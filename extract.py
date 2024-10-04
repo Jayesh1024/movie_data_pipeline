@@ -55,6 +55,35 @@ def movie_cast_filmmakers_extract(movie_page_fp): # Takes the file path to indiv
             f.write(cast_page)
     
     
+def genre_scraper(movie_page_fp):
+    '''
+    Saves the genre page html file to genre_pages/ for every genre in the movie_page
+
+    :type: str
+    :param movie_page_fp: movie page html file path (located in movie_pages/)
+    
+    '''
+    with open(movie_page_fp,'r') as f:
+        soup_movie=BeautifulSoup(f,features='html.parser')
+    movie_imdb_link="https://imdb.com"+soup_movie.select_one("#title-summary-refiner > a").attrs['href']
+    driver.get(movie_imdb_link)
+    imdb_movie_page=driver.page_source
+    soup_movie_imdb=BeautifulSoup(imdb_movie_page,features='html.parser')
+    genre_anchors=soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-10bb6943-4.iWEGeT > div.sc-10bb6943-6.jDEuhp > div.sc-10bb6943-10.dRUSaV > section > div.ipc-chip-list--baseAlt.ipc-chip-list.ipc-chip-list--nowrap.sc-9579cce5-4.bNRyzK > div.ipc-chip-list__scroller > a:nth-child(n)")
+    for anchor in genre_anchors:
+        genre_id=anchor.attrs['href'].split('/')[-2]
+
+        genre_link_num_of_rating_sorted=f"https://www.imdb.com/search/title/?title_type=feature&interests={genre_id}&sort=num_votes,desc"
+        driver.get(genre_link_num_of_rating_sorted)
+        genre_page=driver.page_source
+        with open(f"genre_pages_num_of_rating/{genre_id}_num_of_rating.html",'w') as f:
+            f.write(genre_page)
+
+        genre_link_us_box_office_collection_sorted=f"https://www.imdb.com/search/title/?title_type=feature&interests={genre_id}&sort=boxoffice_gross_us,desc"
+        driver.get(genre_link_us_box_office_collection_sorted)
+        genre_page=driver.page_source
+        with open(f"genre_pages_us_box_office/{genre_id}_us_box_office.html",'w') as f:
+            f.write(genre_page)
 
 
 def main():
@@ -73,4 +102,4 @@ def main():
     driver.close()
 
 
-movie_cast_filmmakers_extract("movie_pages/2024-09-01_Alien: Romulus.html")
+genre_scraper("movie_pages/2024-09-01_Alien: Romulus.html")
