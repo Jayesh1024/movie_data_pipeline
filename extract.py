@@ -57,7 +57,11 @@ def movie_cast_filmmakers_extract(movie_page_fp): # Takes the file path to indiv
     
 def genre_scraper(movie_page_fp):
     '''
-    Saves the genre page html file to genre_pages/ for every genre in the movie_page
+    Saves the genre page html file by number of ratings and us box office collection.\n
+    For every genre page there are two sorting types\n
+    1. Number of rating sorting types are stored in genre_pages_num_of_rating/\n
+    2. US box office collection sorting types are stored in genre_pages_us_box_office/
+
 
     :type: str
     :param movie_page_fp: movie page html file path (located in movie_pages/)
@@ -85,6 +89,32 @@ def genre_scraper(movie_page_fp):
         with open(f"genre_pages_us_box_office/{genre_id}_us_box_office.html",'w') as f:
             f.write(genre_page)
 
+def distributor_scraper(movie_page_fp):
+    '''
+    Saves the distributor html page for following sort types to get top movies by\n
+    1. Number of ratings\n Saves to distributor_pages_num_of_rating/\n
+    2. US box office collection\n Saves to distributor_pages_us_box_office/
+
+    :type movie_page_fp: str
+    :param movie_page_fp: movie page file path of box office mojo site
+
+    '''
+    with open(movie_page_fp,'r') as f:
+        soup_movie=BeautifulSoup(f,features='html.parser')
+    distributor_id=soup_movie.select_one("#a-page > main > div > div.a-section.a-spacing-none.mojo-gutter.mojo-summary-table > div.a-section.a-spacing-none.mojo-summary-values.mojo-hidden-from-mobile > div:nth-child(1) > span:nth-child(2) > a").attrs['href'].split('/')[-3]
+    
+    distributor_link_num_of_ratings=f"https://www.imdb.com/search/title/?companies={distributor_id}&sort=num_votes,desc"
+    driver.get(distributor_link_num_of_ratings)
+    page=driver.page_source
+    with open(f"distributor_pages_num_of_rating/{distributor_id}_num_of_ratings.html",'w') as f:
+        f.write(page)
+
+    distributor_link_us_box_office=f"https://www.imdb.com/search/title/?companies={distributor_id}&sort=boxoffice_gross_us,desc"
+    driver.get(distributor_link_us_box_office)
+    page=driver.page_source
+    with open(f"distributor_pages_us_box_office/{distributor_id}_box_office_us.html",'w') as f:
+        f.write(page)
+    
 
 def main():
     
@@ -102,4 +132,4 @@ def main():
     driver.close()
 
 
-genre_scraper("movie_pages/2024-09-01_Alien: Romulus.html")
+distributor_scraper("movie_pages/2024-09-01_Alien: Romulus.html")
