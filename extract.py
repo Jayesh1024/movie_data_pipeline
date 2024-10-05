@@ -7,12 +7,24 @@ domain="https://boxofficemojo.com"
 driver=webdriver.Chrome()
 
 def page_extract(date):
+    '''
+    Saves the daily box office collection page of boxofficemojo.com to daily_box_office/ for input date
+
+    :type date: str
+    :param date: date for which to save the box office collection html page
+    '''
     driver.get(f"https://www.boxofficemojo.com/date/{date}/")
     html_page=driver.page_source
-    with open(f"html_files/{date}_daily_collection.html",'w') as f:
+    with open(f"daily_box_office/{date}_daily_collection.html",'w') as f:
         f.write(html_page)
     
-def movie_page_extract(collection_page_fp): # Takes the file path of daily collection page , extracts and save all the movies html page to movie_pages directory
+def movie_page_extract(collection_page_fp): 
+    '''
+    Saves the html page for every movie in the given box office collection html page file path to movie_pages/
+
+    :type collection_page_fp: str
+    :param collection_page_fp: file path of the box office collection html page
+    '''
     with open(collection_page_fp,'r') as f:
         soup_page=BeautifulSoup(f,features='html.parser')
     
@@ -130,6 +142,3 @@ def main():
         page_extract(str(start_date_object))
         start_date_object=start_date_object+timedelta(1)
     driver.close()
-
-
-distributor_scraper("movie_pages/2024-09-01_Alien: Romulus.html")
