@@ -1,0 +1,5 @@
+1. while scraping the pages, imdb keep changing their tag attributes by some random codes
+Sol: I used the tag:nth-child(n) strategy to tackle this
+
+2. In which order should my code run, what will be the dependencies?
+Sol: Do simulations, for now this is not a much thought of solution but I will think about it

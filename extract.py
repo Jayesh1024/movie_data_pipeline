@@ -44,28 +44,36 @@ def movie_cast_filmmakers_extract(movie_page_fp): # Takes the file path to indiv
     driver.get(movie_imdb_link)
     imdb_movie_page=driver.page_source
     soup_movie_imdb=BeautifulSoup(imdb_movie_page,features='html.parser')
-    director_links=["https://imdb.com"+dir_anchor_tags.attrs['href'] for dir_anchor_tags in soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-10bb6943-4.iWEGeT > div.sc-10bb6943-6.jDEuhp > div.sc-10bb6943-11.jcTGOi > div.sc-70a366cc-2.bscNnP > div > ul > li:nth-child(1) > div > ul > li:nth-child(n) > a")]
-    writer_links=["https://imdb.com"+writer_anchor_tags.attrs['href'] for writer_anchor_tags in soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-10bb6943-4.iWEGeT > div.sc-10bb6943-6.jDEuhp > div.sc-10bb6943-11.jcTGOi > div.sc-70a366cc-2.bscNnP > div > ul > li:nth-child(2) > div > ul > li:nth-child(n) > a")]
-    cast_links=["https://imdb.com"+cast_anchor_tags.attrs['href'] for cast_anchor_tags in soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-10bb6943-4.iWEGeT > div.sc-10bb6943-6.jDEuhp > div.sc-10bb6943-11.jcTGOi > div.sc-70a366cc-2.bscNnP > div > ul > li:nth-child(3) > div > ul > li:nth-child(n) > a")]
+    filmmakers={
+        "director_links":["https://imdb.com"+dir_anchor_tags.attrs['href'] for dir_anchor_tags in soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(1) > div > ul > li:nth-child(n) > a")],
+        "writer_links":["https://imdb.com"+writer_anchor_tags.attrs['href'] for writer_anchor_tags in soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(2) > div > ul > li:nth-child(n) > a")],
+        "cast_links":["https://imdb.com"+cast_anchor_tags.attrs['href'] for cast_anchor_tags in soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(3) > div > ul > li:nth-child(n) > a")]
+    }
 
-    for link in director_links:
-        driver.get(link)
-        director_page=driver.page_source
-        with open(f"director_pages/{str(datetime.today().date())+"_"+link.split('/')[-2]}.html",'w') as f:
-            f.write(director_page)
-    
-    for link in writer_links:
-        driver.get(link)
-        writer_page=driver.page_source
-        with open(f"writer_pages/{str(datetime.today().date())+"_"+link.split('/')[-2]}.html",'w') as f:
-            f.write(writer_page)
-    
-    for link in cast_links:
-        driver.get(link)
-        cast_page=driver.page_source
-        with open(f"cast_pages/{str(datetime.today().date())+"_"+link.split('/')[-2]}.html",'w') as f:
-            f.write(cast_page)
-    
+    def save_filmmaker_info(id):
+        '''
+        Saves the html pages for the given filmmaker id to dir :filmmaker_pages/
+
+        :type id: str
+        :type directory_name: str
+        :param id: id of the filmmaker, can be a start, director or writer
+        :param directory_name: directory where the pages need to be saved
+        '''
+        links={
+            "profile_link":f"https://www.imdb.com/name/{id}/",
+            "search_num_of_ratings":f"https://www.imdb.com/search/title/?title_type=feature&role={id}&sort=num_votes,desc",
+            "search_box_office":f"https://www.imdb.com/search/title/?title_type=feature&role={id}&sort=boxoffice_gross_us,desc"
+        }
+        for link_type,link in links.items():
+            driver.get(link)
+            page=driver.page_source
+            with open(f"filmmaker_pages/{link_type}_{id}.html",'w') as f:
+                f.write(page)
+
+    for _,links in filmmakers.items():
+        for link in links:
+            id=link.split('/')[-2]
+            save_filmmaker_info(id=id)
     
 def genre_scraper(movie_page_fp):
     '''
@@ -85,7 +93,9 @@ def genre_scraper(movie_page_fp):
     driver.get(movie_imdb_link)
     imdb_movie_page=driver.page_source
     soup_movie_imdb=BeautifulSoup(imdb_movie_page,features='html.parser')
-    genre_anchors=soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div.sc-10bb6943-4.iWEGeT > div.sc-10bb6943-6.jDEuhp > div.sc-10bb6943-10.dRUSaV > section > div.ipc-chip-list--baseAlt.ipc-chip-list.ipc-chip-list--nowrap.sc-9579cce5-4.bNRyzK > div.ipc-chip-list__scroller > a:nth-child(n)")
+
+
+    genre_anchors=soup_movie_imdb.select("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > section > div:nth-child(1) > div.ipc-chip-list__scroller > a:nth-child(n)")
     for anchor in genre_anchors:
         genre_id=anchor.attrs['href'].split('/')[-2]
 
@@ -142,3 +152,5 @@ def main():
         page_extract(str(start_date_object))
         start_date_object=start_date_object+timedelta(1)
     driver.close()
+
+movie_cast_filmmakers_extract("movie_pages/2024-09-01_Alien: Romulus.html")
