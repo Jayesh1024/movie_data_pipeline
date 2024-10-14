@@ -33,9 +33,16 @@ def movie_page_extract(collection_page_fp):
     for i,link in enumerate(movie_links):
         driver.get(link)
         movie_page=driver.page_source
-        file_name=f"{collection_page_fp.split('/')[-1].split('_')[0]}_{movie_anchor_tags[i].text}.html"
-        with open(f"movie_pages/{file_name}",'w') as f:
+        movie_soup=BeautifulSoup(movie_page,features='html.parser')
+        movie_link_imdb="https://imdb.com"+movie_soup.select_one("#title-summary-refiner > a").attrs['href']
+        driver.get(movie_link_imdb)
+        movie_page_imdb=driver.page_source
+        
+        file_name=movie_link_imdb.split('/')[-2]
+        with open(f"movie_pages/{file_name}.html",'w') as f:
             f.write(movie_page)
+        with open(f"movie_pages/{file_name}_imdb.html",'w') as f:
+            f.write(movie_page_imdb)
 
 def movie_cast_filmmakers_extract(movie_page_fp): # Takes the file path to individual movie and extracts and save the cast and crew info page from imdb.com to cast_pages directory
     with open(movie_page_fp,'r') as f:
@@ -153,4 +160,5 @@ def main():
         start_date_object=start_date_object+timedelta(1)
     driver.close()
 
-movie_cast_filmmakers_extract("movie_pages/2024-09-01_Alien: Romulus.html")
+# movie_cast_filmmakers_extract("movie_pages/2024-09-01_Alien: Romulus.html")
+movie_page_extract("daily_box_office/2024-10-08_daily_collection.html")

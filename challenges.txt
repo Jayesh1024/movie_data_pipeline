@@ -3,3 +3,8 @@ Sol: I used the tag:nth-child(n) strategy to tackle this
 
 2. In which order should my code run, what will be the dependencies?
 Sol: Do simulations, for now this is not a much thought of solution but I will think about it
+
+3. Identifying new records using the source dimension ids when doing incremental load
+
+4. When parsing, dynamic number of child elements in some divs
+Sol: Regex
