@@ -4,7 +4,30 @@ import re
 import random
 import json
 from datetime import datetime
-driver=webdriver.Chrome()
+
+
+def XPathToSelector(xpath):
+    '''
+    Converts a given xpath to a css selector path
+
+    :param xpath: The required XPath
+    :type xpath: str
+
+    :rtype: str
+    :returns: The CSS Selector for the input XPath
+    '''
+    
+    pattern=r'//\*\[@id="(.*)"](.*)'
+    matches=re.findall(pattern=pattern,string=xpath)
+    id=matches[0][0]
+    path=matches[0][1].replace('/','>')
+    path_matches=re.finditer(pattern=r'\[(\d+)\]',string=path)
+    for match in path_matches:
+        replacement=match.group(1)
+        path=re.sub(pattern=r'\[\d+\]',repl=f":nth-of-type({replacement})",string=path,count=1)
+    selector="#"+id+path
+    return selector
+
 
 def fact_parser(collection_fp):
 
@@ -31,6 +54,7 @@ def fact_parser(collection_fp):
                     row_dict['rank']=cell.text
                 elif j==2:
                     movie_page_link="https://boxofficemojo.com"+cell.find('a').attrs['href']
+                    driver=webdriver.Chrome()
                     driver.get(movie_page_link)
                     soup_movie=BeautifulSoup(driver.page_source,features='html.parser')
                     movie_id=soup_movie.select_one("#title-summary-refiner > a").attrs['href'].split('/')[-2]
@@ -99,5 +123,73 @@ def movie_parser(movie_fp,movie_fp_imdb):
 
     return movie_data_dict   
 
+def genre_parser(page_fp_num_of_rating,page_fp_us_box_office):
+    '''
+    Parses the genre dimension attributes from html to a python dict object
+    
+    :type page_fp_num_of_rating: str
+    :type page_fp_us_box_office: str
+    :param page_fp_num_of_rating: genre page file path for the page sorted by number of ratings
+    :param page_fp_us_box_office: genre page file path for the page sorted by us box office collection
+    
+    :rtype: dict
+    :returns: A python dict which represents the genre dimension attributes
+    '''
+    with open(page_fp_num_of_rating,'r') as f:
+        soup_num_of_rating=BeautifulSoup(f,features='html.parser')
+    with open(page_fp_us_box_office,'r') as f:
+        soup_us_box_office=BeautifulSoup(f,features='html.parser')
+    
+    genre_dict={}
+    genre_dict['genre_id']=page_fp_num_of_rating.split('/')[1].split('_')[0]
+    genre_dict['genre_name']=soup_num_of_rating.select_one("#__next > main > div:nth-of-type(2) > div:nth-of-type(3) > section > section > div > section > section > div:nth-child(2) > div > section > div:nth-of-type(1) > div > div > div.ipc-chip-list__scroller > button:nth-child(2)").text
+    genre_dict['total_movies']=soup_num_of_rating.select_one("#__next > main > div:nth-of-type(2) > div:nth-of-type(3) > section > section > div > section > section > div:nth-child(2) > div > section > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)").text.split(' ')[-1].replace(',','') 
+    genre_dict['top_movie_NumOfRating']=soup_num_of_rating.select_one("#__next > main > div:nth-of-type(2) > div:nth-of-type(3) > section > section > div > section > section > div:nth-child(2) > div > section > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-child(1) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > a").get('href').split('/')[-2]
+    genre_dict['top_movie_US_BoxOffice']=soup_us_box_office.select_one("#__next > main > div:nth-of-type(2) > div:nth-of-type(3) > section > section > div > section > section > div:nth-child(2) > div > section > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-child(1) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > a").get('href').split('/')[-2]
 
-movie_parser("movie_pages/tt11315808.html","movie_pages/tt11315808_imdb.html")    
+
+def filmmaker_parser(filmmaker_profile_fp,filmmaker_num_of_rating_fp,filmmaker_us_box_office_fp,filmmaker_debut_movie_fp):
+    with open(filmmaker_profile_fp,'r') as f:
+        soup_profile=BeautifulSoup(f,features='html.parser')
+
+    with open(filmmaker_num_of_rating_fp,'r') as f:
+        soup_num_of_rating=BeautifulSoup(f,features='html.parser')
+
+    with open(filmmaker_us_box_office_fp,'r') as f:
+        soup_us_box_office=BeautifulSoup(f,features='html.parser')
+
+    with open(filmmaker_debut_movie_fp,'r') as f:
+        soup_debut_movie=BeautifulSoup(f,features='html.parser')
+    
+
+    filmmaker_dict={}
+    filmmaker_dict['filmmaker_id']=filmmaker_profile_fp.split('/')[-1].split('_')[-1].split('.')[0]
+    filmmaker_dict['name']=soup_profile.select_one(XPathToSelector('''//*[@id="__next"]/main/div/section[1]/section/div[3]/section/section/div[2]/div/h1/span[1]''')).text
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+    dob=filmmaker_birth_details[0].text
+    filmmaker_dict['dob']=datetime.strptime(dob,"%B %d, %Y").date()
+    location=filmmaker_birth_details[1].text
+    filmmaker_dict['place_of_birth']=location
+    location=location.split(',')
+    filmmaker_dict['country']=location[-1]
+    filmmaker_dict['total_movies']=soup_num_of_rating.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/div[1]/div[1]''')).text.split(' ')[-1]
+    filmmaker_dict['top_movie_NumOfRating']=soup_num_of_rating.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/ul/li[1]/div/div/div/div[1]/div[2]/div[1]/a''')).get('href').split('/')[-2]
+    filmmaker_dict['top_movie_US_BoxOffice']=soup_us_box_office.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/ul/li[1]/div/div/div/div[1]/div[2]/div[1]/a''')).get('href').split('/')[-2]
+    filmmaker_dict['debut_movie_id']= soup_debut_movie.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/ul/li[1]/div/div/div/div[1]/div[2]/div[1]/a''')).get('href').split('/')[-2]
+    
+    return filmmaker_dict
+
+
+def distributor_parser(dist_num_of_ratings_fp,dist_us_box_office_fp):
+    with open(dist_num_of_ratings_fp,'r') as f:
+        soup_num_of_rating=BeautifulSoup(f,features='html.parser')
+    with open(dist_us_box_office_fp,'r') as f:
+        soup_us_box_office=BeautifulSoup(f,features='html.parser')
+    distributor_dict={}
+    distributor_dict['distributor_id']=dist_num_of_ratings_fp.split('/')[-1].split('_')[0]
+    distributor_dict['distributor_name']=soup_num_of_rating.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[1]/div/div/div[2]/button[2]''')).text
+    distributor_dict['total_movies']=soup_num_of_rating.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/div[1]/div[1]''')).text.split(' ')[-1]
+    distributor_dict['top_movie_NumOfRating']=soup_num_of_rating.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/ul/li[1]/div/div/div/div[1]/div[2]/div[1]/a''')).get('href').split('/')[-2]
+    distributor_dict['top_movie_US_BoxOffice']=soup_us_box_office.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/ul/li[1]/div/div/div/div[1]/div[2]/div[1]/a''')).get('href').split('/')[-2]
+    return distributor_dict
+

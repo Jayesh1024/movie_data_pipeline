@@ -24,6 +24,7 @@ def movie_page_extract(collection_page_fp):
 
     :type collection_page_fp: str
     :param collection_page_fp: file path of the box office collection html page
+    
     '''
     with open(collection_page_fp,'r') as f:
         soup_page=BeautifulSoup(f,features='html.parser')
@@ -69,7 +70,8 @@ def movie_cast_filmmakers_extract(movie_page_fp): # Takes the file path to indiv
         links={
             "profile_link":f"https://www.imdb.com/name/{id}/",
             "search_num_of_ratings":f"https://www.imdb.com/search/title/?title_type=feature&role={id}&sort=num_votes,desc",
-            "search_box_office":f"https://www.imdb.com/search/title/?title_type=feature&role={id}&sort=boxoffice_gross_us,desc"
+            "search_box_office":f"https://www.imdb.com/search/title/?title_type=feature&role={id}&sort=boxoffice_gross_us,desc",
+            "search_debut_movie":f"https://www.imdb.com/search/title/?title_type=feature&role={id}&sort=release_date,asc"
         }
         for link_type,link in links.items():
             driver.get(link)
@@ -131,14 +133,14 @@ def distributor_scraper(movie_page_fp):
     with open(movie_page_fp,'r') as f:
         soup_movie=BeautifulSoup(f,features='html.parser')
     distributor_id=soup_movie.select_one("#a-page > main > div > div.a-section.a-spacing-none.mojo-gutter.mojo-summary-table > div.a-section.a-spacing-none.mojo-summary-values.mojo-hidden-from-mobile > div:nth-child(1) > span:nth-child(2) > a").attrs['href'].split('/')[-3]
-    
-    distributor_link_num_of_ratings=f"https://www.imdb.com/search/title/?companies={distributor_id}&sort=num_votes,desc"
+
+    distributor_link_num_of_ratings=f"https://www.imdb.com/search/title/?title_type=feature&companies={distributor_id}&sort=num_votes,desc"
     driver.get(distributor_link_num_of_ratings)
     page=driver.page_source
     with open(f"distributor_pages_num_of_rating/{distributor_id}_num_of_ratings.html",'w') as f:
         f.write(page)
 
-    distributor_link_us_box_office=f"https://www.imdb.com/search/title/?companies={distributor_id}&sort=boxoffice_gross_us,desc"
+    distributor_link_us_box_office=f"https://www.imdb.com/search/title/?title_type=feature&companies={distributor_id}&sort=boxoffice_gross_us,desc"
     driver.get(distributor_link_us_box_office)
     page=driver.page_source
     with open(f"distributor_pages_us_box_office/{distributor_id}_box_office_us.html",'w') as f:
@@ -160,5 +162,5 @@ def main():
         start_date_object=start_date_object+timedelta(1)
     driver.close()
 
-# movie_cast_filmmakers_extract("movie_pages/2024-09-01_Alien: Romulus.html")
-movie_page_extract("daily_box_office/2024-10-08_daily_collection.html")
+
+movie_cast_filmmakers_extract('movie_pages/tt11315808.html')

@@ -8,3 +8,4 @@ Sol: Do simulations, for now this is not a much thought of solution but I will t
 
 4. When parsing, dynamic number of child elements in some divs
 Sol: Regex
+
