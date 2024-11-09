@@ -136,6 +136,7 @@ def movie_cast_filmmakers_extract(parsed_movie_json_fp): # Takes the file path t
         logger.info(f"Iteration: {i} and movie_id: {movie['movie_id']}")
         if movie['filmmakers']:
             for j,filmmaker in enumerate(movie['filmmakers']):
+                logger.info(f"Iteration: {j} and filmmaker_id: {filmmaker['filmmaker_id']}")
                 id=filmmaker['filmmaker_id']
                 filmmaker_dict={
                     'movie_id':movie['movie_id'],

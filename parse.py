@@ -189,7 +189,18 @@ def movie_parser(movies_json_fp):
                         running_time=child_span[1].text
                         running_time_pattern=r'(\d)\s*hr\s*(\d*)\s*min'
                         re_match=re.findall(pattern=running_time_pattern,string=running_time)
-                        movie_data_dict['duration']=int(re_match[0][0])*60+int(re_match[0][1])
+                        if not(re_match):
+                            running_time_pattern=r'(\d)\s*hr'
+                            re_match=re.findall(pattern=running_time_pattern,string=running_time)
+                        if isinstance(re_match[0],tuple):            
+                            movie_data_dict['duration']=int(re_match[0][0])*60+int(re_match[0][1])
+                        elif isinstance(re_match[0],str):
+                            movie_data_dict['duration']=int(re_match[0])*60
+                        else:
+                            movie_data_dict['duration']=None
+                            logger.warning(f"movie_data_dict['duration] set to NONE, No match found the the input regex pattern")
+                        
+                            
                     except AttributeError as e:
                         logger.exception(e)
                         logger.warning(f"movie_id: {movie['content']['movie_id']}, duration set to NONE")
@@ -443,11 +454,17 @@ def filmmaker_parser(filmmaker_html_fp):
                 logger.exception(e)
                 filmmaker_dict['dob']=None
                 logger.warning(f"filmmaker_dict['dob'] set to NONE")
-
-            location=filmmaker_birth_details[1].text
-            filmmaker_dict['place_of_birth']=location
-            location=location.split(',')
-            filmmaker_dict['country']=location[-1]
+            try:
+                location=filmmaker_birth_details[1].text
+                filmmaker_dict['place_of_birth']=location
+                location=location.split(',')
+                filmmaker_dict['country']=location[-1]
+            except IndexError as e:
+                logger.exception(e)
+                filmmaker_dict['place_of_birth']=None
+                logger.warning("filmmaker_dict['place_of_birth'] set to NONE")
+                filmmaker_dict['country']=None
+                logger.warning("filmmaker_dict['country'] set to NONE")
         else:
             filmmaker_dict['dob']=None
             logger.warning(f"filmmaker_dict['dob'] set to NONE")
