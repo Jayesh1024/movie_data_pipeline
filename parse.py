@@ -144,13 +144,14 @@ def movie_parser(movies_json_fp):
         #     ]
         # }
         movie_data_dict={}
-
+        
         try:
             movie_data_dict['movie_name']=movie_soup.select_one("#a-page > main > div > div.a-section.a-spacing-none.mojo-summary > div.a-section.mojo-heading-summary > div > div > div.a-fixed-left-grid-col.a-col-right > h1").text
         except AttributeError as e:
             logger.exception(e)
             movie_data_dict['movie_name']=None
-
+        
+        movie_data_dict['release_id']=movie['content']['url_boxofficemojo'].split('/')[-2]
         movie_data_dict['movie_id']=movie['content']['movie_id']
 
         movie_release_data_rows=movie_soup.select("#a-page > main > div > div.a-section.a-spacing-none.mojo-gutter.mojo-summary-table > div.a-section.a-spacing-none.mojo-summary-values.mojo-hidden-from-mobile > div:nth-child(n)")
