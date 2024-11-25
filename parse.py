@@ -477,7 +477,7 @@ def filmmaker_parser(filmmaker_html_fp):
         
         
         try:
-            filmmaker_dict['total_movies']=soup_num_of_rating.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/div[1]/div[1]''')).text.split(' ')[-1]
+            filmmaker_dict['total_movies']=soup_num_of_rating.select_one(XPathToSelector('''//*[@id="__next"]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/div[1]/div[1]''')).text.split(' ')[-1].replace(',','')
         except AttributeError as e:
             logger.exception(e)
             filmmaker_dict['total_movies']=None

@@ -29,6 +29,6 @@ def main():
     distributor_html_json_fp=extract.distributor_scraper("movies_parsed_2024116.json")
     distributor_parsed_json_fp=parse.distributor_parser(distributor_html_json_fp)
 
-parse.filmmaker_parser("filmmaker_html_2024116.json")
+main()
 
 #TODO: Log progress of genre, currently only movie progress is logged in the genre_scraper()

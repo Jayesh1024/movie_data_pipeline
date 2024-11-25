@@ -9,3 +9,12 @@ Sol: Do simulations, for now this is not a much thought of solution but I will t
 4. When parsing, dynamic number of child elements in some divs
 Sol: Regex
 
+5. Adjust my code by checking the data quality of the spark dataframes and logs if there is some extraction error from the movie sites
+
+6. Adding data quality checks, and defining quality metrics which will be logged for a data quality dashboard
+
+7. Implementing SCD-1 and SCD-2 for the dimensions
+
+
+
+
