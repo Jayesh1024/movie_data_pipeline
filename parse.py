@@ -3,14 +3,7 @@ import re
 import random
 import json
 from datetime import datetime
-
-import logging
-logger=logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-file_handler=logging.FileHandler('run.log')
-formatter=logging.Formatter(fmt="%(asctime)s:%(levelname)s:%(name)s:%(funcName)s:%(lineno)d:%(message)s")
-file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
+from log import logger
 
 def XPathToSelector(xpath):
     '''
@@ -35,7 +28,7 @@ def XPathToSelector(xpath):
     return selector
 
 
-def fact_parser(collection_json_path):
+def fact_parser(collection_json_path,run_date:str):
     with open(collection_json_path,'r') as f:
         collection_json=json.load(fp=f)
 
@@ -47,7 +40,7 @@ def fact_parser(collection_json_path):
     # movie_fact_table=[
     #     {
     #         'run_date':str,
-    #         'updated_at_id':str,
+    #         'extracted_at':str,
     #         'num_of_releases':int,
     #         'rank':str,
     #         'release_id':str,
@@ -97,14 +90,14 @@ def fact_parser(collection_json_path):
 
             
             movie_fact_table.append(row_dict)
-    path=f'collection_parsed_{collection_json['collection_date'].replace('-','')}.json'
+    path=f'run_{run_date}/collection_parsed_{run_date}.json'
     with open(path,'w') as f:
         json.dump(obj=movie_fact_table,fp=f,indent=2)
     logger.info(f"collection page parsed for run date: {collection_json['collection_date']} and saved to path: {path}")
     return path
 
 #TODO: change how this func takes inputs (which is in form of json) and then processes it
-def movie_parser(movies_json_fp):
+def movie_parser(movies_json_fp,run_date:str):
 
     with open(movies_json_fp,'r') as f:
         movies_json=json.load(f)
@@ -232,8 +225,13 @@ def movie_parser(movies_json_fp):
             movie_data_dict['widest_release']=None
             logger.warning(f"movie_id:{movie['content']['movie_id']}, widest_release set to NONE")
         
+        try:
+            imdb_rating_num_of_ratings=movie_soup_imdb.select_one("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > a").text.split('/')
+        except AttributeError as e:
+            logger.exception(e)
+            imdb_rating_num_of_ratings=None
+            logger.warning('imdb_rating_num_of_ratings set to NONE')
 
-        imdb_rating_num_of_ratings=movie_soup_imdb.select_one("#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-afa4bed1-0.iMxoKo > section > div:nth-child(5) > section > section > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > a").text.split('/')
         if imdb_rating_num_of_ratings:
 
             movie_data_dict['imdb_rating']=imdb_rating_num_of_ratings[0]
@@ -291,12 +289,12 @@ def movie_parser(movies_json_fp):
         "run_date":movies_json[0]['run_date'],
         "content":movies
     }
-    path=f'movies_parsed_{movies_json[0]['run_date']}.json'
+    path=f'run_{run_date}/movies_parsed_{run_date}.json'
     with open(path,'w') as f:
         json.dump(obj=movies,fp=f,indent=2)
     return path
 
-def genre_parser(genre_html_json_fp):
+def genre_parser(genre_html_json_fp,run_date:str):
     
     with open(genre_html_json_fp,'r') as f:
         genre_html=json.load(f)
@@ -369,13 +367,13 @@ def genre_parser(genre_html_json_fp):
             logger.warning(f"genre_dict['top_movie_US_BoxOffice'] set to NONE for genre_id: {genre['genre_id']}")
         response['content'].append(genre_dict)
 
-    path=f'genre_parsed_{genre_html['run_date']}.json'
+    path=f'run_{run_date}/genre_parsed_{run_date}.json'
     with open(path,'w') as f:
         json.dump(response,f,indent=2)
     
     return path
 
-def filmmaker_parser(filmmaker_html_fp):
+def filmmaker_parser(filmmaker_html_fp,run_date:str):
     
     with open(filmmaker_html_fp,'r') as f:
         filmmaker_data=json.load(f)
@@ -509,14 +507,14 @@ def filmmaker_parser(filmmaker_html_fp):
 
         response['content'].append(filmmaker_dict)
 
-    path=f'filmmaker_parsed_{filmmaker_data['run_date']}.json'
+    path=f'run_{run_date}/filmmaker_parsed_{run_date}.json'
     with open(path,'w') as f:
         json.dump(response,fp=f,indent=2)
 
     return path
 
 
-def distributor_parser(distributor_html_json_fp):
+def distributor_parser(distributor_html_json_fp,run_date:str):
     with open(distributor_html_json_fp,'r') as f:
         distributors=json.load(f)
 
@@ -586,7 +584,7 @@ def distributor_parser(distributor_html_json_fp):
         
         response['content'].append(distributor_dict)
     
-    path=f"distributor_parsed_{distributors['run_date']}.json"
+    path=f"run_{run_date}/distributor_parsed_{run_date}.json"
     with open(path,'w') as f:
         json.dump(response,f,indent=2)
 
