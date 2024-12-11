@@ -15,6 +15,19 @@ Sol: Regex
 
 7. Implementing SCD-1 and SCD-2 for the dimensions
 
+8. Optimising scraping speed:
+    8.1 Don't scrape the whole page, pick elements to scrape # Can't use this approach, XPath changes if the target element is preceded with some javascript element
+
+9. If extract.py fails then saving the scraped results before the script exits
+    9.1 Two ways:
+        9.1.a Use MongoDB for saving the data in an append manner
+        9.1.b Use a try except block to wrap around the code, so when script fails the data gets saved before the code quits #Using this way for now
+
+10. Deciding the recovery point and how the script should behave when rerunning after a extract.py failure
+    10.1 By script behaviour I mean it should check what data got loaded before failure and by considering that resume the progress
+
+11. Database table surrogate key sequence not decreamenting after deleting rows
+
 
 
 

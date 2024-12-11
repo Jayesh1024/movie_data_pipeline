@@ -1,0 +1,2 @@
+effective_from: The first date from when the data inside the source system got created. (First date because the data can be updated in the source so this date can change)
+extracted_at: The date when the data was extracted from the source system

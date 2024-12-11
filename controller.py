@@ -1,34 +1,36 @@
 import extract
 import parse
-import json
-
+import os
+from log import logger
 def main():
+    try:
+        # Step 1
+        run_date='2024-11-07' # run date
+        run_date_str=run_date.replace('-','')
+        os.mkdir(f"./run_{run_date_str}")
+        collection_html_json_path=extract.page_extract(date=run_date) # Returns the path of the json file which have the html data for the box office collection page for the run date
 
-    # Step 1
-    date='2024-11-6'
-    collection_html_json_path=extract.page_extract(date=date) # Returns the path of the json file which have the html data for the box office collection page for the run date
+        # Step 2
+        collection_parsed_path=parse.fact_parser(collection_html_json_path,run_date_str) # Returns the path of the parsed box office collection page for the run date
 
-    # Step 2
-    collection_parsed_path=parse.fact_parser(collection_html_json_path) # Returns the path of the parsed box office collection page for the run date
+        # # Step 3
+        movies_html_page_json_path=extract.movie_page_extract(collection_parsed_path,run_date_str) # Returns the path of the json file which have the movies pages for every movie on the collection page for input run date
 
-    # # Step 3
-    movies_html_page_json_path=extract.movie_page_extract(collection_parsed_path) # Returns the path of the json file which have the movies pages for every movie on the collection page for input run date
+        # Step 4
+        movies_parsed_json_path=parse.movie_parser(movies_html_page_json_path,run_date_str) # Returns the path of the json file which have parsed movie page for every movie on the collections page for the input run date
 
-    # Step 4
-    movies_parsed_json_path=parse.movie_parser("movies_html_source_2024116.json") # Returns the path of the json file which have parsed movie page for every movie on the collections page for the input run date
+        # # Step 5 (Can be run in parallel with filmmaker and distributor scraper and parser functions)
+        genre_html_json_path=extract.genre_scraper(movies_parsed_json_path,run_date_str)
+        genre_parsed_json_path=parse.genre_parser(genre_html_json_path,run_date_str)
+        
+        # # Step 6 (Parallel)
+        filmmaker_html_json_path=extract.movie_cast_filmmakers_extract(movies_parsed_json_path,run_date_str)
+        filmmaker_parsed_json_path=parse.filmmaker_parser(filmmaker_html_json_path,run_date_str)
 
-    # # Step 5 (Can be run in parallel with filmmaker and distributor scraper and parser functions)
-    genre_html_json_path=extract.genre_scraper(movies_parsed_json_path)
-    genre_parsed_json_path=parse.genre_parser(genre_html_json_path)
-    
-    # # Step 6 (Parallel)
-    filmmaker_html_json_path=extract.movie_cast_filmmakers_extract(movies_parsed_json_path)
-    filmmaker_parsed_json_path=parse.filmmaker_parser(filmmaker_html_json_path)
-
-    # Step 7 (Parallel)
-    distributor_html_json_fp=extract.distributor_scraper("movies_parsed_2024116.json")
-    distributor_parsed_json_fp=parse.distributor_parser(distributor_html_json_fp)
+        # Step 7 (Parallel)
+        distributor_html_json_fp=extract.distributor_scraper(movies_parsed_json_path,run_date_str)
+        distributor_parsed_json_fp=parse.distributor_parser(distributor_html_json_fp,run_date_str)
+    except Exception as e:
+        logger.exception(e)
 
 main()
-
-#TODO: Log progress of genre, currently only movie progress is logged in the genre_scraper()
