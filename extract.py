@@ -1,16 +1,19 @@
 from selenium import webdriver
 from selenium.webdriver import ChromeService
 from datetime import datetime
+import time
 from bs4 import BeautifulSoup
 import pytz
 import json
 from log import logger
 
-ist_tz=pytz.timezone('Asia/Kolkata')
 service=ChromeService(executable_path='./chromedriver')
-driver=webdriver.Chrome(service=service)
+
+ist_tz=pytz.timezone('Asia/Kolkata')
+
 
 def page_extract(date):
+    driver=webdriver.Chrome(service=service)
     try:
         link=f"https://www.boxofficemojo.com/date/{date}/"
         driver.get(link)
@@ -25,14 +28,19 @@ def page_extract(date):
         logger.error(f"Failed collection page extraction for run date: {date}")
         logger.exception(e)
     finally:
-        path=f'run_{date.replace('-','')}/boxoffice_html_{str(date).replace('-','')}.json'
+        driver.close()
+        path=f"run_{date.replace('-','')}/boxoffice_html_{str(date).replace('-','')}.json"
         with open(path,'w') as f:
             json.dump(obj=boxoffice_collection_daily,fp=f,indent=2)
+
         logger.info(f"Collection HTML page for run date: {date} saved to path: {path}")
+        
         return path
     
     
 def movie_page_extract(collection_parsed_fp,run_date:str): 
+    
+    driver=webdriver.Chrome(service=service)
     
     movies_parsed=[]
     
@@ -59,7 +67,7 @@ def movie_page_extract(collection_parsed_fp,run_date:str):
 
             movie_individual_dict['run_date']=movie_html['run_date']
             movie_individual_dict['content']['release_id']=movie_html['release_id']
-            movie_individual_dict['content']['url_boxofficemojo']=f'https://boxofficemojo.com/release/{movie_html['release_id']}/'
+            movie_individual_dict['content']['url_boxofficemojo']=f"https://boxofficemojo.com/release/{movie_html['release_id']}/"
             movie_individual_dict['extracted_at']=movie_html['extracted_at']
             driver.get(movie_individual_dict['content']['url_boxofficemojo'])
             movie_individual_dict['content']['page_source']['boxofficemojo']=driver.page_source
@@ -86,12 +94,14 @@ def movie_page_extract(collection_parsed_fp,run_date:str):
             logger.error(f"Failed iteration {i} for movie release id: {movie_html['release_id']}")
             logger.exception(e)
     finally:
-        path=f'run_{run_date}/movies_html_source_{run_date}.json'
+        driver.close()
+        path=f"run_{run_date}/movies_html_source_{run_date}.json"
         with open(path,'w') as f:
             json.dump(obj=movies_parsed,fp=f,indent=2)
         return path
 
 def movie_cast_filmmakers_extract(parsed_movie_json_fp,run_date:str): # Takes the file path to individual movie and extracts and save the cast and crew info page from imdb.com to cast_pages directory
+    driver=webdriver.Chrome(service=service)
     with open(parsed_movie_json_fp,'r') as f:
         movies_parsed=json.load(f)
 
@@ -172,6 +182,7 @@ def movie_cast_filmmakers_extract(parsed_movie_json_fp,run_date:str): # Takes th
         logger.error(f"Failed movie iteration {i} and filmamker iteration {j} for movie_id : {movie['movie_id']} and filmmaker_id: {filmmaker['filmmaker_id']}")
         logger.exception(e)
     finally:    
+        driver.close()
         path=f"run_{run_date}/filmmaker_html_{run_date}.json"
         with open(path,'w') as f:
             json.dump(response,f,indent=2)
@@ -180,6 +191,7 @@ def movie_cast_filmmakers_extract(parsed_movie_json_fp,run_date:str): # Takes th
             
     
 def genre_scraper(parsed_movie_json_fp,run_date:str):
+    driver=webdriver.Chrome(service=service)
     
     with open(parsed_movie_json_fp,'r') as f:
         movies_parsed=json.load(f)
@@ -244,6 +256,7 @@ def genre_scraper(parsed_movie_json_fp,run_date:str):
         logger.error(f"Failed movie_iteration: {i}, genre_iteration{j} for movie_id: {movie['movie_id']} and genre_id: {genre_id}")
         logger.exception(e)
     finally:
+        driver.close()
         path=f"run_{run_date}/genre_html_{run_date}.json"
         with open(path,'w') as f:
             json.dump(response,f,indent=2)
@@ -255,6 +268,7 @@ def genre_scraper(parsed_movie_json_fp,run_date:str):
             
 
 def distributor_scraper(movie_parsed_fp,run_date:str):
+    driver=webdriver.Chrome(service=service)
     '''
     Saves the distributor html page for following sort types to get top movies by\n
     1. Number of ratings\n Saves to distributor_pages_num_of_rating/\n
@@ -336,6 +350,7 @@ def distributor_scraper(movie_parsed_fp,run_date:str):
         logger.error(f"Failed movie_iteration: {i} for movie_id: {movie['movie_id']} and distributor_id: {movie['distributor_id']}")
         logger.exception(e)
     finally:
+        driver.close()
         path=f"run_{run_date}/distributor_html_{run_date}.json"
         with open(path,'w') as f:
             json.dump(response,f,indent=2)

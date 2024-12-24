@@ -1,11 +1,19 @@
+import argparse
 import extract
 import parse
 import os
 from log import logger
+
+parser=argparse.ArgumentParser()
+parser.add_argument("--run_date",type=str,required=True)
+
+args=parser.parse_args()
+
+print(args.run_date)
 def main():
     try:
         # Step 1
-        run_date='2024-11-07' # run date
+        run_date=args.run_date # Date for which the data will be scraped from the sites
         run_date_str=run_date.replace('-','')
         os.mkdir(f"./run_{run_date_str}")
         collection_html_json_path=extract.page_extract(date=run_date) # Returns the path of the json file which have the html data for the box office collection page for the run date
@@ -33,4 +41,3 @@ def main():
     except Exception as e:
         logger.exception(e)
 
-main()

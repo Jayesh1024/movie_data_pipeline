@@ -1,0 +1,24 @@
+name: test
+
+services:
+  db:
+    container_name: postgredb
+    image: postgres:15.10-alpine3.21
+    environment:
+      - "POSTGRES_PASSWORD=admin"
+
+  airflow:
+    container_name: airflow_cont
+    image: apache/airflow:latest-python3.9
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: bind
+        source: "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow"
+        target: "/opt/airflow"
+    depends_on:
+      - db
+    command: standalone
+    
+
+
