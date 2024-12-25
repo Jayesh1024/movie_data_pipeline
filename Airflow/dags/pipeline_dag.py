@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src')
+sys.path.append('/opt/src')
 from parse import *
 from extract import *
 from airflow.models.dag import DAG

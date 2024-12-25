@@ -4,21 +4,31 @@ services:
   db:
     container_name: postgredb
     image: postgres:15.10-alpine3.21
+    volumes:
+      - type: volume
+        source: postgres_vol
+        target: /var/lib/postgresql/data
     environment:
       - "POSTGRES_PASSWORD=admin"
 
   airflow:
     container_name: airflow_cont
-    image: apache/airflow:latest-python3.9
+    image: airflow_custom:1.0
     ports:
       - "8080:8080"
+    environment:
+      - AIRFLOW__CORE__DAGS_FOLDER=/opt/src/Airflow/dags
+      - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/src/Airflow/logs
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow_user:admin@db:5432/airflow_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
     volumes:
       - type: bind
-        source: "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow"
-        target: "/opt/airflow"
+        source: "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src"
+        target: "/opt/src"
     depends_on:
       - db
     command: standalone
     
-
-
+volumes:
+  postgres_vol:
+    
