@@ -1,0 +1,7 @@
+[2024-12-19T23:58:47.369+0530] {processor.py:186} INFO - Started process (PID=66824) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_python_dop_operator_3.py
+[2024-12-19T23:58:47.370+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2024-12-19T23:58:47.371+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:58:47.371+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_python_dop_operator_3.py
+[2024-12-19T23:58:47.418+0530] {processor.py:925} INFO - DAG(s) 'example_branch_dop_operator_v3' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_python_dop_operator_3.py
+[2024-12-19T23:58:47.732+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:58:47.732+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-19T23:58:47.759+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:58:47.759+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2024-12-19 18:27:00+00:00, run_after=2024-12-19 18:28:00+00:00
+[2024-12-19T23:58:47.785+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_python_dop_operator_3.py took 0.420 seconds

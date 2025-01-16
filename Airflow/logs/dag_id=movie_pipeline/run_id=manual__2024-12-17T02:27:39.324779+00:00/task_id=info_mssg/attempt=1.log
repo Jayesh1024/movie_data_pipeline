@@ -1,0 +1,30 @@
+[2024-12-17T07:58:03.545+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-17T07:58:03.557+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.info_mssg manual__2024-12-17T02:27:39.324779+00:00 [queued]>
+[2024-12-17T07:58:03.566+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.info_mssg manual__2024-12-17T02:27:39.324779+00:00 [queued]>
+[2024-12-17T07:58:03.567+0530] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-17T07:58:03.582+0530] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): info_mssg> on 2024-12-17 02:27:39.324779+00:00
+[2024-12-17T07:58:03.590+0530] {logging_mixin.py:190} WARNING - /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=34006) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-17T07:58:03.591+0530] {standard_task_runner.py:72} INFO - Started process 34013 to run task
+[2024-12-17T07:58:03.592+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'info_mssg', 'manual__2024-12-17T02:27:39.324779+00:00', '--job-id', '154', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T/tmpfm4bh84g']
+[2024-12-17T07:58:03.595+0530] {standard_task_runner.py:105} INFO - Job 154: Subtask info_mssg
+[2024-12-17T07:58:03.709+0530] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.info_mssg manual__2024-12-17T02:27:39.324779+00:00 [running]> on host Jayeshs-MacBook-Air.local
+[2024-12-17T07:58:03.834+0530] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='info_mssg' AIRFLOW_CTX_EXECUTION_DATE='2024-12-17T02:27:39.324779+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-17T02:27:39.324779+00:00'
+[2024-12-17T07:58:03.836+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-17T07:58:03.837+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-17T07:58:03.838+0530] {logging_mixin.py:190} INFO - Current task name:info_mssg state:running start_date:2024-12-17 02:28:03.558364+00:00
+[2024-12-17T07:58:03.839+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline and current dag run status:running
+[2024-12-17T07:58:03.840+0530] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-17T07:58:03.842+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T
+[2024-12-17T07:58:03.843+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', "echo 'extraction start'"]
+[2024-12-17T07:58:03.852+0530] {subprocess.py:99} INFO - Output:
+[2024-12-17T07:58:03.856+0530] {subprocess.py:106} INFO - extraction start
+[2024-12-17T07:58:03.857+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-12-17T07:58:03.884+0530] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-17T07:58:03.885+0530] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=info_mssg, run_id=manual__2024-12-17T02:27:39.324779+00:00, execution_date=20241217T022739, start_date=20241217T022803, end_date=20241217T022803
+[2024-12-17T07:58:03.896+0530] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-17T07:58:03.897+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-17T07:58:03.899+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline queued_at:2024-12-17 02:27:39.341078+00:00
+[2024-12-17T07:58:03.900+0530] {logging_mixin.py:190} INFO - Task hostname:Jayeshs-MacBook-Air.local operator:BashOperator
+[2024-12-17T07:58:03.928+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-17T07:58:03.952+0530] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-17T07:58:03.952+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

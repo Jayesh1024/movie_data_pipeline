@@ -1,0 +1,35 @@
+[2025-01-10T08:01:59.319+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-10T08:01:59.441+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T08:01:59.522+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T08:01:59.536+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-10T08:01:59.611+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_run_dir> on 2025-01-09 00:00:00+00:00
+[2025-01-10T08:01:59.629+0000] {standard_task_runner.py:72} INFO - Started process 181 to run task
+[2025-01-10T08:01:59.651+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'create_run_dir', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmplqoncw14']
+[2025-01-10T08:01:59.676+0000] {standard_task_runner.py:105} INFO - Job 149: Subtask create_run_dir
+[2025-01-10T08:02:00.025+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.create_run_dir scheduled__2025-01-09T00:00:00+00:00 [running]> on host 9981e2da1c0c
+[2025-01-10T08:02:01.354+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='create_run_dir' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-10T08:02:01.397+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-10T08:02:01.479+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-10T08:02:01.734+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-10T08:02:01.750+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=create_run_dir, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250110T080159, end_date=20250110T080201
+[2025-01-10T08:02:02.024+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-10T08:02:02.384+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-10T08:02:02.403+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-10T15:05:37.772+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-10T15:05:37.875+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T15:05:37.918+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T15:05:37.921+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-10T15:05:38.009+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_run_dir> on 2025-01-09 00:00:00+00:00
+[2025-01-10T15:05:38.031+0000] {standard_task_runner.py:72} INFO - Started process 1317 to run task
+[2025-01-10T15:05:38.072+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'create_run_dir', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmps6lxc_52']
+[2025-01-10T15:05:38.091+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask create_run_dir
+[2025-01-10T15:05:38.676+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.create_run_dir scheduled__2025-01-09T00:00:00+00:00 [running]> on host 8bfb9ef5b0f1
+[2025-01-10T15:05:40.561+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='create_run_dir' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-10T15:05:40.668+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-10T15:05:40.727+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-10T15:05:41.075+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-10T15:05:41.087+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=create_run_dir, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250110T150537, end_date=20250110T150541
+[2025-01-10T15:05:41.890+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-10T15:05:42.573+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-10T15:05:42.611+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-10T15:05:43.073+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics

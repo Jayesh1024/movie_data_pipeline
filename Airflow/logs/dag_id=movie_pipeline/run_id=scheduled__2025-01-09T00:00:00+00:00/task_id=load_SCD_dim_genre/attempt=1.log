@@ -1,0 +1,240 @@
+[2025-01-13T13:54:52.094+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-13T13:54:52.782+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.load_SCD_dim_genre scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:52.970+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.load_SCD_dim_genre scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:53.078+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-13T13:54:53.544+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): load_SCD_dim_genre> on 2025-01-09 00:00:00+00:00
+[2025-01-13T13:54:53.753+0000] {standard_task_runner.py:72} INFO - Started process 48002 to run task
+[2025-01-13T13:54:53.883+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'load_SCD_dim_genre', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp36en7zti']
+[2025-01-13T13:54:53.887+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask load_SCD_dim_genre
+[2025-01-13T13:54:55.061+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.load_SCD_dim_genre scheduled__2025-01-09T00:00:00+00:00 [running]> on host 8bfb9ef5b0f1
+[2025-01-13T13:55:00.923+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='load_SCD_dim_genre' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-13T13:55:01.257+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-13T13:55:01.510+0000] {sql.py:278} INFO - Executing: WITH source_target_join AS(
+    SELECT
+        s.genre_id genre_id_s,
+        s.genre_name genre_name_s,
+        s.top_movie_numofrating top_movie_numofrating_s,
+        s.top_movie_us_boxoffice top_movie_us_boxoffice_s,
+        s.total_movies total_movies_s,
+        s.extracted_at extracted_at_s,
+        s.effective_from effective_from_s,
+        t.id id_t,
+        t.genre_id genre_id_t,
+        t.genre_name genre_name_t,
+        t.total_movies total_movies_t,
+        t.top_movie_numofrating top_movie_numofrating_t,
+        t.top_movie_us_boxoffice top_movie_us_boxoffice_t,
+        t.extracted_at extracted_at_t,
+        t.effective_from effective_from_t,
+        t.expiration_date expiration_date_t,
+        t.active_inactive active_inactive_t
+    FROM jayesh.dim_genre_staging s
+    LEFT JOIN (SELECT * FROM jayesh.dim_genre WHERE active_inactive='active') t
+    ON s.genre_id = t.genre_id
+),
+new_records AS(
+    SELECT
+        genre_id_s,
+        genre_name_s,
+        total_movies_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        extracted_at_s,
+        effective_from_s
+    FROM source_target_join
+    WHERE genre_id_t is null
+),
+scd2_records AS(
+    SELECT
+        genre_id_s,
+        genre_name_s,
+        total_movies_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        extracted_at_s,
+        effective_from_s
+    FROM source_target_join
+    WHERE
+        genre_id_t is not null AND
+        (
+            top_movie_numofrating_s <> top_movie_numofrating_t OR
+            top_movie_us_boxoffice_s <> top_movie_us_boxoffice_t
+        )
+),
+scd1_records AS(
+    SELECT
+        genre_id_s,
+        genre_name_s,
+        total_movies_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        extracted_at_s,
+        effective_from_s
+    FROM source_target_join
+    WHERE
+        genre_id_t is not null AND
+        (
+            total_movies_s <> total_movies_t AND
+            top_movie_numofrating_s = top_movie_numofrating_t AND
+            top_movie_us_boxoffice_s = top_movie_us_boxoffice_t            
+        )
+),
+update_scd2 AS(
+    UPDATE jayesh.dim_genre as g
+    SET
+        expiration_date = scd.effective_from_s,
+        active_inactive = 'inactive'
+    FROM scd2_records as scd
+    WHERE
+        g.genre_id IN (scd.genre_id_s) AND
+        g.active_inactive = 'active'
+    RETURNING *
+),
+insert_new_and_scd2 AS(
+    INSERT INTO jayesh.dim_genre(
+        genre_id,
+        genre_name,
+        total_movies,
+        top_movie_numofrating,
+        top_movie_us_boxoffice,
+        extracted_at,
+        effective_from
+    )
+    SELECT * FROM new_records
+    UNION
+    SELECT * FROM scd2_records
+    RETURNING *
+),
+update_scd1 AS(
+    UPDATE jayesh.dim_genre as g
+    SET
+        extracted_at = scd.extracted_at_s,
+        total_movies = scd.total_movies_s
+    FROM scd1_records as scd
+    WHERE
+        g.genre_id IN (scd.genre_id_s) AND
+        g.active_inactive = 'active'
+    RETURNING *
+)
+
+SELECT 1;
+
+TRUNCATE dim_genre_staging;
+[2025-01-13T13:55:03.775+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:05.702+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:08.740+0000] {sql.py:553} INFO - Running statement: WITH source_target_join AS(
+    SELECT
+        s.genre_id genre_id_s,
+        s.genre_name genre_name_s,
+        s.top_movie_numofrating top_movie_numofrating_s,
+        s.top_movie_us_boxoffice top_movie_us_boxoffice_s,
+        s.total_movies total_movies_s,
+        s.extracted_at extracted_at_s,
+        s.effective_from effective_from_s,
+        t.id id_t,
+        t.genre_id genre_id_t,
+        t.genre_name genre_name_t,
+        t.total_movies total_movies_t,
+        t.top_movie_numofrating top_movie_numofrating_t,
+        t.top_movie_us_boxoffice top_movie_us_boxoffice_t,
+        t.extracted_at extracted_at_t,
+        t.effective_from effective_from_t,
+        t.expiration_date expiration_date_t,
+        t.active_inactive active_inactive_t
+    FROM jayesh.dim_genre_staging s
+    LEFT JOIN (SELECT * FROM jayesh.dim_genre WHERE active_inactive='active') t
+    ON s.genre_id = t.genre_id
+),
+new_records AS(
+    SELECT
+        genre_id_s,
+        genre_name_s,
+        total_movies_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        extracted_at_s,
+        effective_from_s
+    FROM source_target_join
+    WHERE genre_id_t is null
+),
+scd2_records AS(
+    SELECT
+        genre_id_s,
+        genre_name_s,
+        total_movies_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        extracted_at_s,
+        effective_from_s
+    FROM source_target_join
+    WHERE
+        genre_id_t is not null AND
+        (
+            top_movie_numofrating_s <> top_movie_numofrating_t OR
+            top_movie_us_boxoffice_s <> top_movie_us_boxoffice_t
+        )
+),
+scd1_records AS(
+    SELECT
+        genre_id_s,
+        genre_name_s,
+        total_movies_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        extracted_at_s,
+        effective_from_s
+    FROM source_target_join
+    WHERE
+        genre_id_t is not null AND
+        (
+            total_movies_s <> total_movies_t AND
+            top_movie_numofrating_s = top_movie_numofrating_t AND
+            top_movie_us_boxoffice_s = top_movie_us_boxoffice_t            
+        )
+),
+update_scd2 AS(
+    UPDATE jayesh.dim_genre as g
+    SET
+        expiration_date = scd.effective_from_s,
+        active_inactive = 'inactive'
+    FROM scd2_records as scd
+    WHERE
+        g.genre_id IN (scd.genre_id_s) AND
+        g.active_inactive = 'active'
+    RETURNING *
+),
+insert_new_and_scd2 AS(
+    INSERT INTO jayesh.dim_genre(
+        genre_id,
+        genre_name,
+        total_movies,
+        top_movie_numofrating,
+        top_movie_us_boxoffice,
+        extracted_at,
+        effective_from
+    )
+    SELECT * FROM new_records
+    UNION
+    SELECT * FROM scd2_records
+    RETURNING *
+),
+update_scd1 AS(
+    UPDATE jayesh.dim_genre as g
+    SET
+        extracted_at = scd.extracted_at_s,
+        total_movies = scd.total_movies_s
+    FROM scd1_records as scd
+    WHERE
+        g.genre_id IN (scd.genre_id_s) AND
+        g.active_inactive = 'active'
+    RETURNING *
+)
+
+SELECT 1;
+
+TRUNCATE dim_genre_staging;, parameters: None
+[2025-01-13T13:55:09.578+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-13T13:55:09.601+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=load_SCD_dim_genre, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250113T135452, end_date=20250113T135509
+[2025-01-13T13:55:11.377+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-13T13:55:11.787+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-13T13:55:11.831+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,5 @@
+[2024-12-19T23:59:02.699+0530] {processor.py:186} INFO - Started process (PID=66839) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_operator.py
+[2024-12-19T23:59:02.700+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_operator.py for tasks to queue
+[2024-12-19T23:59:02.702+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:59:02.702+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_operator.py
+[2024-12-19T23:59:02.730+0530] {processor.py:927} WARNING - No viable dags retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_operator.py
+[2024-12-19T23:59:02.860+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_branch_operator.py took 0.166 seconds

@@ -1,0 +1,30 @@
+[2024-12-15T07:00:22.133+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-15T07:00:22.142+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape scheduled__2024-12-14T01:30:00+00:00 [queued]>
+[2024-12-15T07:00:22.149+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape scheduled__2024-12-14T01:30:00+00:00 [queued]>
+[2024-12-15T07:00:22.149+0530] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-15T07:00:22.162+0530] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): scrape> on 2024-12-14 01:30:00+00:00
+[2024-12-15T07:00:22.168+0530] {logging_mixin.py:190} WARNING - /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=42463) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-15T07:00:22.170+0530] {standard_task_runner.py:72} INFO - Started process 42469 to run task
+[2024-12-15T07:00:22.171+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape', 'scheduled__2024-12-14T01:30:00+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T/tmp1vn5f9z6']
+[2024-12-15T07:00:22.174+0530] {standard_task_runner.py:105} INFO - Job 80: Subtask scrape
+[2024-12-15T07:00:22.224+0530] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape scheduled__2024-12-14T01:30:00+00:00 [running]> on host Jayeshs-MacBook-Air.local
+[2024-12-15T07:00:22.290+0530] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape' AIRFLOW_CTX_EXECUTION_DATE='2024-12-14T01:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-14T01:30:00+00:00'
+[2024-12-15T07:00:22.292+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-15T07:00:22.293+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-15T07:00:22.293+0530] {logging_mixin.py:190} INFO - Current task name:scrape state:running start_date:2024-12-15 01:30:22.143350+00:00
+[2024-12-15T07:00:22.294+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline and current dag run status:running
+[2024-12-15T07:00:22.294+0530] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-15T07:00:22.296+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T
+[2024-12-15T07:00:22.296+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', 'python controller.py --run_date 2024-12-14']
+[2024-12-15T07:00:22.303+0530] {subprocess.py:99} INFO - Output:
+[2024-12-15T07:00:24.541+0530] {subprocess.py:106} INFO - 2024-12-14
+[2024-12-15T07:00:24.733+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-12-15T07:00:24.753+0530] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-15T07:00:24.754+0530] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=scrape, run_id=scheduled__2024-12-14T01:30:00+00:00, execution_date=20241214T013000, start_date=20241215T013022, end_date=20241215T013024
+[2024-12-15T07:00:24.769+0530] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-15T07:00:24.769+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-15T07:00:24.770+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline queued_at:2024-12-15 01:30:04.059671+00:00
+[2024-12-15T07:00:24.770+0530] {logging_mixin.py:190} INFO - Task hostname:Jayeshs-MacBook-Air.local operator:BashOperator
+[2024-12-15T07:00:24.803+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-15T07:00:24.826+0530] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-15T07:00:24.826+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

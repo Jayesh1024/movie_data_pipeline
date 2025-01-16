@@ -1,0 +1,186 @@
+[2024-12-28T14:43:10.035+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-28T14:43:11.813+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-28T14:43:11.906+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-28T14:43:11.933+0000] {taskinstance.py:2866} INFO - Starting attempt 4 of 4
+[2024-12-28T14:43:12.026+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_filmmakers> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-28T14:43:12.037+0000] {standard_task_runner.py:72} INFO - Started process 7295 to run task
+[2024-12-28T14:43:12.081+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_filmmakers', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '98', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmptcdqddhw']
+[2024-12-28T14:43:12.136+0000] {standard_task_runner.py:105} INFO - Job 98: Subtask scrape_filmmakers
+[2024-12-28T14:43:13.291+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [running]> on host e0a3add0f1ca
+[2024-12-28T14:43:14.290+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_filmmakers' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-28T14:43:14.316+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-28T14:43:30.134+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 0 for movie_id : tt13186482 and filmmaker_id: nm1503575
+[2024-12-28T14:44:53.625+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 1 for movie_id : tt13186482 and filmmaker_id: nm0622288
+[2024-12-28T14:45:37.820+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 2 for movie_id : tt13186482 and filmmaker_id: nm0941314
+[2024-12-28T14:46:07.467+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 3 for movie_id : tt13186482 and filmmaker_id: nm0575293
+[2024-12-28T14:46:37.272+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 4 for movie_id : tt13186482 and filmmaker_id: nm7543974
+[2024-12-28T14:47:06.947+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 5 for movie_id : tt13186482 and filmmaker_id: nm5123156
+[2024-12-28T14:47:43.065+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 6 for movie_id : tt13186482 and filmmaker_id: nm2274707
+[2024-12-28T14:48:08.263+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 0 for movie_id : tt5040012 and filmmaker_id: nm3211470
+[2024-12-28T14:48:35.922+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 1 for movie_id : tt5040012 and filmmaker_id: nm3211470
+[2024-12-28T14:49:04.577+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 2 for movie_id : tt5040012 and filmmaker_id: nm0301961
+[2024-12-28T14:50:06.715+0000] {job.py:229} INFO - Heartbeat recovered after 16.33 seconds
+[2024-12-28T14:50:20.018+0000] {job.py:229} INFO - Heartbeat recovered after 17.11 seconds
+[2024-12-28T14:50:44.993+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 3 for movie_id : tt5040012 and filmmaker_id: nm0831290
+[2024-12-28T14:51:30.138+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 4 for movie_id : tt5040012 and filmmaker_id: nm6675440
+[2024-12-28T14:51:56.689+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 5 for movie_id : tt5040012 and filmmaker_id: nm0396558
+[2024-12-28T14:52:23.686+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 6 for movie_id : tt5040012 and filmmaker_id: nm0803889
+[2024-12-28T14:52:52.374+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 0 for movie_id : tt18259086 and filmmaker_id: nm1733778
+[2024-12-28T14:53:18.308+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 1 for movie_id : tt18259086 and filmmaker_id: nm1352459
+[2024-12-28T14:53:40.926+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 2 for movie_id : tt18259086 and filmmaker_id: nm1351254
+[2024-12-28T14:54:04.151+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 3 for movie_id : tt18259086 and filmmaker_id: nm4465847
+[2024-12-28T14:54:25.674+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 4 for movie_id : tt18259086 and filmmaker_id: nm0000120
+[2024-12-28T14:55:00.473+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 5 for movie_id : tt18259086 and filmmaker_id: nm2355635
+[2024-12-28T14:55:31.581+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 6 for movie_id : tt18259086 and filmmaker_id: nm0000206
+[2024-12-28T14:56:11.971+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 0 for movie_id : tt11563598 and filmmaker_id: nm0003506
+[2024-12-28T14:56:46.670+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 1 for movie_id : tt11563598 and filmmaker_id: nm0003506
+[2024-12-28T14:57:23.569+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 2 for movie_id : tt11563598 and filmmaker_id: nm0168379
+[2024-12-28T14:57:50.548+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 3 for movie_id : tt11563598 and filmmaker_id: nm2374778
+[2024-12-28T14:58:17.690+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 4 for movie_id : tt11563598 and filmmaker_id: nm3154303
+[2024-12-28T14:58:53.151+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 5 for movie_id : tt11563598 and filmmaker_id: nm0001570
+[2024-12-28T14:59:43.781+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 6 for movie_id : tt11563598 and filmmaker_id: nm1102577
+[2024-12-28T15:00:19.223+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 0 for movie_id : tt1262426 and filmmaker_id: nm0160840
+[2024-12-28T15:00:50.204+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 1 for movie_id : tt1262426 and filmmaker_id: nm0392848
+[2024-12-28T15:01:11.036+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 2 for movie_id : tt1262426 and filmmaker_id: nm1401416
+[2024-12-28T15:01:38.338+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 3 for movie_id : tt1262426 and filmmaker_id: nm0536579
+[2024-12-28T15:02:06.245+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 4 for movie_id : tt1262426 and filmmaker_id: nm7248827
+[2024-12-28T15:02:31.526+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 5 for movie_id : tt1262426 and filmmaker_id: nm3812858
+[2024-12-28T15:02:57.461+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 6 for movie_id : tt1262426 and filmmaker_id: nm0000156
+[2024-12-28T15:03:26.313+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 0 for movie_id : tt13622970 and filmmaker_id: nm3989471
+[2024-12-28T15:03:55.111+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 1 for movie_id : tt13622970 and filmmaker_id: nm2911364
+[2024-12-28T15:04:22.014+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 2 for movie_id : tt13622970 and filmmaker_id: nm2834849
+[2024-12-28T15:04:51.606+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 3 for movie_id : tt13622970 and filmmaker_id: nm1158544
+[2024-12-28T15:05:23.179+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 4 for movie_id : tt13622970 and filmmaker_id: nm2834849
+[2024-12-28T15:05:50.715+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 5 for movie_id : tt13622970 and filmmaker_id: nm2414279
+[2024-12-28T15:06:23.974+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 6 for movie_id : tt13622970 and filmmaker_id: nm7635388
+[2024-12-28T15:07:11.845+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 7 for movie_id : tt13622970 and filmmaker_id: nm0425005
+[2024-12-28T15:09:06.140+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 8 for movie_id : tt13622970 and filmmaker_id: nm12533314
+[2024-12-28T15:11:00.272+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 0 for movie_id : tt6133444 and filmmaker_id: nm1121126
+[2024-12-28T15:13:18.596+0000] {job.py:229} INFO - Heartbeat recovered after 10.92 seconds
+[2024-12-28T15:14:31.512+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 1 for movie_id : tt6133444 and filmmaker_id: nm1503575
+[2024-12-28T15:18:17.770+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 2 for movie_id : tt6133444 and filmmaker_id: nm3629113
+[2024-12-28T15:20:16.990+0000] {job.py:229} INFO - Heartbeat recovered after 12.54 seconds
+[2024-12-28T15:21:43.703+0000] {job.py:229} INFO - Heartbeat recovered after 10.54 seconds
+[2024-12-28T15:23:09.918+0000] {job.py:229} INFO - Heartbeat recovered after 13.49 seconds
+[2024-12-28T15:25:10.181+0000] {extract.py:187} ERROR - Failed movie iteration 6 and filmamker iteration 2 for movie_id : tt6133444 and filmmaker_id: nm3629113
+[2024-12-28T15:26:38.073+0000] {extract.py:188} ERROR - HTTPConnectionPool(host='localhost', port=42619): Read timed out. (read timeout=120)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.9/socket.py", line 716, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/src/extract.py", line 173, in movie_cast_filmmakers_extract
+    driver.get(link)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 358, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=42619): Read timed out. (read timeout=120)
+[2024-12-28T15:34:51.285+0000] {local_task_job_runner.py:228} ERROR - Heartbeat time limit exceeded!
+[2024-12-28T15:34:56.767+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-28T15:34:57.912+0000] {process_utils.py:132} INFO - Sending 15 to group 7295. PIDs of all processes in the group: [7328, 7334, 7338, 7339, 7358, 7360, 7412, 7675, 7363, 7415, 7483, 12068, 12107, 7410, 7295]
+[2024-12-28T15:34:57.949+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 7295
+[2024-12-28T15:34:58.301+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-28T15:34:58.717+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7363, status='terminated', started='14:43:17') (7363) terminated with exit code None
+[2024-12-28T15:34:58.725+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7415, status='terminated', started='14:43:20') (7415) terminated with exit code None
+[2024-12-28T15:34:58.822+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=12107, status='terminated', started='15:22:36') (12107) terminated with exit code None
+[2024-12-28T15:34:58.901+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7360, status='terminated', started='14:43:15') (7360) terminated with exit code None
+[2024-12-28T15:34:59.423+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=12068, status='terminated', started='15:21:13') (12068) terminated with exit code None
+[2024-12-28T15:34:59.567+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7483, status='terminated', started='14:43:26') (7483) terminated with exit code None
+[2024-12-28T15:35:00.234+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7338, status='terminated', started='14:43:15') (7338) terminated with exit code None
+[2024-12-28T15:35:00.264+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7410, status='terminated', started='14:43:18') (7410) terminated with exit code None
+[2024-12-28T15:35:00.291+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7334, status='terminated', started='14:43:15') (7334) terminated with exit code None
+[2024-12-28T15:35:00.293+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7675, status='terminated', started='14:45:06') (7675) terminated with exit code None
+[2024-12-28T15:35:00.310+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7358, status='terminated', started='14:43:15') (7358) terminated with exit code None
+[2024-12-28T15:35:00.316+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7412, status='terminated', started='14:43:19') (7412) terminated with exit code None
+[2024-12-28T15:35:00.489+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7339, status='terminated', started='14:43:15') (7339) terminated with exit code None
+[2024-12-28T15:35:00.453+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/src/extract.py", line 190, in movie_cast_filmmakers_extract
+    driver.close()
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 495, in close
+    self.execute(Command.CLOSE)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 77, in request
+    return self.request_encode_url(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 99, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.9/socket.py", line 716, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-12-28T15:35:00.712+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=scrape_filmmakers, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241228T144311, end_date=20241228T153500
+[2024-12-28T15:35:00.935+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-28T15:35:01.186+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7328, status='terminated', started='14:43:15') (7328) terminated with exit code None
+[2024-12-28T15:35:01.190+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7295, status='terminated', exitcode=2, started='14:43:11') (7295) terminated with exit code 2

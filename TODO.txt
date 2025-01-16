@@ -1,3 +1,11 @@
-1. Orchestrate the workflow using Airflow
-2. Define data quality metrics at different points in the pipeline
-3. Track and set up alerting for those metrics for monitoring the pipeline health.
+load data to s3
+run databricks notebook using spark
+test the integrations of s3,databricks and rds using airflow
+
+
+integrate spark workflow in airflow dag
+Error handling in parse.py and extract.py
+email when any task fails.
+Orchestrate sql workflow in airflow dag
+track and setup monitoring and alerting for data quality metrics.
+deploy to cloud in a single ec2 instance (no distributed environment needed, keep it simple)

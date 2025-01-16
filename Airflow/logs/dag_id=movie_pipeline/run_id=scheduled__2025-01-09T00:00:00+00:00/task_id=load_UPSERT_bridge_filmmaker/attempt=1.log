@@ -1,0 +1,68 @@
+[2025-01-13T13:54:53.627+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-13T13:54:54.731+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.load_UPSERT_bridge_filmmaker scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:55.046+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.load_UPSERT_bridge_filmmaker scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:55.071+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-13T13:54:55.283+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): load_UPSERT_bridge_filmmaker> on 2025-01-09 00:00:00+00:00
+[2025-01-13T13:54:55.389+0000] {standard_task_runner.py:72} INFO - Started process 48006 to run task
+[2025-01-13T13:54:55.458+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'load_UPSERT_bridge_filmmaker', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpri2l6vwj']
+[2025-01-13T13:54:55.484+0000] {standard_task_runner.py:105} INFO - Job 14: Subtask load_UPSERT_bridge_filmmaker
+[2025-01-13T13:55:02.959+0000] {job.py:229} INFO - Heartbeat recovered after 11.10 seconds
+[2025-01-13T13:55:03.565+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.load_UPSERT_bridge_filmmaker scheduled__2025-01-09T00:00:00+00:00 [running]> on host 8bfb9ef5b0f1
+[2025-01-13T13:55:11.866+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='load_UPSERT_bridge_filmmaker' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-13T13:55:11.870+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-13T13:55:11.879+0000] {sql.py:278} INFO - Executing: MERGE INTO jayesh.bridge_movie_filmmaker t
+USING jayesh.bridge_movie_filmmaker_staging s
+ON
+    t.movie_id = s.movie_id AND
+    t.filmmaker_id = s.filmmaker_id AND
+    t.role = s.role
+
+WHEN MATCHED THEN
+    DO NOTHING
+    
+WHEN NOT MATCHED THEN
+    INSERT(
+        movie_id,
+        filmmaker_id,
+        role,
+        effective_from
+    )
+    VALUES(
+        s.movie_id,
+        s.filmmaker_id,
+        s.role,
+        s.effective_from
+    );
+
+TRUNCATE bridge_movie_filmmaker_staging;
+[2025-01-13T13:55:12.064+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:12.170+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:12.583+0000] {sql.py:553} INFO - Running statement: MERGE INTO jayesh.bridge_movie_filmmaker t
+USING jayesh.bridge_movie_filmmaker_staging s
+ON
+    t.movie_id = s.movie_id AND
+    t.filmmaker_id = s.filmmaker_id AND
+    t.role = s.role
+
+WHEN MATCHED THEN
+    DO NOTHING
+    
+WHEN NOT MATCHED THEN
+    INSERT(
+        movie_id,
+        filmmaker_id,
+        role,
+        effective_from
+    )
+    VALUES(
+        s.movie_id,
+        s.filmmaker_id,
+        s.role,
+        s.effective_from
+    );
+
+TRUNCATE bridge_movie_filmmaker_staging;, parameters: None
+[2025-01-13T13:55:12.765+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-13T13:55:12.770+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=load_UPSERT_bridge_filmmaker, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250113T135454, end_date=20250113T135512
+[2025-01-13T13:55:12.917+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-13T13:55:13.028+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

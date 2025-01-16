@@ -1,0 +1,191 @@
+[2025-01-10T11:48:48.646+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-10T11:48:48.850+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T11:48:49.000+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T11:48:49.001+0000] {taskinstance.py:2866} INFO - Starting attempt 3 of 1
+[2025-01-10T11:48:49.127+0000] {taskinstance.py:2889} INFO - Executing <Task(DatabricksNotebookOperator): run_databricks_notebook> on 2025-01-09 00:00:00+00:00
+[2025-01-10T11:48:49.162+0000] {standard_task_runner.py:72} INFO - Started process 182 to run task
+[2025-01-10T11:48:49.230+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'run_databricks_notebook', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpy10drvpa']
+[2025-01-10T11:48:49.406+0000] {standard_task_runner.py:105} INFO - Job 189: Subtask run_databricks_notebook
+[2025-01-10T11:48:50.397+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [running]> on host 4c5be024ee58
+[2025-01-10T11:48:51.619+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='run_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-10T11:48:51.652+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-10T11:48:51.849+0000] {base.py:84} INFO - Retrieving connection 'databricks_default'
+[2025-01-10T11:48:53.126+0000] {databricks.py:1098} INFO - Check the job run in Databricks: https://dbc-642e039b-9d51.cloud.databricks.com/?o=2557426697257658#job/822685509451187/run/855116176205577
+[2025-01-10T11:48:53.915+0000] {databricks.py:1171} INFO - Check the task run in Databricks: https://dbc-642e039b-9d51.cloud.databricks.com/?o=2557426697257658#job/822685509451187/run/855116176205577
+[2025-01-10T11:48:53.916+0000] {databricks.py:1173} INFO - Current state of the the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:48:59.122+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:04.242+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:09.486+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:14.685+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:19.825+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:24.943+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:30.252+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:35.751+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:40.997+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:46.632+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:51.988+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:49:57.252+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:02.488+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:07.638+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:12.861+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:18.042+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:23.409+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:28.626+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:33.878+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:39.092+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:44.630+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:49.760+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:50:55.146+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:00.452+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:05.599+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:11.087+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:16.469+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:21.765+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:27.151+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:32.349+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:37.965+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:43.205+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:48.468+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:51:54.740+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:00.573+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:06.042+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:11.220+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:16.939+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:22.774+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:27.962+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:33.160+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:38.299+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:43.491+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:48.698+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:54.230+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:52:59.565+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:04.855+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:10.044+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:15.194+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:20.393+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:25.714+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:30.888+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:35.995+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:41.117+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:46.895+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:52.157+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:53:57.342+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:02.533+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:07.684+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:13.559+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:18.742+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:23.860+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:29.092+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:34.198+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:39.347+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T11:54:44.506+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T11:54:49.647+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T11:54:54.774+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T11:54:59.906+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T11:55:05.050+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T11:55:10.250+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T11:55:15.463+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T11:55:20.561+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is TERMINATED
+[2025-01-10T11:55:20.570+0000] {databricks.py:1116} INFO - Task succeeded. Final state SUCCESS.
+[2025-01-10T11:55:20.943+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-10T11:55:20.974+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=run_databricks_notebook, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250110T114848, end_date=20250110T115520
+[2025-01-10T11:55:21.158+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-10T11:55:21.235+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-01-10T11:55:21.387+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-10T11:55:21.453+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-10T15:38:11.800+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-10T15:38:11.867+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T15:38:11.887+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T15:38:11.889+0000] {taskinstance.py:2866} INFO - Starting attempt 3 of 3
+[2025-01-10T15:38:11.916+0000] {taskinstance.py:2889} INFO - Executing <Task(DatabricksNotebookOperator): run_databricks_notebook> on 2025-01-09 00:00:00+00:00
+[2025-01-10T15:38:11.929+0000] {standard_task_runner.py:72} INFO - Started process 1975 to run task
+[2025-01-10T15:38:11.953+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'run_databricks_notebook', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpd_fb111x']
+[2025-01-10T15:38:11.961+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask run_databricks_notebook
+[2025-01-10T15:38:12.142+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [running]> on host 8bfb9ef5b0f1
+[2025-01-10T15:38:12.578+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='run_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-10T15:38:12.583+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-10T15:38:12.635+0000] {base.py:84} INFO - Retrieving connection 'databricks_default'
+[2025-01-10T15:38:13.756+0000] {databricks.py:1098} INFO - Check the job run in Databricks: https://dbc-642e039b-9d51.cloud.databricks.com/?o=2557426697257658#job/7827041043727/run/782021575000901
+[2025-01-10T15:38:14.349+0000] {databricks.py:1171} INFO - Check the task run in Databricks: https://dbc-642e039b-9d51.cloud.databricks.com/?o=2557426697257658#job/7827041043727/run/782021575000901
+[2025-01-10T15:38:14.370+0000] {databricks.py:1173} INFO - Current state of the the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:19.528+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:24.723+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:29.938+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:35.079+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:40.214+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:45.310+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:50.431+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:38:55.535+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:00.634+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:05.757+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:10.868+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:15.977+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:21.090+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:26.208+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:31.329+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:36.527+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:41.650+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:46.754+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:51.849+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:39:56.945+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:02.055+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:07.223+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:12.414+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:17.610+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:22.853+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:28.068+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:33.216+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:38.311+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:43.426+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:48.665+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:53.918+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:40:59.021+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:04.119+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:09.217+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:14.469+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:19.581+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:24.740+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:29.855+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:34.957+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:40.075+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:45.169+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:50.302+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:41:55.417+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:00.659+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:05.769+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:10.864+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:16.115+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:21.402+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:26.560+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:31.671+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:36.803+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:41.902+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:47.002+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:52.118+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:42:57.222+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:02.413+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:07.541+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:12.754+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:17.930+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:23.039+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:28.141+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:33.339+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:38.454+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:43.608+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:48.734+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:43:53.839+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:43:58.965+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:04.081+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:09.172+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:14.364+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:19.470+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:24.569+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:29.669+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:34.795+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is RUNNING
+[2025-01-10T15:44:39.899+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is TERMINATED
+[2025-01-10T15:44:39.901+0000] {databricks.py:1116} INFO - Task succeeded. Final state SUCCESS.
+[2025-01-10T15:44:39.933+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-10T15:44:39.935+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=run_databricks_notebook, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250110T153811, end_date=20250110T154439
+[2025-01-10T15:44:39.991+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-10T15:44:40.084+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-10T15:44:40.090+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

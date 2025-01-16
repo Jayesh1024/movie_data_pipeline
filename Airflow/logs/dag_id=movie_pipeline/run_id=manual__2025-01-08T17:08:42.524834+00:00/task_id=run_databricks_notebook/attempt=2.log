@@ -1,0 +1,123 @@
+[2025-01-08T17:19:12.136+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-08T17:19:12.188+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook manual__2025-01-08T17:08:42.524834+00:00 [queued]>
+[2025-01-08T17:19:12.215+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook manual__2025-01-08T17:08:42.524834+00:00 [queued]>
+[2025-01-08T17:19:12.217+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-08T17:19:12.264+0000] {taskinstance.py:2889} INFO - Executing <Task(DatabricksNotebookOperator): run_databricks_notebook> on 2025-01-08 17:08:42.524834+00:00
+[2025-01-08T17:19:12.275+0000] {standard_task_runner.py:72} INFO - Started process 585 to run task
+[2025-01-08T17:19:12.282+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'run_databricks_notebook', 'manual__2025-01-08T17:08:42.524834+00:00', '--job-id', '125', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpgid7pv7s']
+[2025-01-08T17:19:12.290+0000] {standard_task_runner.py:105} INFO - Job 125: Subtask run_databricks_notebook
+[2025-01-08T17:19:12.444+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.run_databricks_notebook manual__2025-01-08T17:08:42.524834+00:00 [running]> on host d92005d21524
+[2025-01-08T17:19:12.705+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='run_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T17:08:42.524834+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-08T17:08:42.524834+00:00'
+[2025-01-08T17:19:12.710+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-08T17:19:12.716+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-01-08T17:19:12.719+0000] {base.py:84} INFO - Retrieving connection 'databricks_default'
+[2025-01-08T17:19:12.724+0000] {databricks_base.py:651} INFO - Using basic auth.
+[2025-01-08T17:19:12.728+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1215, in execute
+    self._launch_job(context=context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1096, in _launch_job
+    self.databricks_run_id = self._hook.submit_run(run_json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks.py", line 263, in submit_run
+    response = self._do_api_call(SUBMIT_RUN_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 667, in _do_api_call
+    for attempt in self._get_retry_object():
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/usr/local/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 676, in _do_api_call
+    response = request_func(
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 697, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for 'databrickshttpsdbc-642e039b-9d51.cloud.databricks.com/:///api/2.1/jobs/runs/submit'
+[2025-01-08T17:19:12.763+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=run_databricks_notebook, run_id=manual__2025-01-08T17:08:42.524834+00:00, execution_date=20250108T170842, start_date=20250108T171912, end_date=20250108T171912
+[2025-01-08T17:19:12.799+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-08T17:19:12.803+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 125 for task run_databricks_notebook (No connection adapters were found for 'databrickshttpsdbc-642e039b-9d51.cloud.databricks.com/:///api/2.1/jobs/runs/submit'; 585)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1215, in execute
+    self._launch_job(context=context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1096, in _launch_job
+    self.databricks_run_id = self._hook.submit_run(run_json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks.py", line 263, in submit_run
+    response = self._do_api_call(SUBMIT_RUN_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 667, in _do_api_call
+    for attempt in self._get_retry_object():
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/usr/local/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 676, in _do_api_call
+    response = request_func(
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 697, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for 'databrickshttpsdbc-642e039b-9d51.cloud.databricks.com/:///api/2.1/jobs/runs/submit'
+[2025-01-08T17:19:12.840+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-08T17:19:12.892+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-08T17:19:12.897+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

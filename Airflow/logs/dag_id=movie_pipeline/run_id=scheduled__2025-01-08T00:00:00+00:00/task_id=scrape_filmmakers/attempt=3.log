@@ -1,0 +1,15 @@
+[2025-01-10T08:01:59.488+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-10T08:01:59.570+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers scheduled__2025-01-08T00:00:00+00:00 [queued]>
+[2025-01-10T08:01:59.610+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers scheduled__2025-01-08T00:00:00+00:00 [queued]>
+[2025-01-10T08:01:59.612+0000] {taskinstance.py:2866} INFO - Starting attempt 3 of 1
+[2025-01-10T08:01:59.684+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_filmmakers> on 2025-01-08 00:00:00+00:00
+[2025-01-10T08:01:59.700+0000] {standard_task_runner.py:72} INFO - Started process 183 to run task
+[2025-01-10T08:01:59.715+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_filmmakers', 'scheduled__2025-01-08T00:00:00+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpvgjxjnq2']
+[2025-01-10T08:01:59.723+0000] {standard_task_runner.py:105} INFO - Job 151: Subtask scrape_filmmakers
+[2025-01-10T08:02:00.125+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_filmmakers scheduled__2025-01-08T00:00:00+00:00 [running]> on host 9981e2da1c0c
+[2025-01-10T08:02:02.004+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_filmmakers' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-08T00:00:00+00:00'
+[2025-01-10T08:02:02.012+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-10T08:02:19.022+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 0 for movie_id : tt13186482 and filmmaker_id: nm1503575
+[2025-01-10T08:03:03.658+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 1 for movie_id : tt13186482 and filmmaker_id: nm0622288
+[2025-01-10T08:03:52.880+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 2 for movie_id : tt13186482 and filmmaker_id: nm0941314
+[2025-01-10T08:03:55.994+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses

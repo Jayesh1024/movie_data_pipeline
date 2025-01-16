@@ -1,0 +1,7 @@
+[2024-12-19T23:59:06.426+0530] {processor.py:186} INFO - Started process (PID=66844) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_bash_operator.py
+[2024-12-19T23:59:06.428+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_bash_operator.py for tasks to queue
+[2024-12-19T23:59:06.429+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:59:06.429+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_bash_operator.py
+[2024-12-19T23:59:06.447+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_bash_operator.py
+[2024-12-19T23:59:06.834+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:59:06.833+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-19T23:59:06.858+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:59:06.857+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2024-12-18 00:00:00+00:00, run_after=2024-12-19 00:00:00+00:00
+[2024-12-19T23:59:06.891+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_bash_operator.py took 0.469 seconds

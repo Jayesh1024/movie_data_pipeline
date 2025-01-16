@@ -1,0 +1,171 @@
+[2024-12-21T10:22:41.658+0530] {processor.py:186} INFO - Started process (PID=2074) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:22:41.659+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:22:41.661+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:22:41.661+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:22:42.242+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:22:42.615+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:22:42.614+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:22:42.678+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:22:42.677+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:22:42.758+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 1.109 seconds
+[2024-12-21T10:25:13.047+0530] {processor.py:186} INFO - Started process (PID=2489) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:25:13.049+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:25:13.056+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:25:13.055+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:25:14.113+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:25:15.067+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:25:15.065+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:25:15.198+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:25:15.197+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:25:15.295+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 2.263 seconds
+[2024-12-21T10:26:39.775+0530] {processor.py:186} INFO - Started process (PID=2727) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:26:39.778+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:26:39.782+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:26:39.781+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:26:40.188+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:26:40.720+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:26:40.719+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:26:40.811+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:26:40.810+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:26:40.963+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 1.207 seconds
+[2024-12-21T10:27:53.677+0530] {processor.py:186} INFO - Started process (PID=2932) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:27:53.679+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:27:53.680+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:27:53.680+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:27:53.890+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:27:54.120+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:27:54.119+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:27:54.152+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:27:54.152+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:27:54.177+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.505 seconds
+[2024-12-21T10:29:11.645+0530] {processor.py:186} INFO - Started process (PID=3144) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:29:11.646+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:29:11.650+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:29:11.650+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:29:11.880+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:29:12.144+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:29:12.144+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:29:12.187+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:29:12.186+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:29:12.217+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.577 seconds
+[2024-12-21T10:30:41.766+0530] {processor.py:186} INFO - Started process (PID=3373) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:30:41.768+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:30:41.770+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:30:41.769+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:30:42.003+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:30:42.241+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:30:42.240+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:30:42.276+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:30:42.276+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:30:42.307+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.548 seconds
+[2024-12-21T10:47:22.487+0530] {processor.py:186} INFO - Started process (PID=3990) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:47:22.491+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:47:22.493+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:47:22.493+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:47:22.871+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:47:23.091+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:47:23.091+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:47:23.127+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:47:23.127+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:47:23.193+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.711 seconds
+[2024-12-21T10:49:32.108+0530] {processor.py:186} INFO - Started process (PID=4385) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:49:32.112+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:49:32.117+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:49:32.117+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:49:32.394+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:49:32.713+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:49:32.712+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:49:32.772+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:49:32.771+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:49:32.810+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.711 seconds
+[2024-12-21T10:51:19.411+0530] {processor.py:186} INFO - Started process (PID=4767) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:51:19.413+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:51:19.415+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:51:19.414+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:51:19.657+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:51:19.938+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:51:19.937+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:51:19.998+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:51:19.997+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:51:20.057+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.653 seconds
+[2024-12-21T10:52:58.447+0530] {processor.py:186} INFO - Started process (PID=5113) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:52:58.448+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T10:52:58.450+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:52:58.449+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:52:58.767+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T10:52:59.009+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:52:59.008+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T10:52:59.046+0530] {logging_mixin.py:190} INFO - [2024-12-21T10:52:59.045+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T10:52:59.076+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.634 seconds
+[2024-12-21T11:54:26.378+0530] {processor.py:186} INFO - Started process (PID=6459) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:54:26.380+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T11:54:26.384+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:54:26.383+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:54:26.830+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:54:27.065+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:54:27.065+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T11:54:27.105+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:54:27.105+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T11:54:27.174+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.802 seconds
+[2024-12-21T11:56:35.408+0530] {processor.py:186} INFO - Started process (PID=6933) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:56:35.413+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T11:56:35.416+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:56:35.415+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:56:35.888+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:56:36.217+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:56:36.216+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T11:56:36.264+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:56:36.264+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T11:56:36.303+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.902 seconds
+[2024-12-21T11:58:09.972+0530] {processor.py:186} INFO - Started process (PID=7265) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:58:09.975+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T11:58:09.977+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:58:09.976+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:58:10.423+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:58:10.717+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:58:10.716+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T11:58:10.774+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:58:10.774+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T11:58:10.875+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.909 seconds
+[2024-12-21T11:59:43.405+0530] {processor.py:186} INFO - Started process (PID=7609) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:59:43.407+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T11:59:43.409+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:59:43.409+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:59:43.895+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T11:59:44.173+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:59:44.173+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T11:59:44.253+0530] {logging_mixin.py:190} INFO - [2024-12-21T11:59:44.253+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T11:59:44.330+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.931 seconds
+[2024-12-21T12:01:28.084+0530] {processor.py:186} INFO - Started process (PID=7972) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:01:28.087+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T12:01:28.089+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:01:28.089+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:01:28.501+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:01:28.795+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:01:28.794+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T12:01:28.830+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:01:28.829+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T12:01:28.861+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.782 seconds
+[2024-12-21T12:03:10.124+0530] {processor.py:186} INFO - Started process (PID=8325) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:03:10.129+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T12:03:10.140+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:03:10.138+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:03:10.985+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:03:11.390+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:03:11.388+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T12:03:11.485+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:03:11.485+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T12:03:11.532+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 1.421 seconds
+[2024-12-21T12:05:08.682+0530] {processor.py:186} INFO - Started process (PID=8737) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:05:08.684+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T12:05:08.686+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:05:08.686+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:05:09.135+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:05:09.360+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:05:09.359+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T12:05:09.394+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:05:09.393+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T12:05:09.427+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.749 seconds
+[2024-12-21T12:06:33.738+0530] {processor.py:186} INFO - Started process (PID=9064) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:06:33.739+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T12:06:33.741+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:06:33.741+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:06:34.082+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T12:06:34.307+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:06:34.306+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T12:06:34.340+0530] {logging_mixin.py:190} INFO - [2024-12-21T12:06:34.340+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T12:06:34.366+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.633 seconds
+[2024-12-21T22:32:08.842+0530] {processor.py:186} INFO - Started process (PID=15857) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:32:08.848+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T22:32:08.870+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:32:08.869+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:32:09.841+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:32:10.050+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:32:10.049+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T22:32:10.347+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:32:10.345+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T22:32:10.484+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 1.682 seconds
+[2024-12-21T22:32:40.655+0530] {processor.py:186} INFO - Started process (PID=16106) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:32:40.660+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T22:32:40.670+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:32:40.669+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:32:41.614+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:32:42.147+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:32:42.146+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T22:32:42.352+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:32:42.351+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T22:32:42.434+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 1.801 seconds
+[2024-12-21T22:33:12.717+0530] {processor.py:186} INFO - Started process (PID=16322) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:33:12.720+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T22:33:12.726+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:33:12.725+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:33:13.738+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:33:14.067+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:33:14.066+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T22:33:14.117+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:33:14.116+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T22:33:14.202+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 1.505 seconds
+[2024-12-21T22:33:45.161+0530] {processor.py:186} INFO - Started process (PID=16534) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:33:45.164+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T22:33:45.169+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:33:45.168+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:33:45.573+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T22:33:45.639+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:33:45.637+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T22:33:45.687+0530] {logging_mixin.py:190} INFO - [2024-12-21T22:33:45.687+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T22:33:45.768+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.623 seconds
+[2024-12-21T23:52:47.978+0530] {processor.py:186} INFO - Started process (PID=17962) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T23:52:47.981+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T23:52:47.988+0530] {logging_mixin.py:190} INFO - [2024-12-21T23:52:47.987+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T23:52:49.643+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T23:52:49.971+0530] {logging_mixin.py:190} INFO - [2024-12-21T23:52:49.970+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T23:52:50.195+0530] {logging_mixin.py:190} INFO - [2024-12-21T23:52:50.194+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T23:52:50.237+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 2.368 seconds
+[2024-12-21T23:53:21.125+0530] {processor.py:186} INFO - Started process (PID=18227) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T23:53:21.127+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T23:53:21.133+0530] {logging_mixin.py:190} INFO - [2024-12-21T23:53:21.132+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T23:53:21.689+0530] {processor.py:925} INFO - DAG(s) 'movie_pipeline' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T23:53:21.815+0530] {logging_mixin.py:190} INFO - [2024-12-21T23:53:21.814+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-21T23:53:21.892+0530] {logging_mixin.py:190} INFO - [2024-12-21T23:53:21.891+0530] {dag.py:4180} INFO - Setting next_dagrun for movie_pipeline to 2024-12-21 00:00:00+00:00, run_after=2024-12-22 00:00:00+00:00
+[2024-12-21T23:53:21.944+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py took 0.841 seconds
+[2024-12-21T23:53:52.372+0530] {processor.py:186} INFO - Started process (PID=18425) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py
+[2024-12-21T23:53:52.452+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py for tasks to queue
+[2024-12-21T23:53:52.497+0530] {logging_mixin.py:190} INFO - [2024-12-21T23:53:52.468+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/pipeline_dag.py

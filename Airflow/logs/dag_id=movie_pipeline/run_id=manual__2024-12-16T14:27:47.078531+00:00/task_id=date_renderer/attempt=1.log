@@ -1,0 +1,29 @@
+[2024-12-16T19:58:11.539+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-16T19:58:11.551+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.date_renderer manual__2024-12-16T14:27:47.078531+00:00 [queued]>
+[2024-12-16T19:58:11.560+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.date_renderer manual__2024-12-16T14:27:47.078531+00:00 [queued]>
+[2024-12-16T19:58:11.560+0530] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-16T19:58:11.577+0530] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): date_renderer> on 2024-12-16 14:27:47.078531+00:00
+[2024-12-16T19:58:11.585+0530] {logging_mixin.py:190} WARNING - /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=25650) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-16T19:58:11.586+0530] {standard_task_runner.py:72} INFO - Started process 25657 to run task
+[2024-12-16T19:58:11.588+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'date_renderer', 'manual__2024-12-16T14:27:47.078531+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T/tmp0qd9lcmr']
+[2024-12-16T19:58:11.592+0530] {standard_task_runner.py:105} INFO - Job 142: Subtask date_renderer
+[2024-12-16T19:58:11.647+0530] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.date_renderer manual__2024-12-16T14:27:47.078531+00:00 [running]> on host Jayeshs-MacBook-Air.local
+[2024-12-16T19:58:11.726+0530] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='date_renderer' AIRFLOW_CTX_EXECUTION_DATE='2024-12-16T14:27:47.078531+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-16T14:27:47.078531+00:00'
+[2024-12-16T19:58:11.728+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-16T19:58:11.730+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-16T19:58:11.730+0530] {logging_mixin.py:190} INFO - Current task name:date_renderer state:running start_date:2024-12-16 14:28:11.551453+00:00
+[2024-12-16T19:58:11.731+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline and current dag run status:running
+[2024-12-16T19:58:11.731+0530] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-16T19:58:11.732+0530] {logging_mixin.py:190} INFO - 
+              The start date is: "{{ds}}"
+        
+[2024-12-16T19:58:11.733+0530] {python.py:240} INFO - Done. Returned value was: success
+[2024-12-16T19:58:11.750+0530] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-16T19:58:11.751+0530] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=date_renderer, run_id=manual__2024-12-16T14:27:47.078531+00:00, execution_date=20241216T142747, start_date=20241216T142811, end_date=20241216T142811
+[2024-12-16T19:58:11.761+0530] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-16T19:58:11.763+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-16T19:58:11.763+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline queued_at:2024-12-16 14:27:47.094241+00:00
+[2024-12-16T19:58:11.764+0530] {logging_mixin.py:190} INFO - Task hostname:Jayeshs-MacBook-Air.local operator:_PythonDecoratedOperator
+[2024-12-16T19:58:11.773+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-16T19:58:11.792+0530] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-16T19:58:11.793+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

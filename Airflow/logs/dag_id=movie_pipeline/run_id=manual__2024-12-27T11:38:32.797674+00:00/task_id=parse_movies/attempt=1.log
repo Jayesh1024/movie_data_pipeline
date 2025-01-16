@@ -1,0 +1,288 @@
+[2024-12-27T12:50:41.197+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-27T12:50:41.637+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.parse_movies manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-27T12:50:41.663+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.parse_movies manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-27T12:50:41.664+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-27T12:50:41.692+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): parse_movies> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-27T12:50:41.702+0000] {standard_task_runner.py:72} INFO - Started process 1368 to run task
+[2024-12-27T12:50:41.710+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'parse_movies', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp6s39lxzf']
+[2024-12-27T12:50:41.717+0000] {standard_task_runner.py:105} INFO - Job 70: Subtask parse_movies
+[2024-12-27T12:50:41.883+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.parse_movies manual__2024-12-27T11:38:32.797674+00:00 [running]> on host b92f2c33c491
+[2024-12-27T12:50:42.295+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='parse_movies' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-27T12:50:42.303+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-27T12:50:42.948+0000] {parse.py:109} INFO - Parsing movie_id: tt13186482
+[2024-12-27T12:50:43.454+0000] {parse.py:173} ERROR - time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:43.460+0000] {parse.py:175} WARNING - movie_id: tt13186482, release_date_id set to NONE
+[2024-12-27T12:50:43.521+0000] {parse.py:109} INFO - Parsing movie_id: tt5040012
+[2024-12-27T12:50:43.846+0000] {parse.py:173} ERROR - time data 'Dec 25, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 25, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:43.848+0000] {parse.py:175} WARNING - movie_id: tt5040012, release_date_id set to NONE
+[2024-12-27T12:50:43.899+0000] {parse.py:109} INFO - Parsing movie_id: tt18259086
+[2024-12-27T12:50:44.344+0000] {parse.py:173} ERROR - time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:44.348+0000] {parse.py:175} WARNING - movie_id: tt18259086, release_date_id set to NONE
+[2024-12-27T12:50:44.419+0000] {parse.py:109} INFO - Parsing movie_id: tt11563598
+[2024-12-27T12:50:45.682+0000] {parse.py:173} ERROR - time data 'Dec 25, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 25, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:45.685+0000] {parse.py:175} WARNING - movie_id: tt11563598, release_date_id set to NONE
+[2024-12-27T12:50:45.869+0000] {parse.py:109} INFO - Parsing movie_id: tt1262426
+[2024-12-27T12:50:46.401+0000] {parse.py:173} ERROR - time data 'Nov 22, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Nov 22, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:46.403+0000] {parse.py:175} WARNING - movie_id: tt1262426, release_date_id set to NONE
+[2024-12-27T12:50:46.452+0000] {parse.py:109} INFO - Parsing movie_id: tt13622970
+[2024-12-27T12:50:47.628+0000] {parse.py:173} ERROR - time data 'Nov 27, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Nov 27, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:47.633+0000] {parse.py:175} WARNING - movie_id: tt13622970, release_date_id set to NONE
+[2024-12-27T12:50:47.745+0000] {parse.py:109} INFO - Parsing movie_id: tt6133444
+[2024-12-27T12:50:48.495+0000] {parse.py:158} ERROR - 'NoneType' object has no attribute 'attrs'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 156, in movie_parser
+    movie_data_dict['distributor_id']=child_span[1].find('a').attrs['href'].split('/')[-3]
+AttributeError: 'NoneType' object has no attribute 'attrs'
+[2024-12-27T12:50:48.497+0000] {parse.py:159} WARNING - movie_id: tt6133444, distributor_id set to NONE
+[2024-12-27T12:50:48.498+0000] {parse.py:173} ERROR - time data 'Dec 25, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 25, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:48.500+0000] {parse.py:175} WARNING - movie_id: tt6133444, release_date_id set to NONE
+[2024-12-27T12:50:48.692+0000] {parse.py:109} INFO - Parsing movie_id: tt30057084
+[2024-12-27T12:50:50.263+0000] {parse.py:173} ERROR - time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:50.277+0000] {parse.py:175} WARNING - movie_id: tt30057084, release_date_id set to NONE
+[2024-12-27T12:50:50.339+0000] {parse.py:109} INFO - Parsing movie_id: tt9218128
+[2024-12-27T12:50:50.853+0000] {parse.py:173} ERROR - time data 'Nov 22, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Nov 22, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:50.855+0000] {parse.py:175} WARNING - movie_id: tt9218128, release_date_id set to NONE
+[2024-12-27T12:50:50.905+0000] {parse.py:109} INFO - Parsing movie_id: tt29137778
+[2024-12-27T12:50:51.313+0000] {parse.py:173} ERROR - time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:51.319+0000] {parse.py:175} WARNING - movie_id: tt29137778, release_date_id set to NONE
+[2024-12-27T12:50:51.465+0000] {parse.py:109} INFO - Parsing movie_id: tt8790086
+[2024-12-27T12:50:52.203+0000] {parse.py:173} ERROR - time data 'Dec 13, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 13, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:52.206+0000] {parse.py:175} WARNING - movie_id: tt8790086, release_date_id set to NONE
+[2024-12-27T12:50:52.278+0000] {parse.py:109} INFO - Parsing movie_id: tt14948432
+[2024-12-27T12:50:53.560+0000] {parse.py:173} ERROR - time data 'Nov 15, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Nov 15, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:53.562+0000] {parse.py:175} WARNING - movie_id: tt14948432, release_date_id set to NONE
+[2024-12-27T12:50:53.627+0000] {parse.py:109} INFO - Parsing movie_id: tt2347285
+[2024-12-27T12:50:54.149+0000] {parse.py:173} ERROR - time data 'Nov 8, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Nov 8, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:54.152+0000] {parse.py:175} WARNING - movie_id: tt2347285, release_date_id set to NONE
+[2024-12-27T12:50:54.201+0000] {parse.py:109} INFO - Parsing movie_id: tt14824600
+[2024-12-27T12:50:54.859+0000] {parse.py:173} ERROR - time data 'Dec 13, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 13, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:54.861+0000] {parse.py:175} WARNING - movie_id: tt14824600, release_date_id set to NONE
+[2024-12-27T12:50:54.930+0000] {parse.py:109} INFO - Parsing movie_id: tt8999762
+[2024-12-27T12:50:55.322+0000] {parse.py:173} ERROR - time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:55.324+0000] {parse.py:175} WARNING - movie_id: tt8999762, release_date_id set to NONE
+[2024-12-27T12:50:55.390+0000] {parse.py:109} INFO - Parsing movie_id: tt21823606
+[2024-12-27T12:50:56.057+0000] {parse.py:173} ERROR - time data 'Nov 1, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Nov 1, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:56.063+0000] {parse.py:175} WARNING - movie_id: tt21823606, release_date_id set to NONE
+[2024-12-27T12:50:56.178+0000] {parse.py:109} INFO - Parsing movie_id: tt20215234
+[2024-12-27T12:50:56.902+0000] {parse.py:173} ERROR - time data 'Oct 25, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Oct 25, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:56.904+0000] {parse.py:175} WARNING - movie_id: tt20215234, release_date_id set to NONE
+[2024-12-27T12:50:56.968+0000] {parse.py:109} INFO - Parsing movie_id: tt23055660
+[2024-12-27T12:50:57.383+0000] {parse.py:173} ERROR - time data 'Dec 13, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 13, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:57.386+0000] {parse.py:175} WARNING - movie_id: tt23055660, release_date_id set to NONE
+[2024-12-27T12:50:57.451+0000] {parse.py:109} INFO - Parsing movie_id: tt14260836
+[2024-12-27T12:50:57.821+0000] {parse.py:158} ERROR - 'NoneType' object has no attribute 'attrs'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 156, in movie_parser
+    movie_data_dict['distributor_id']=child_span[1].find('a').attrs['href'].split('/')[-3]
+AttributeError: 'NoneType' object has no attribute 'attrs'
+[2024-12-27T12:50:57.825+0000] {parse.py:159} WARNING - movie_id: tt14260836, distributor_id set to NONE
+[2024-12-27T12:50:57.829+0000] {parse.py:173} ERROR - time data 'Dec 25, 2024 (Jan 10, 2025)' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 25, 2024 (Jan 10, 2025)' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:57.831+0000] {parse.py:175} WARNING - movie_id: tt14260836, release_date_id set to NONE
+[2024-12-27T12:50:58.063+0000] {parse.py:109} INFO - Parsing movie_id: tt26446278
+[2024-12-27T12:50:58.442+0000] {parse.py:173} ERROR - time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 20, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:58.444+0000] {parse.py:175} WARNING - movie_id: tt26446278, release_date_id set to NONE
+[2024-12-27T12:50:58.512+0000] {parse.py:109} INFO - Parsing movie_id: tt28082769
+[2024-12-27T12:50:59.407+0000] {parse.py:173} ERROR - time data 'Dec 13, 2024 (Jan 17, 2025)' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 13, 2024 (Jan 17, 2025)' does not match format '%d-%b-%Y'
+[2024-12-27T12:50:59.409+0000] {parse.py:175} WARNING - movie_id: tt28082769, release_date_id set to NONE
+[2024-12-27T12:50:59.507+0000] {parse.py:109} INFO - Parsing movie_id: tt29623480
+[2024-12-27T12:51:00.057+0000] {parse.py:173} ERROR - time data 'Sep 27, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Sep 27, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:51:00.059+0000] {parse.py:175} WARNING - movie_id: tt29623480, release_date_id set to NONE
+[2024-12-27T12:51:00.253+0000] {parse.py:109} INFO - Parsing movie_id: tt21987878
+[2024-12-27T12:51:00.672+0000] {parse.py:158} ERROR - 'NoneType' object has no attribute 'attrs'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 156, in movie_parser
+    movie_data_dict['distributor_id']=child_span[1].find('a').attrs['href'].split('/')[-3]
+AttributeError: 'NoneType' object has no attribute 'attrs'
+[2024-12-27T12:51:00.674+0000] {parse.py:159} WARNING - movie_id: tt21987878, distributor_id set to NONE
+[2024-12-27T12:51:00.676+0000] {parse.py:173} ERROR - time data 'Dec 6, 2024' does not match format '%d-%b-%Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 167, in movie_parser
+    movie_data_dict['release_date_id']=str(datetime.strptime(release_date,"%d-%b-%Y").date()).replace('-','')
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Dec 6, 2024' does not match format '%d-%b-%Y'
+[2024-12-27T12:51:00.677+0000] {parse.py:175} WARNING - movie_id: tt21987878, release_date_id set to NONE
+[2024-12-27T12:51:00.737+0000] {python.py:240} INFO - Done. Returned value was: run_20241225/movies_parsed_20241225.json
+[2024-12-27T12:51:00.907+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-27T12:51:00.909+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=parse_movies, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241227T125041, end_date=20241227T125100
+[2024-12-27T12:51:01.008+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-27T12:51:01.155+0000] {taskinstance.py:3895} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2024-12-27T12:51:01.161+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

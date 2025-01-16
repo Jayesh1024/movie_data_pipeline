@@ -1,0 +1,66 @@
+[2024-12-19T22:06:27.729+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-19T22:06:27.739+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.parse_movies backfill__2024-12-16T00:00:00+00:00 [queued]>
+[2024-12-19T22:06:27.747+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.parse_movies backfill__2024-12-16T00:00:00+00:00 [queued]>
+[2024-12-19T22:06:27.747+0530] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-19T22:06:27.767+0530] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): parse_movies> on 2024-12-16 00:00:00+00:00
+[2024-12-19T22:06:27.775+0530] {logging_mixin.py:190} WARNING - /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=56535) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-19T22:06:27.777+0530] {standard_task_runner.py:72} INFO - Started process 56550 to run task
+[2024-12-19T22:06:27.781+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'parse_movies', 'backfill__2024-12-16T00:00:00+00:00', '--job-id', '282', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T/tmpdmp2ewft']
+[2024-12-19T22:06:27.784+0530] {standard_task_runner.py:105} INFO - Job 282: Subtask parse_movies
+[2024-12-19T22:06:27.834+0530] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.parse_movies backfill__2024-12-16T00:00:00+00:00 [running]> on host Jayeshs-MacBook-Air.local
+[2024-12-19T22:06:27.917+0530] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='parse_movies' AIRFLOW_CTX_EXECUTION_DATE='2024-12-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='backfill__2024-12-16T00:00:00+00:00'
+[2024-12-19T22:06:27.919+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-19T22:06:27.920+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-19T22:06:27.920+0530] {logging_mixin.py:190} INFO - Current task name:parse_movies state:running start_date:2024-12-19 16:36:27.740324+00:00
+[2024-12-19T22:06:27.921+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline and current dag run status:running
+[2024-12-19T22:06:27.922+0530] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-19T22:06:28.120+0530] {parse.py:109} INFO - Parsing movie_id: tt1262426
+[2024-12-19T22:06:28.518+0530] {parse.py:109} INFO - Parsing movie_id: tt13622970
+[2024-12-19T22:06:29.091+0530] {parse.py:109} INFO - Parsing movie_id: tt9218128
+[2024-12-19T22:06:29.422+0530] {parse.py:109} INFO - Parsing movie_id: tt8790086
+[2024-12-19T22:06:29.796+0530] {parse.py:109} INFO - Parsing movie_id: tt0816692
+[2024-12-19T22:06:30.297+0530] {parse.py:109} INFO - Parsing movie_id: tt0047673
+[2024-12-19T22:06:30.791+0530] {parse.py:109} INFO - Parsing movie_id: tt14824600
+[2024-12-19T22:06:31.019+0530] {parse.py:109} INFO - Parsing movie_id: tt14948432
+[2024-12-19T22:06:31.239+0530] {parse.py:109} INFO - Parsing movie_id: tt2347285
+[2024-12-19T22:06:31.658+0530] {parse.py:109} INFO - Parsing movie_id: tt34422601
+[2024-12-19T22:06:31.974+0530] {parse.py:275} ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/parse.py", line 273, in movie_parser
+    stars=[{"filmmaker_id":anchor.get('href').split('/')[-2],"role":"star"} for anchor in movie_soup_imdb.select_one(XPathToSelector('''//*[@id="__next"]/main/div/section[1]/section/div[3]/section/section/div[3]/div[2]/div[2]/div[2]/div/ul/li[3]/div/ul''')).find_all('a')]
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find_all'
+[2024-12-19T22:06:31.979+0530] {parse.py:109} INFO - Parsing movie_id: tt15041836
+[2024-12-19T22:06:32.167+0530] {parse.py:109} INFO - Parsing movie_id: tt26237514
+[2024-12-19T22:06:32.361+0530] {parse.py:109} INFO - Parsing movie_id: tt16366836
+[2024-12-19T22:06:32.697+0530] {parse.py:109} INFO - Parsing movie_id: tt21823606
+[2024-12-19T22:06:33.173+0530] {parse.py:109} INFO - Parsing movie_id: tt20215234
+[2024-12-19T22:06:33.532+0530] {parse.py:109} INFO - Parsing movie_id: tt29623480
+[2024-12-19T22:06:33.875+0530] {parse.py:109} INFO - Parsing movie_id: tt19861162
+[2024-12-19T22:06:34.071+0530] {parse.py:109} INFO - Parsing movie_id: tt28082769
+[2024-12-19T22:06:34.605+0530] {parse.py:109} INFO - Parsing movie_id: tt23055660
+[2024-12-19T22:06:34.900+0530] {parse.py:109} INFO - Parsing movie_id: tt21987878
+[2024-12-19T22:06:35.203+0530] {parse.py:158} ERROR - 'NoneType' object has no attribute 'attrs'
+Traceback (most recent call last):
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/parse.py", line 156, in movie_parser
+    movie_data_dict['distributor_id']=child_span[1].find('a').attrs['href'].split('/')[-3]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'attrs'
+[2024-12-19T22:06:35.204+0530] {parse.py:159} WARNING - movie_id: tt21987878, distributor_id set to NONE
+[2024-12-19T22:06:35.232+0530] {parse.py:109} INFO - Parsing movie_id: tt30309913
+[2024-12-19T22:06:35.514+0530] {parse.py:275} ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/parse.py", line 273, in movie_parser
+    stars=[{"filmmaker_id":anchor.get('href').split('/')[-2],"role":"star"} for anchor in movie_soup_imdb.select_one(XPathToSelector('''//*[@id="__next"]/main/div/section[1]/section/div[3]/section/section/div[3]/div[2]/div[2]/div[2]/div/ul/li[3]/div/ul''')).find_all('a')]
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find_all'
+[2024-12-19T22:06:35.525+0530] {python.py:240} INFO - Done. Returned value was: run_20241216/movies_parsed_20241216.json
+[2024-12-19T22:06:35.541+0530] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-19T22:06:35.542+0530] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=parse_movies, run_id=backfill__2024-12-16T00:00:00+00:00, execution_date=20241216T000000, start_date=20241219T163627, end_date=20241219T163635
+[2024-12-19T22:06:35.551+0530] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-19T22:06:35.552+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-19T22:06:35.553+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline queued_at:2024-12-19 16:32:17.221588+00:00
+[2024-12-19T22:06:35.553+0530] {logging_mixin.py:190} INFO - Task hostname:Jayeshs-MacBook-Air.local operator:PythonOperator
+[2024-12-19T22:06:35.598+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-19T22:06:35.615+0530] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-19T22:06:35.619+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

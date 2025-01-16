@@ -1,0 +1,18 @@
+[2024-12-26T15:16:32.230+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-26T15:16:32.340+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_collection_page manual__2024-12-26T15:02:05.416978+00:00 [queued]>
+[2024-12-26T15:16:32.859+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_collection_page manual__2024-12-26T15:02:05.416978+00:00 [queued]>
+[2024-12-26T15:16:32.866+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-26T15:16:32.966+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_collection_page> on 2024-12-26 15:02:05.416978+00:00
+[2024-12-26T15:16:33.098+0000] {standard_task_runner.py:72} INFO - Started process 1000 to run task
+[2024-12-26T15:16:33.181+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_collection_page', 'manual__2024-12-26T15:02:05.416978+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpm3sp676o']
+[2024-12-26T15:16:33.206+0000] {standard_task_runner.py:105} INFO - Job 37: Subtask scrape_collection_page
+[2024-12-26T15:16:33.581+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_collection_page manual__2024-12-26T15:02:05.416978+00:00 [running]> on host 1712831d7ea4
+[2024-12-26T15:16:33.908+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_collection_page' AIRFLOW_CTX_EXECUTION_DATE='2024-12-26T15:02:05.416978+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-26T15:02:05.416978+00:00'
+[2024-12-26T15:16:33.912+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-26T15:16:50.504+0000] {extract.py:40} INFO - Collection HTML page for run date: 2024-12-26 saved to path: run_20241226/boxoffice_html_20241226.json
+[2024-12-26T15:16:50.512+0000] {python.py:240} INFO - Done. Returned value was: run_20241226/boxoffice_html_20241226.json
+[2024-12-26T15:16:50.798+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-26T15:16:50.799+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=scrape_collection_page, run_id=manual__2024-12-26T15:02:05.416978+00:00, execution_date=20241226T150205, start_date=20241226T151632, end_date=20241226T151650
+[2024-12-26T15:16:50.884+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-26T15:16:51.143+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-26T15:16:51.159+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

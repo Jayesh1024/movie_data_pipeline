@@ -1,0 +1,172 @@
+[2024-12-29T04:43:22.059+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-29T04:43:22.136+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-29T04:43:22.441+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-29T04:43:22.442+0000] {taskinstance.py:2866} INFO - Starting attempt 5 of 5
+[2024-12-29T04:43:22.472+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_filmmakers> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-29T04:43:22.487+0000] {standard_task_runner.py:72} INFO - Started process 441 to run task
+[2024-12-29T04:43:22.500+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_filmmakers', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp1nlu9_rk']
+[2024-12-29T04:43:22.507+0000] {standard_task_runner.py:105} INFO - Job 118: Subtask scrape_filmmakers
+[2024-12-29T04:43:22.827+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [running]> on host 5b3ca2f211c1
+[2024-12-29T04:43:23.183+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_filmmakers' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-29T04:43:23.189+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-29T04:43:31.873+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 0 for movie_id : tt13186482 and filmmaker_id: nm1503575
+[2024-12-29T04:43:55.999+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 1 for movie_id : tt13186482 and filmmaker_id: nm0622288
+[2024-12-29T04:44:15.211+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 2 for movie_id : tt13186482 and filmmaker_id: nm0941314
+[2024-12-29T04:44:32.164+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 3 for movie_id : tt13186482 and filmmaker_id: nm0575293
+[2024-12-29T04:44:53.202+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 4 for movie_id : tt13186482 and filmmaker_id: nm7543974
+[2024-12-29T04:45:12.034+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 5 for movie_id : tt13186482 and filmmaker_id: nm5123156
+[2024-12-29T04:45:40.286+0000] {extract.py:152} INFO - movie iteration 0 and filmamker iteration 6 for movie_id : tt13186482 and filmmaker_id: nm2274707
+[2024-12-29T04:45:58.723+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 0 for movie_id : tt5040012 and filmmaker_id: nm3211470
+[2024-12-29T04:46:14.196+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 1 for movie_id : tt5040012 and filmmaker_id: nm3211470
+[2024-12-29T04:46:35.336+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 2 for movie_id : tt5040012 and filmmaker_id: nm0301961
+[2024-12-29T04:46:53.645+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 3 for movie_id : tt5040012 and filmmaker_id: nm0831290
+[2024-12-29T04:47:12.932+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 4 for movie_id : tt5040012 and filmmaker_id: nm6675440
+[2024-12-29T04:47:31.781+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 5 for movie_id : tt5040012 and filmmaker_id: nm0396558
+[2024-12-29T04:47:54.997+0000] {extract.py:152} INFO - movie iteration 1 and filmamker iteration 6 for movie_id : tt5040012 and filmmaker_id: nm0803889
+[2024-12-29T04:48:16.537+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 0 for movie_id : tt18259086 and filmmaker_id: nm1733778
+[2024-12-29T04:48:38.443+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 1 for movie_id : tt18259086 and filmmaker_id: nm1352459
+[2024-12-29T04:48:51.629+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 2 for movie_id : tt18259086 and filmmaker_id: nm1351254
+[2024-12-29T04:49:06.818+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 3 for movie_id : tt18259086 and filmmaker_id: nm4465847
+[2024-12-29T04:49:20.745+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 4 for movie_id : tt18259086 and filmmaker_id: nm0000120
+[2024-12-29T04:49:40.684+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 5 for movie_id : tt18259086 and filmmaker_id: nm2355635
+[2024-12-29T04:50:01.650+0000] {extract.py:152} INFO - movie iteration 2 and filmamker iteration 6 for movie_id : tt18259086 and filmmaker_id: nm0000206
+[2024-12-29T04:50:20.831+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 0 for movie_id : tt11563598 and filmmaker_id: nm0003506
+[2024-12-29T04:50:37.397+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 1 for movie_id : tt11563598 and filmmaker_id: nm0003506
+[2024-12-29T04:50:51.237+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 2 for movie_id : tt11563598 and filmmaker_id: nm0168379
+[2024-12-29T04:51:04.622+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 3 for movie_id : tt11563598 and filmmaker_id: nm2374778
+[2024-12-29T04:51:18.493+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 4 for movie_id : tt11563598 and filmmaker_id: nm3154303
+[2024-12-29T04:51:42.453+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 5 for movie_id : tt11563598 and filmmaker_id: nm0001570
+[2024-12-29T04:52:05.337+0000] {extract.py:152} INFO - movie iteration 3 and filmamker iteration 6 for movie_id : tt11563598 and filmmaker_id: nm1102577
+[2024-12-29T04:52:28.552+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 0 for movie_id : tt1262426 and filmmaker_id: nm0160840
+[2024-12-29T04:52:53.016+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 1 for movie_id : tt1262426 and filmmaker_id: nm0392848
+[2024-12-29T04:53:11.577+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 2 for movie_id : tt1262426 and filmmaker_id: nm1401416
+[2024-12-29T04:53:30.450+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 3 for movie_id : tt1262426 and filmmaker_id: nm0536579
+[2024-12-29T04:53:44.327+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 4 for movie_id : tt1262426 and filmmaker_id: nm7248827
+[2024-12-29T04:54:03.475+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 5 for movie_id : tt1262426 and filmmaker_id: nm3812858
+[2024-12-29T04:54:22.266+0000] {extract.py:152} INFO - movie iteration 4 and filmamker iteration 6 for movie_id : tt1262426 and filmmaker_id: nm0000156
+[2024-12-29T04:54:43.199+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 0 for movie_id : tt13622970 and filmmaker_id: nm3989471
+[2024-12-29T04:54:58.434+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 1 for movie_id : tt13622970 and filmmaker_id: nm2911364
+[2024-12-29T04:55:13.515+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 2 for movie_id : tt13622970 and filmmaker_id: nm2834849
+[2024-12-29T04:55:30.359+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 3 for movie_id : tt13622970 and filmmaker_id: nm1158544
+[2024-12-29T04:55:48.103+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 4 for movie_id : tt13622970 and filmmaker_id: nm2834849
+[2024-12-29T04:56:01.855+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 5 for movie_id : tt13622970 and filmmaker_id: nm2414279
+[2024-12-29T04:56:19.184+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 6 for movie_id : tt13622970 and filmmaker_id: nm7635388
+[2024-12-29T04:56:37.213+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 7 for movie_id : tt13622970 and filmmaker_id: nm0425005
+[2024-12-29T04:57:01.683+0000] {extract.py:152} INFO - movie iteration 5 and filmamker iteration 8 for movie_id : tt13622970 and filmmaker_id: nm12533314
+[2024-12-29T04:57:16.703+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 0 for movie_id : tt6133444 and filmmaker_id: nm1121126
+[2024-12-29T04:57:36.096+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 1 for movie_id : tt6133444 and filmmaker_id: nm1503575
+[2024-12-29T04:57:53.869+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 2 for movie_id : tt6133444 and filmmaker_id: nm3629113
+[2024-12-29T04:58:09.519+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 3 for movie_id : tt6133444 and filmmaker_id: nm3109964
+[2024-12-29T04:58:29.741+0000] {extract.py:152} INFO - movie iteration 6 and filmamker iteration 4 for movie_id : tt6133444 and filmmaker_id: nm12380497
+[2024-12-29T04:58:43.659+0000] {extract.py:152} INFO - movie iteration 7 and filmamker iteration 0 for movie_id : tt30057084 and filmmaker_id: nm0717603
+[2024-12-29T04:59:05.608+0000] {extract.py:152} INFO - movie iteration 7 and filmamker iteration 1 for movie_id : tt30057084 and filmmaker_id: nm0717603
+[2024-12-29T04:59:20.411+0000] {extract.py:152} INFO - movie iteration 7 and filmamker iteration 2 for movie_id : tt30057084 and filmmaker_id: nm0000173
+[2024-12-29T04:59:45.113+0000] {extract.py:152} INFO - movie iteration 7 and filmamker iteration 3 for movie_id : tt30057084 and filmmaker_id: nm6170168
+[2024-12-29T05:00:00.783+0000] {extract.py:152} INFO - movie iteration 7 and filmamker iteration 4 for movie_id : tt30057084 and filmmaker_id: nm0000104
+[2024-12-29T05:00:22.620+0000] {extract.py:152} INFO - movie iteration 8 and filmamker iteration 0 for movie_id : tt9218128 and filmmaker_id: nm0000631
+[2024-12-29T05:00:44.257+0000] {extract.py:152} INFO - movie iteration 8 and filmamker iteration 1 for movie_id : tt9218128 and filmmaker_id: nm0291905
+[2024-12-29T05:00:59.812+0000] {extract.py:152} INFO - movie iteration 8 and filmamker iteration 2 for movie_id : tt9218128 and filmmaker_id: nm0185976
+[2024-12-29T05:01:16.976+0000] {extract.py:152} INFO - movie iteration 8 and filmamker iteration 3 for movie_id : tt9218128 and filmmaker_id: nm0769227
+[2024-12-29T05:01:32.136+0000] {extract.py:152} INFO - movie iteration 8 and filmamker iteration 4 for movie_id : tt9218128 and filmmaker_id: nm8958770
+[2024-12-29T05:01:46.555+0000] {extract.py:152} INFO - movie iteration 8 and filmamker iteration 5 for movie_id : tt9218128 and filmmaker_id: nm0000243
+[2024-12-29T05:02:21.711+0000] {job.py:229} INFO - Heartbeat recovered after 10.91 seconds
+[2024-12-29T05:02:23.331+0000] {extract.py:152} INFO - movie iteration 8 and filmamker iteration 6 for movie_id : tt9218128 and filmmaker_id: nm0050959
+[2024-12-29T05:02:50.777+0000] {extract.py:152} INFO - movie iteration 9 and filmamker iteration 0 for movie_id : tt29137778 and filmmaker_id: nm1351912
+[2024-12-29T05:03:10.090+0000] {extract.py:152} INFO - movie iteration 9 and filmamker iteration 1 for movie_id : tt29137778 and filmmaker_id: nm3220108
+[2024-12-29T05:03:30.136+0000] {extract.py:152} INFO - movie iteration 9 and filmamker iteration 2 for movie_id : tt29137778 and filmmaker_id: nm4137576
+[2024-12-29T05:03:47.011+0000] {extract.py:152} INFO - movie iteration 9 and filmamker iteration 3 for movie_id : tt29137778 and filmmaker_id: nm7918285
+[2024-12-29T05:04:05.839+0000] {extract.py:152} INFO - movie iteration 9 and filmamker iteration 4 for movie_id : tt29137778 and filmmaker_id: nm1685408
+[2024-12-29T05:04:25.358+0000] {extract.py:152} INFO - movie iteration 9 and filmamker iteration 5 for movie_id : tt29137778 and filmmaker_id: nm0568180
+[2024-12-29T05:04:51.688+0000] {extract.py:152} INFO - movie iteration 9 and filmamker iteration 6 for movie_id : tt29137778 and filmmaker_id: nm0592874
+[2024-12-29T05:05:07.776+0000] {extract.py:152} INFO - movie iteration 10 and filmamker iteration 0 for movie_id : tt8790086 and filmmaker_id: nm1170855
+[2024-12-29T05:05:22.746+0000] {extract.py:152} INFO - movie iteration 10 and filmamker iteration 1 for movie_id : tt8790086 and filmmaker_id: nm0921013
+[2024-12-29T05:05:37.915+0000] {extract.py:152} INFO - movie iteration 10 and filmamker iteration 2 for movie_id : tt8790086 and filmmaker_id: nm1436466
+[2024-12-29T05:05:51.909+0000] {extract.py:152} INFO - movie iteration 10 and filmamker iteration 3 for movie_id : tt8790086 and filmmaker_id: nm0391344
+[2024-12-29T05:06:08.337+0000] {extract.py:152} INFO - movie iteration 10 and filmamker iteration 4 for movie_id : tt8790086 and filmmaker_id: nm1093951
+[2024-12-29T05:06:27.064+0000] {extract.py:152} INFO - movie iteration 10 and filmamker iteration 5 for movie_id : tt8790086 and filmmaker_id: nm3663196
+[2024-12-29T05:06:49.020+0000] {extract.py:152} INFO - movie iteration 10 and filmamker iteration 6 for movie_id : tt8790086 and filmmaker_id: nm9538520
+[2024-12-29T05:07:05.146+0000] {extract.py:152} INFO - movie iteration 11 and filmamker iteration 0 for movie_id : tt14948432 and filmmaker_id: nm0440458
+[2024-12-29T05:07:28.494+0000] {extract.py:152} INFO - movie iteration 11 and filmamker iteration 1 for movie_id : tt14948432 and filmmaker_id: nm0604555
+[2024-12-29T05:07:50.591+0000] {extract.py:152} INFO - movie iteration 11 and filmamker iteration 2 for movie_id : tt14948432 and filmmaker_id: nm1205652
+[2024-12-29T05:08:06.755+0000] {extract.py:152} INFO - movie iteration 11 and filmamker iteration 3 for movie_id : tt14948432 and filmmaker_id: nm0425005
+[2024-12-29T05:08:22.046+0000] {extract.py:152} INFO - movie iteration 11 and filmamker iteration 4 for movie_id : tt14948432 and filmmaker_id: nm0262635
+[2024-12-29T05:08:45.560+0000] {extract.py:152} INFO - movie iteration 11 and filmamker iteration 5 for movie_id : tt14948432 and filmmaker_id: nm0005154
+[2024-12-29T05:09:11.273+0000] {extract.py:152} INFO - movie iteration 12 and filmamker iteration 0 for movie_id : tt2347285 and filmmaker_id: nm0420817
+[2024-12-29T05:09:30.001+0000] {extract.py:152} INFO - movie iteration 12 and filmamker iteration 1 for movie_id : tt2347285 and filmmaker_id: nm0732393
+[2024-12-29T05:09:43.135+0000] {extract.py:152} INFO - movie iteration 12 and filmamker iteration 2 for movie_id : tt2347285 and filmmaker_id: nm1480232
+[2024-12-29T05:09:57.946+0000] {extract.py:152} INFO - movie iteration 12 and filmamker iteration 3 for movie_id : tt2347285 and filmmaker_id: nm3056833
+[2024-12-29T05:10:11.582+0000] {extract.py:152} INFO - movie iteration 12 and filmamker iteration 4 for movie_id : tt2347285 and filmmaker_id: nm14398475
+[2024-12-29T05:10:25.721+0000] {extract.py:152} INFO - movie iteration 12 and filmamker iteration 5 for movie_id : tt2347285 and filmmaker_id: nm8407821
+[2024-12-29T05:10:41.571+0000] {extract.py:152} INFO - movie iteration 12 and filmamker iteration 6 for movie_id : tt2347285 and filmmaker_id: nm0339460
+[2024-12-29T05:10:59.892+0000] {extract.py:152} INFO - movie iteration 13 and filmamker iteration 0 for movie_id : tt14824600 and filmmaker_id: nm0436784
+[2024-12-29T05:11:15.458+0000] {extract.py:152} INFO - movie iteration 13 and filmamker iteration 1 for movie_id : tt14824600 and filmmaker_id: nm2731620
+[2024-12-29T05:11:27.692+0000] {extract.py:152} INFO - movie iteration 13 and filmamker iteration 2 for movie_id : tt14824600 and filmmaker_id: nm2176993
+[2024-12-29T05:11:38.998+0000] {extract.py:152} INFO - movie iteration 13 and filmamker iteration 3 for movie_id : tt14824600 and filmmaker_id: nm3907831
+[2024-12-29T05:11:51.023+0000] {extract.py:152} INFO - movie iteration 13 and filmamker iteration 4 for movie_id : tt14824600 and filmmaker_id: nm0004051
+[2024-12-29T05:12:10.323+0000] {extract.py:152} INFO - movie iteration 13 and filmamker iteration 5 for movie_id : tt14824600 and filmmaker_id: nm3230329
+[2024-12-29T05:12:21.548+0000] {extract.py:152} INFO - movie iteration 13 and filmamker iteration 6 for movie_id : tt14824600 and filmmaker_id: nm0001584
+[2024-12-29T05:12:38.492+0000] {extract.py:152} INFO - movie iteration 14 and filmamker iteration 0 for movie_id : tt8999762 and filmmaker_id: nm1227232
+[2024-12-29T05:12:54.763+0000] {extract.py:152} INFO - movie iteration 14 and filmamker iteration 1 for movie_id : tt8999762 and filmmaker_id: nm1227232
+[2024-12-29T05:13:07.575+0000] {extract.py:152} INFO - movie iteration 14 and filmamker iteration 2 for movie_id : tt8999762 and filmmaker_id: nm2178754
+[2024-12-29T05:13:20.786+0000] {extract.py:152} INFO - movie iteration 14 and filmamker iteration 3 for movie_id : tt8999762 and filmmaker_id: nm0004778
+[2024-12-29T05:13:39.486+0000] {extract.py:152} INFO - movie iteration 14 and filmamker iteration 4 for movie_id : tt8999762 and filmmaker_id: nm0428065
+[2024-12-29T05:13:56.149+0000] {extract.py:152} INFO - movie iteration 14 and filmamker iteration 5 for movie_id : tt8999762 and filmmaker_id: nm0001602
+[2024-12-29T05:14:14.246+0000] {extract.py:152} INFO - movie iteration 15 and filmamker iteration 0 for movie_id : tt21823606 and filmmaker_id: nm0251986
+[2024-12-29T05:14:31.311+0000] {extract.py:152} INFO - movie iteration 15 and filmamker iteration 1 for movie_id : tt21823606 and filmmaker_id: nm0251986
+[2024-12-29T05:14:45.623+0000] {extract.py:152} INFO - movie iteration 15 and filmamker iteration 2 for movie_id : tt21823606 and filmmaker_id: nm0001085
+[2024-12-29T05:15:01.106+0000] {extract.py:152} INFO - movie iteration 15 and filmamker iteration 3 for movie_id : tt21823606 and filmmaker_id: nm0251986
+[2024-12-29T05:15:20.649+0000] {extract.py:152} INFO - movie iteration 15 and filmamker iteration 4 for movie_id : tt21823606 and filmmaker_id: nm6159473
+[2024-12-29T05:15:33.998+0000] {extract.py:152} INFO - movie iteration 16 and filmamker iteration 0 for movie_id : tt20215234 and filmmaker_id: nm0074163
+[2024-12-29T05:15:52.648+0000] {extract.py:152} INFO - movie iteration 16 and filmamker iteration 1 for movie_id : tt20215234 and filmmaker_id: nm1661186
+[2024-12-29T05:16:18.973+0000] {extract.py:152} INFO - movie iteration 16 and filmamker iteration 2 for movie_id : tt20215234 and filmmaker_id: nm0365249
+[2024-12-29T05:16:32.807+0000] {extract.py:152} INFO - movie iteration 16 and filmamker iteration 3 for movie_id : tt20215234 and filmmaker_id: nm0000146
+[2024-12-29T05:16:50.988+0000] {extract.py:152} INFO - movie iteration 16 and filmamker iteration 4 for movie_id : tt20215234 and filmmaker_id: nm0001804
+[2024-12-29T05:17:19.300+0000] {extract.py:152} INFO - movie iteration 16 and filmamker iteration 5 for movie_id : tt20215234 and filmmaker_id: nm0001475
+[2024-12-29T05:17:42.862+0000] {extract.py:152} INFO - movie iteration 17 and filmamker iteration 0 for movie_id : tt23055660 and filmmaker_id: nm8840476
+[2024-12-29T05:17:58.295+0000] {extract.py:152} INFO - movie iteration 17 and filmamker iteration 1 for movie_id : tt23055660 and filmmaker_id: nm8840476
+[2024-12-29T05:18:08.615+0000] {extract.py:152} INFO - movie iteration 17 and filmamker iteration 2 for movie_id : tt23055660 and filmmaker_id: nm0055656
+[2024-12-29T05:18:26.418+0000] {extract.py:152} INFO - movie iteration 17 and filmamker iteration 3 for movie_id : tt23055660 and filmmaker_id: nm1019209
+[2024-12-29T05:18:37.819+0000] {extract.py:152} INFO - movie iteration 17 and filmamker iteration 4 for movie_id : tt23055660 and filmmaker_id: nm5376232
+[2024-12-29T05:18:49.960+0000] {extract.py:152} INFO - movie iteration 17 and filmamker iteration 5 for movie_id : tt23055660 and filmmaker_id: nm1518261
+[2024-12-29T05:19:03.959+0000] {extract.py:152} INFO - movie iteration 17 and filmamker iteration 6 for movie_id : tt23055660 and filmmaker_id: nm0254712
+[2024-12-29T05:19:27.686+0000] {extract.py:152} INFO - movie iteration 18 and filmamker iteration 0 for movie_id : tt14260836 and filmmaker_id: nm1243905
+[2024-12-29T05:19:48.530+0000] {extract.py:152} INFO - movie iteration 18 and filmamker iteration 1 for movie_id : tt14260836 and filmmaker_id: nm2352568
+[2024-12-29T05:20:03.413+0000] {extract.py:152} INFO - movie iteration 18 and filmamker iteration 2 for movie_id : tt14260836 and filmmaker_id: nm2555314
+[2024-12-29T05:20:15.150+0000] {extract.py:152} INFO - movie iteration 18 and filmamker iteration 3 for movie_id : tt14260836 and filmmaker_id: nm1243905
+[2024-12-29T05:20:26.578+0000] {extract.py:152} INFO - movie iteration 18 and filmamker iteration 4 for movie_id : tt14260836 and filmmaker_id: nm0005560
+[2024-12-29T05:20:43.548+0000] {extract.py:152} INFO - movie iteration 18 and filmamker iteration 5 for movie_id : tt14260836 and filmmaker_id: nm5956650
+[2024-12-29T05:20:58.316+0000] {extract.py:152} INFO - movie iteration 18 and filmamker iteration 6 for movie_id : tt14260836 and filmmaker_id: nm0671487
+[2024-12-29T05:21:11.297+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 0 for movie_id : tt26446278 and filmmaker_id: nm0478799
+[2024-12-29T05:21:26.833+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 1 for movie_id : tt26446278 and filmmaker_id: nm1141181
+[2024-12-29T05:21:50.358+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 2 for movie_id : tt26446278 and filmmaker_id: nm0241416
+[2024-12-29T05:22:10.335+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 3 for movie_id : tt26446278 and filmmaker_id: nm0478799
+[2024-12-29T05:22:24.240+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 4 for movie_id : tt26446278 and filmmaker_id: nm1141181
+[2024-12-29T05:22:47.058+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 5 for movie_id : tt26446278 and filmmaker_id: nm2582755
+[2024-12-29T05:23:06.959+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 6 for movie_id : tt26446278 and filmmaker_id: nm3319078
+[2024-12-29T05:23:29.220+0000] {extract.py:152} INFO - movie iteration 19 and filmamker iteration 7 for movie_id : tt26446278 and filmmaker_id: nm1326732
+[2024-12-29T05:24:19.271+0000] {extract.py:152} INFO - movie iteration 20 and filmamker iteration 0 for movie_id : tt28082769 and filmmaker_id: nm2959497
+[2024-12-29T05:25:02.098+0000] {extract.py:152} INFO - movie iteration 20 and filmamker iteration 1 for movie_id : tt28082769 and filmmaker_id: nm9415549
+[2024-12-29T05:25:36.899+0000] {extract.py:152} INFO - movie iteration 20 and filmamker iteration 2 for movie_id : tt28082769 and filmmaker_id: nm2959497
+[2024-12-29T05:25:52.885+0000] {extract.py:152} INFO - movie iteration 20 and filmamker iteration 3 for movie_id : tt28082769 and filmmaker_id: nm1017048
+[2024-12-29T05:26:11.139+0000] {extract.py:152} INFO - movie iteration 20 and filmamker iteration 4 for movie_id : tt28082769 and filmmaker_id: nm0765597
+[2024-12-29T05:26:36.093+0000] {extract.py:152} INFO - movie iteration 20 and filmamker iteration 5 for movie_id : tt28082769 and filmmaker_id: nm1910274
+[2024-12-29T05:27:23.446+0000] {extract.py:152} INFO - movie iteration 20 and filmamker iteration 6 for movie_id : tt28082769 and filmmaker_id: nm0001035
+[2024-12-29T05:28:08.689+0000] {extract.py:152} INFO - movie iteration 21 and filmamker iteration 0 for movie_id : tt29623480 and filmmaker_id: nm0761498
+[2024-12-29T05:28:47.134+0000] {extract.py:152} INFO - movie iteration 21 and filmamker iteration 1 for movie_id : tt29623480 and filmmaker_id: nm0761498
+[2024-12-29T05:29:05.792+0000] {extract.py:152} INFO - movie iteration 21 and filmamker iteration 2 for movie_id : tt29623480 and filmmaker_id: nm2464094
+[2024-12-29T05:29:24.622+0000] {extract.py:152} INFO - movie iteration 21 and filmamker iteration 3 for movie_id : tt29623480 and filmmaker_id: nm2143282
+[2024-12-29T05:29:50.860+0000] {extract.py:152} INFO - movie iteration 21 and filmamker iteration 4 for movie_id : tt29623480 and filmmaker_id: nm0050959
+[2024-12-29T05:30:18.219+0000] {extract.py:152} INFO - movie iteration 21 and filmamker iteration 5 for movie_id : tt29623480 and filmmaker_id: nm5598573
+[2024-12-29T05:30:49.458+0000] {extract.py:152} INFO - movie iteration 22 and filmamker iteration 0 for movie_id : tt21987878 and filmmaker_id: nm1658935
+[2024-12-29T05:31:11.753+0000] {extract.py:152} INFO - movie iteration 22 and filmamker iteration 1 for movie_id : tt21987878 and filmmaker_id: nm1658935
+[2024-12-29T05:31:29.094+0000] {extract.py:152} INFO - movie iteration 22 and filmamker iteration 2 for movie_id : tt21987878 and filmmaker_id: nm0000582
+[2024-12-29T05:31:47.408+0000] {extract.py:152} INFO - movie iteration 22 and filmamker iteration 3 for movie_id : tt21987878 and filmmaker_id: nm1910274
+[2024-12-29T05:32:06.286+0000] {extract.py:152} INFO - movie iteration 22 and filmamker iteration 4 for movie_id : tt21987878 and filmmaker_id: nm0000114
+[2024-12-29T05:33:23.135+0000] {python.py:240} INFO - Done. Returned value was: run_20241225/filmmaker_html_20241225.json
+[2024-12-29T05:33:33.556+0000] {job.py:229} INFO - Heartbeat recovered after 10.86 seconds
+[2024-12-29T05:33:39.674+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-29T05:33:39.919+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=scrape_filmmakers, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241229T044322, end_date=20241229T053339
+[2024-12-29T05:33:41.609+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-29T05:33:43.481+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-29T05:33:43.508+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-29T05:33:45.213+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics

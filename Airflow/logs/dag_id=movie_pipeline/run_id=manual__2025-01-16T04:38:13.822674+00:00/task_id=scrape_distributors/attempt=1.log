@@ -1,0 +1,296 @@
+[2025-01-16T15:30:08.518+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-16T15:30:08.605+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_distributors manual__2025-01-16T04:38:13.822674+00:00 [queued]>
+[2025-01-16T15:30:08.631+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_distributors manual__2025-01-16T04:38:13.822674+00:00 [queued]>
+[2025-01-16T15:30:08.637+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-16T15:30:08.674+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_distributors> on 2025-01-16 04:38:13.822674+00:00
+[2025-01-16T15:30:08.691+0000] {standard_task_runner.py:72} INFO - Started process 1773 to run task
+[2025-01-16T15:30:08.701+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_distributors', 'manual__2025-01-16T04:38:13.822674+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp1zbyuwtc']
+[2025-01-16T15:30:08.709+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask scrape_distributors
+[2025-01-16T15:30:08.901+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_distributors manual__2025-01-16T04:38:13.822674+00:00 [running]> on host 2dad824ef9ce
+[2025-01-16T15:30:09.484+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_distributors' AIRFLOW_CTX_EXECUTION_DATE='2025-01-16T04:38:13.822674+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-16T04:38:13.822674+00:00'
+[2025-01-16T15:30:09.490+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-16T15:30:22.381+0000] {extract.py:319} INFO - Iteration: 0 and movie_id: tt13186482
+[2025-01-16T15:31:40.154+0000] {extract.py:319} INFO - Iteration: 1 and movie_id: tt8008948
+[2025-01-16T15:32:41.564+0000] {extract.py:319} INFO - Iteration: 2 and movie_id: tt18259086
+[2025-01-16T15:33:10.192+0000] {extract.py:319} INFO - Iteration: 3 and movie_id: tt5040012
+[2025-01-16T15:33:32.344+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-16T15:33:32.463+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-16T15:33:32.519+0000] {process_utils.py:132} INFO - Sending 15 to group 1773. PIDs of all processes in the group: [1820, 1840, 1854, 1855, 1868, 1880, 1962, 1893, 1967, 2105, 3064, 3101, 3154, 1957, 1773]
+[2025-01-16T15:33:32.524+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1773
+[2025-01-16T15:33:32.572+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1893, status='terminated', started='15:30:09') (1893) terminated with exit code None
+[2025-01-16T15:33:32.593+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-16T15:33:32.661+0000] {connectionpool.py:827} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a0da24a30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/df02d0b5b02dd0b24adde3a8220f4734/window
+[2025-01-16T15:33:32.669+0000] {connectionpool.py:827} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a0da24d60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/df02d0b5b02dd0b24adde3a8220f4734/window
+[2025-01-16T15:33:32.672+0000] {connectionpool.py:827} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a0da24ac0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/df02d0b5b02dd0b24adde3a8220f4734/window
+[2025-01-16T15:33:32.672+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=3064, status='terminated', started='15:33:06') (3064) terminated with exit code None
+[2025-01-16T15:33:32.782+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1957, status='terminated', started='15:30:09') (1957) terminated with exit code None
+[2025-01-16T15:33:32.799+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1854, status='terminated', started='15:30:09') (1854) terminated with exit code None
+[2025-01-16T15:33:32.827+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1967, status='terminated', started='15:30:10') (1967) terminated with exit code None
+[2025-01-16T15:33:32.834+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1840, status='terminated', started='15:30:09') (1840) terminated with exit code None
+[2025-01-16T15:33:32.838+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1868, status='terminated', started='15:30:09') (1868) terminated with exit code None
+[2025-01-16T15:33:32.845+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1880, status='terminated', started='15:30:09') (1880) terminated with exit code None
+[2025-01-16T15:33:32.686+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/src/extract_scripts/extract.py", line 328, in distributor_scraper
+    page_rating=driver.page_source
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 485, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 77, in request
+    return self.request_encode_url(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 99, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.9/socket.py", line 716, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f3a0da24c10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/src/extract_scripts/extract.py", line 358, in distributor_scraper
+    driver.close()
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 495, in close
+    self.execute(Command.CLOSE)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 77, in request
+    return self.request_encode_url(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 99, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=45207): Max retries exceeded with url: /session/df02d0b5b02dd0b24adde3a8220f4734/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a0da24c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-01-16T15:33:32.962+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1962, status='terminated', started='15:30:09') (1962) terminated with exit code None
+[2025-01-16T15:33:32.973+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2105, status='terminated', started='15:30:11') (2105) terminated with exit code None
+[2025-01-16T15:33:32.978+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1855, status='terminated', started='15:30:09') (1855) terminated with exit code None
+[2025-01-16T15:33:32.981+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=3101, status='terminated', started='15:33:21') (3101) terminated with exit code None
+[2025-01-16T15:33:32.987+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=3154, status='terminated', started='15:33:30') (3154) terminated with exit code None
+[2025-01-16T15:33:32.994+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=scrape_distributors, run_id=manual__2025-01-16T04:38:13.822674+00:00, execution_date=20250116T043813, start_date=20250116T153008, end_date=20250116T153332
+[2025-01-16T15:33:33.078+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-16T15:33:33.082+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 39 for task scrape_distributors (HTTPConnectionPool(host='localhost', port=45207): Max retries exceeded with url: /session/df02d0b5b02dd0b24adde3a8220f4734/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a0da24c10>: Failed to establish a new connection: [Errno 111] Connection refused')); 1773)
+Traceback (most recent call last):
+  File "/opt/src/extract_scripts/extract.py", line 328, in distributor_scraper
+    page_rating=driver.page_source
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 485, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 77, in request
+    return self.request_encode_url(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 99, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.9/socket.py", line 716, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f3a0da24c10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/src/extract_scripts/extract.py", line 358, in distributor_scraper
+    driver.close()
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 495, in close
+    self.execute(Command.CLOSE)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 77, in request
+    return self.request_encode_url(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 99, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=45207): Max retries exceeded with url: /session/df02d0b5b02dd0b24adde3a8220f4734/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a0da24c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-01-16T15:33:33.180+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1773, status='terminated', exitcode=1, started='15:30:07') (1773) terminated with exit code 1
+[2025-01-16T15:33:33.182+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1820, status='terminated', started='15:30:09') (1820) terminated with exit code None

@@ -1,0 +1,297 @@
+[2025-01-13T13:54:51.724+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-13T13:54:52.106+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.load_SCD_dim_filmmakers scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:52.208+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.load_SCD_dim_filmmakers scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:52.212+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-13T13:54:52.765+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): load_SCD_dim_filmmakers> on 2025-01-09 00:00:00+00:00
+[2025-01-13T13:54:52.830+0000] {standard_task_runner.py:72} INFO - Started process 48000 to run task
+[2025-01-13T13:54:52.966+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'load_SCD_dim_filmmakers', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpp7wmhcx6']
+[2025-01-13T13:54:53.240+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask load_SCD_dim_filmmakers
+[2025-01-13T13:54:54.959+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.load_SCD_dim_filmmakers scheduled__2025-01-09T00:00:00+00:00 [running]> on host 8bfb9ef5b0f1
+[2025-01-13T13:55:00.829+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='load_SCD_dim_filmmakers' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-13T13:55:01.381+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-13T13:55:01.409+0000] {sql.py:278} INFO - Executing: WITH source_target_join AS(
+    SELECT
+        s.country country_s,
+        s.debut_movie_id debut_movie_id_s,
+        s.dob dob_s,
+        s.filmmaker_id filmmaker_id_s,
+        s.name name_s,
+        s.place_of_birth place_of_birth_s,
+        s.top_movie_numofrating top_movie_numofrating_s,
+        s.top_movie_us_boxoffice top_movie_us_boxoffice_s,
+        s.total_movies total_movies_s,
+        s.extracted_at extracted_at_s,
+        s.effective_from effective_from_s,
+        s.age age_s,
+        t.id id_t,
+        t.filmmaker_id filmmaker_id_t,
+        t.name name_t,
+        t.dob dob_t,
+        t.age age_t,
+        t.place_of_birth place_of_birth_t,
+        t.country country_t,
+        t.total_movies total_movies_t,
+        t.top_movie_numofrating top_movie_numofrating_t,
+        t.top_movie_us_boxoffice top_movie_us_boxoffice_t,
+        t.debut_movie_id debut_movie_id_t,
+        t.extracted_at extracted_at_t,
+        t.effective_from effective_from_t,
+        t.expiration_date expiration_date_t,
+        t.active_inactive active_inactive_t
+
+    FROM jayesh.dim_filmmakers_staging s
+    LEFT JOIN (SELECT * FROM jayesh.dim_filmmakers WHERE active_inactive='active') t
+    ON s.filmmaker_id = t.filmmaker_id
+),
+new_records AS(
+    SELECT
+        country_s,
+        debut_movie_id_s,
+        dob_s,
+        filmmaker_id_s,
+        name_s,
+        place_of_birth_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        total_movies_s,
+        extracted_at_s,
+        effective_from_s,
+        age_s
+    FROM source_target_join
+    WHERE filmmaker_id_t is null
+),
+scd1_records AS(
+    SELECT
+        country_s,
+        debut_movie_id_s,
+        dob_s,
+        filmmaker_id_s,
+        name_s,
+        place_of_birth_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        total_movies_s,
+        extracted_at_s,
+        effective_from_s,
+        age_s
+    FROM source_target_join
+    WHERE
+        filmmaker_id_t is not null AND
+        (
+            (
+                age_s <> age_t OR
+                total_movies_s <> total_movies_t
+            ) AND
+            top_movie_numofrating_s = top_movie_numofrating_t AND
+            top_movie_us_boxoffice_s = top_movie_us_boxoffice_t
+        )
+),
+scd2_records AS(
+    SELECT
+        country_s,
+        debut_movie_id_s,
+        dob_s,
+        filmmaker_id_s,
+        name_s,
+        place_of_birth_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        total_movies_s,
+        extracted_at_s,
+        effective_from_s,
+        age_s
+    FROM source_target_join
+    WHERE
+        filmmaker_id_t is not null AND
+        (
+            top_movie_numofrating_s <> top_movie_numofrating_t OR
+            top_movie_us_boxoffice_s <> top_movie_us_boxoffice_t            
+        )
+),
+update_scd2 AS(
+    UPDATE jayesh.dim_filmmakers as f
+    SET
+        expiration_date = scd.effective_from_s,
+        active_inactive = 'inactive'
+    FROM scd2_records scd
+    WHERE f.filmmaker_id IN (scd.filmmaker_id_s) AND active_inactive='active'
+),
+insert_rows AS(
+    INSERT INTO jayesh.dim_filmmakers(
+        country,
+        debut_movie_id,
+        dob,
+        filmmaker_id,
+        name,
+        place_of_birth,
+        top_movie_numofrating,
+        top_movie_us_boxoffice,
+        total_movies,
+        extracted_at,
+        effective_from,
+        age
+    )
+    SELECT * FROM new_records
+    UNION ALL
+    SELECT * FROM scd2_records
+    RETURNING *
+),
+update_scd1 AS(
+    UPDATE jayesh.dim_filmmakers as f
+    SET
+        age = scd.age_s,
+        total_movies = scd.total_movies_s,
+        extracted_at = scd.extracted_at_s
+    FROM scd1_records as scd
+    WHERE f.filmmaker_id IN (scd.filmmaker_id_s) AND active_inactive = 'active'
+)
+
+SELECT 1;
+
+TRUNCATE dim_filmmakers_staging;
+[2025-01-13T13:55:03.613+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:04.696+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:09.045+0000] {sql.py:553} INFO - Running statement: WITH source_target_join AS(
+    SELECT
+        s.country country_s,
+        s.debut_movie_id debut_movie_id_s,
+        s.dob dob_s,
+        s.filmmaker_id filmmaker_id_s,
+        s.name name_s,
+        s.place_of_birth place_of_birth_s,
+        s.top_movie_numofrating top_movie_numofrating_s,
+        s.top_movie_us_boxoffice top_movie_us_boxoffice_s,
+        s.total_movies total_movies_s,
+        s.extracted_at extracted_at_s,
+        s.effective_from effective_from_s,
+        s.age age_s,
+        t.id id_t,
+        t.filmmaker_id filmmaker_id_t,
+        t.name name_t,
+        t.dob dob_t,
+        t.age age_t,
+        t.place_of_birth place_of_birth_t,
+        t.country country_t,
+        t.total_movies total_movies_t,
+        t.top_movie_numofrating top_movie_numofrating_t,
+        t.top_movie_us_boxoffice top_movie_us_boxoffice_t,
+        t.debut_movie_id debut_movie_id_t,
+        t.extracted_at extracted_at_t,
+        t.effective_from effective_from_t,
+        t.expiration_date expiration_date_t,
+        t.active_inactive active_inactive_t
+
+    FROM jayesh.dim_filmmakers_staging s
+    LEFT JOIN (SELECT * FROM jayesh.dim_filmmakers WHERE active_inactive='active') t
+    ON s.filmmaker_id = t.filmmaker_id
+),
+new_records AS(
+    SELECT
+        country_s,
+        debut_movie_id_s,
+        dob_s,
+        filmmaker_id_s,
+        name_s,
+        place_of_birth_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        total_movies_s,
+        extracted_at_s,
+        effective_from_s,
+        age_s
+    FROM source_target_join
+    WHERE filmmaker_id_t is null
+),
+scd1_records AS(
+    SELECT
+        country_s,
+        debut_movie_id_s,
+        dob_s,
+        filmmaker_id_s,
+        name_s,
+        place_of_birth_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        total_movies_s,
+        extracted_at_s,
+        effective_from_s,
+        age_s
+    FROM source_target_join
+    WHERE
+        filmmaker_id_t is not null AND
+        (
+            (
+                age_s <> age_t OR
+                total_movies_s <> total_movies_t
+            ) AND
+            top_movie_numofrating_s = top_movie_numofrating_t AND
+            top_movie_us_boxoffice_s = top_movie_us_boxoffice_t
+        )
+),
+scd2_records AS(
+    SELECT
+        country_s,
+        debut_movie_id_s,
+        dob_s,
+        filmmaker_id_s,
+        name_s,
+        place_of_birth_s,
+        top_movie_numofrating_s,
+        top_movie_us_boxoffice_s,
+        total_movies_s,
+        extracted_at_s,
+        effective_from_s,
+        age_s
+    FROM source_target_join
+    WHERE
+        filmmaker_id_t is not null AND
+        (
+            top_movie_numofrating_s <> top_movie_numofrating_t OR
+            top_movie_us_boxoffice_s <> top_movie_us_boxoffice_t            
+        )
+),
+update_scd2 AS(
+    UPDATE jayesh.dim_filmmakers as f
+    SET
+        expiration_date = scd.effective_from_s,
+        active_inactive = 'inactive'
+    FROM scd2_records scd
+    WHERE f.filmmaker_id IN (scd.filmmaker_id_s) AND active_inactive='active'
+),
+insert_rows AS(
+    INSERT INTO jayesh.dim_filmmakers(
+        country,
+        debut_movie_id,
+        dob,
+        filmmaker_id,
+        name,
+        place_of_birth,
+        top_movie_numofrating,
+        top_movie_us_boxoffice,
+        total_movies,
+        extracted_at,
+        effective_from,
+        age
+    )
+    SELECT * FROM new_records
+    UNION ALL
+    SELECT * FROM scd2_records
+    RETURNING *
+),
+update_scd1 AS(
+    UPDATE jayesh.dim_filmmakers as f
+    SET
+        age = scd.age_s,
+        total_movies = scd.total_movies_s,
+        extracted_at = scd.extracted_at_s
+    FROM scd1_records as scd
+    WHERE f.filmmaker_id IN (scd.filmmaker_id_s) AND active_inactive = 'active'
+)
+
+SELECT 1;
+
+TRUNCATE dim_filmmakers_staging;, parameters: None
+[2025-01-13T13:55:09.631+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-13T13:55:09.652+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=load_SCD_dim_filmmakers, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250113T135452, end_date=20250113T135509
+[2025-01-13T13:55:11.654+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-13T13:55:11.911+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,282 @@
+[2024-12-27T12:51:03.863+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-27T12:51:04.531+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-27T12:51:04.577+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-27T12:51:04.579+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-27T12:51:04.679+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_filmmakers> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-27T12:51:04.700+0000] {standard_task_runner.py:72} INFO - Started process 1382 to run task
+[2024-12-27T12:51:04.714+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_filmmakers', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpuw2mj426']
+[2024-12-27T12:51:04.728+0000] {standard_task_runner.py:105} INFO - Job 73: Subtask scrape_filmmakers
+[2024-12-27T12:51:05.077+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [running]> on host b92f2c33c491
+[2024-12-27T12:51:06.110+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_filmmakers' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-27T12:51:06.118+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-27T12:51:11.201+0000] {extract.py:151} INFO - movie iteration 0 and filmamker iteration 0 for movie_id : tt13186482 and filmmaker_id: nm1503575
+[2024-12-27T12:52:28.044+0000] {extract.py:151} INFO - movie iteration 0 and filmamker iteration 1 for movie_id : tt13186482 and filmmaker_id: nm0622288
+[2024-12-27T12:53:20.287+0000] {extract.py:151} INFO - movie iteration 0 and filmamker iteration 2 for movie_id : tt13186482 and filmmaker_id: nm0941314
+[2024-12-27T12:54:01.250+0000] {extract.py:151} INFO - movie iteration 0 and filmamker iteration 3 for movie_id : tt13186482 and filmmaker_id: nm0575293
+[2024-12-27T12:54:41.024+0000] {extract.py:151} INFO - movie iteration 0 and filmamker iteration 4 for movie_id : tt13186482 and filmmaker_id: nm7543974
+[2024-12-27T12:55:11.109+0000] {extract.py:151} INFO - movie iteration 0 and filmamker iteration 5 for movie_id : tt13186482 and filmmaker_id: nm5123156
+[2024-12-27T12:56:00.533+0000] {extract.py:151} INFO - movie iteration 0 and filmamker iteration 6 for movie_id : tt13186482 and filmmaker_id: nm2274707
+[2024-12-27T12:56:32.463+0000] {extract.py:151} INFO - movie iteration 1 and filmamker iteration 0 for movie_id : tt5040012 and filmmaker_id: nm3211470
+[2024-12-27T12:57:11.364+0000] {extract.py:151} INFO - movie iteration 1 and filmamker iteration 1 for movie_id : tt5040012 and filmmaker_id: nm3211470
+[2024-12-27T12:57:46.234+0000] {extract.py:151} INFO - movie iteration 1 and filmamker iteration 2 for movie_id : tt5040012 and filmmaker_id: nm0301961
+[2024-12-27T12:58:25.733+0000] {extract.py:151} INFO - movie iteration 1 and filmamker iteration 3 for movie_id : tt5040012 and filmmaker_id: nm0831290
+[2024-12-27T12:59:28.889+0000] {extract.py:151} INFO - movie iteration 1 and filmamker iteration 4 for movie_id : tt5040012 and filmmaker_id: nm6675440
+[2024-12-27T13:00:06.830+0000] {extract.py:151} INFO - movie iteration 1 and filmamker iteration 5 for movie_id : tt5040012 and filmmaker_id: nm0396558
+[2024-12-27T13:00:44.146+0000] {extract.py:151} INFO - movie iteration 1 and filmamker iteration 6 for movie_id : tt5040012 and filmmaker_id: nm0803889
+[2024-12-27T13:01:16.229+0000] {extract.py:151} INFO - movie iteration 2 and filmamker iteration 0 for movie_id : tt18259086 and filmmaker_id: nm1733778
+[2024-12-27T13:01:38.417+0000] {extract.py:151} INFO - movie iteration 2 and filmamker iteration 1 for movie_id : tt18259086 and filmmaker_id: nm1352459
+[2024-12-27T13:02:01.209+0000] {extract.py:151} INFO - movie iteration 2 and filmamker iteration 2 for movie_id : tt18259086 and filmmaker_id: nm1351254
+[2024-12-27T13:02:23.277+0000] {extract.py:151} INFO - movie iteration 2 and filmamker iteration 3 for movie_id : tt18259086 and filmmaker_id: nm4465847
+[2024-12-27T13:02:45.084+0000] {extract.py:151} INFO - movie iteration 2 and filmamker iteration 4 for movie_id : tt18259086 and filmmaker_id: nm0000120
+[2024-12-27T13:03:16.378+0000] {extract.py:151} INFO - movie iteration 2 and filmamker iteration 5 for movie_id : tt18259086 and filmmaker_id: nm2355635
+[2024-12-27T13:03:45.758+0000] {extract.py:151} INFO - movie iteration 2 and filmamker iteration 6 for movie_id : tt18259086 and filmmaker_id: nm0000206
+[2024-12-27T13:04:18.239+0000] {extract.py:151} INFO - movie iteration 3 and filmamker iteration 0 for movie_id : tt11563598 and filmmaker_id: nm0003506
+[2024-12-27T13:04:48.524+0000] {extract.py:151} INFO - movie iteration 3 and filmamker iteration 1 for movie_id : tt11563598 and filmmaker_id: nm0003506
+[2024-12-27T13:05:12.899+0000] {extract.py:151} INFO - movie iteration 3 and filmamker iteration 2 for movie_id : tt11563598 and filmmaker_id: nm0168379
+[2024-12-27T13:05:38.586+0000] {extract.py:151} INFO - movie iteration 3 and filmamker iteration 3 for movie_id : tt11563598 and filmmaker_id: nm2374778
+[2024-12-27T13:05:59.752+0000] {extract.py:151} INFO - movie iteration 3 and filmamker iteration 4 for movie_id : tt11563598 and filmmaker_id: nm3154303
+[2024-12-27T13:06:25.794+0000] {extract.py:151} INFO - movie iteration 3 and filmamker iteration 5 for movie_id : tt11563598 and filmmaker_id: nm0001570
+[2024-12-27T13:06:54.485+0000] {extract.py:151} INFO - movie iteration 3 and filmamker iteration 6 for movie_id : tt11563598 and filmmaker_id: nm1102577
+[2024-12-27T13:07:24.999+0000] {extract.py:151} INFO - movie iteration 4 and filmamker iteration 0 for movie_id : tt1262426 and filmmaker_id: nm0160840
+[2024-12-27T13:07:58.096+0000] {extract.py:151} INFO - movie iteration 4 and filmamker iteration 1 for movie_id : tt1262426 and filmmaker_id: nm0392848
+[2024-12-27T13:08:25.948+0000] {extract.py:151} INFO - movie iteration 4 and filmamker iteration 2 for movie_id : tt1262426 and filmmaker_id: nm1401416
+[2024-12-27T13:09:32.493+0000] {job.py:229} INFO - Heartbeat recovered after 14.40 seconds
+[2024-12-27T13:09:36.297+0000] {extract.py:151} INFO - movie iteration 4 and filmamker iteration 3 for movie_id : tt1262426 and filmmaker_id: nm0536579
+[2024-12-27T13:09:53.231+0000] {extract.py:151} INFO - movie iteration 4 and filmamker iteration 4 for movie_id : tt1262426 and filmmaker_id: nm7248827
+[2024-12-27T13:10:15.734+0000] {extract.py:151} INFO - movie iteration 4 and filmamker iteration 5 for movie_id : tt1262426 and filmmaker_id: nm3812858
+[2024-12-27T13:10:35.228+0000] {extract.py:151} INFO - movie iteration 4 and filmamker iteration 6 for movie_id : tt1262426 and filmmaker_id: nm0000156
+[2024-12-27T13:10:56.919+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 0 for movie_id : tt13622970 and filmmaker_id: nm3989471
+[2024-12-27T13:11:14.052+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 1 for movie_id : tt13622970 and filmmaker_id: nm2911364
+[2024-12-27T13:11:30.956+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 2 for movie_id : tt13622970 and filmmaker_id: nm2834849
+[2024-12-27T13:11:47.178+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 3 for movie_id : tt13622970 and filmmaker_id: nm1158544
+[2024-12-27T13:12:03.846+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 4 for movie_id : tt13622970 and filmmaker_id: nm2834849
+[2024-12-27T13:12:17.898+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 5 for movie_id : tt13622970 and filmmaker_id: nm2414279
+[2024-12-27T13:12:35.310+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 6 for movie_id : tt13622970 and filmmaker_id: nm7635388
+[2024-12-27T13:12:54.830+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 7 for movie_id : tt13622970 and filmmaker_id: nm0425005
+[2024-12-27T13:13:20.888+0000] {extract.py:151} INFO - movie iteration 5 and filmamker iteration 8 for movie_id : tt13622970 and filmmaker_id: nm12533314
+[2024-12-27T13:13:39.273+0000] {extract.py:151} INFO - movie iteration 6 and filmamker iteration 0 for movie_id : tt6133444 and filmmaker_id: nm1121126
+[2024-12-27T13:14:00.539+0000] {extract.py:151} INFO - movie iteration 6 and filmamker iteration 1 for movie_id : tt6133444 and filmmaker_id: nm1503575
+[2024-12-27T13:14:17.274+0000] {extract.py:151} INFO - movie iteration 6 and filmamker iteration 2 for movie_id : tt6133444 and filmmaker_id: nm3629113
+[2024-12-27T13:14:32.333+0000] {extract.py:151} INFO - movie iteration 6 and filmamker iteration 3 for movie_id : tt6133444 and filmmaker_id: nm3109964
+[2024-12-27T13:14:51.127+0000] {extract.py:151} INFO - movie iteration 6 and filmamker iteration 4 for movie_id : tt6133444 and filmmaker_id: nm12380497
+[2024-12-27T13:15:05.570+0000] {extract.py:151} INFO - movie iteration 7 and filmamker iteration 0 for movie_id : tt30057084 and filmmaker_id: nm0717603
+[2024-12-27T13:15:26.537+0000] {extract.py:151} INFO - movie iteration 7 and filmamker iteration 1 for movie_id : tt30057084 and filmmaker_id: nm0717603
+[2024-12-27T13:15:43.712+0000] {extract.py:151} INFO - movie iteration 7 and filmamker iteration 2 for movie_id : tt30057084 and filmmaker_id: nm0000173
+[2024-12-27T13:16:12.335+0000] {extract.py:151} INFO - movie iteration 7 and filmamker iteration 3 for movie_id : tt30057084 and filmmaker_id: nm6170168
+[2024-12-27T13:16:29.868+0000] {extract.py:151} INFO - movie iteration 7 and filmamker iteration 4 for movie_id : tt30057084 and filmmaker_id: nm0000104
+[2024-12-27T13:16:52.263+0000] {extract.py:151} INFO - movie iteration 8 and filmamker iteration 0 for movie_id : tt9218128 and filmmaker_id: nm0000631
+[2024-12-27T13:17:14.023+0000] {extract.py:151} INFO - movie iteration 8 and filmamker iteration 1 for movie_id : tt9218128 and filmmaker_id: nm0291905
+[2024-12-27T13:17:28.436+0000] {extract.py:151} INFO - movie iteration 8 and filmamker iteration 2 for movie_id : tt9218128 and filmmaker_id: nm0185976
+[2024-12-27T13:17:44.781+0000] {extract.py:151} INFO - movie iteration 8 and filmamker iteration 3 for movie_id : tt9218128 and filmmaker_id: nm0769227
+[2024-12-27T13:18:00.370+0000] {extract.py:151} INFO - movie iteration 8 and filmamker iteration 4 for movie_id : tt9218128 and filmmaker_id: nm8958770
+[2024-12-27T13:18:16.699+0000] {extract.py:151} INFO - movie iteration 8 and filmamker iteration 5 for movie_id : tt9218128 and filmmaker_id: nm0000243
+[2024-12-27T13:18:38.774+0000] {extract.py:151} INFO - movie iteration 8 and filmamker iteration 6 for movie_id : tt9218128 and filmmaker_id: nm0050959
+[2024-12-27T13:18:59.253+0000] {extract.py:151} INFO - movie iteration 9 and filmamker iteration 0 for movie_id : tt29137778 and filmmaker_id: nm1351912
+[2024-12-27T13:19:16.834+0000] {extract.py:151} INFO - movie iteration 9 and filmamker iteration 1 for movie_id : tt29137778 and filmmaker_id: nm3220108
+[2024-12-27T13:19:33.454+0000] {extract.py:151} INFO - movie iteration 9 and filmamker iteration 2 for movie_id : tt29137778 and filmmaker_id: nm4137576
+[2024-12-27T13:19:48.966+0000] {extract.py:151} INFO - movie iteration 9 and filmamker iteration 3 for movie_id : tt29137778 and filmmaker_id: nm7918285
+[2024-12-27T13:20:04.369+0000] {extract.py:151} INFO - movie iteration 9 and filmamker iteration 4 for movie_id : tt29137778 and filmmaker_id: nm1685408
+[2024-12-27T13:20:22.744+0000] {extract.py:151} INFO - movie iteration 9 and filmamker iteration 5 for movie_id : tt29137778 and filmmaker_id: nm0568180
+[2024-12-27T13:20:44.728+0000] {extract.py:151} INFO - movie iteration 9 and filmamker iteration 6 for movie_id : tt29137778 and filmmaker_id: nm0592874
+[2024-12-27T13:21:04.271+0000] {extract.py:151} INFO - movie iteration 10 and filmamker iteration 0 for movie_id : tt8790086 and filmmaker_id: nm1170855
+[2024-12-27T13:21:23.885+0000] {extract.py:151} INFO - movie iteration 10 and filmamker iteration 1 for movie_id : tt8790086 and filmmaker_id: nm0921013
+[2024-12-27T13:21:44.131+0000] {extract.py:151} INFO - movie iteration 10 and filmamker iteration 2 for movie_id : tt8790086 and filmmaker_id: nm1436466
+[2024-12-27T13:21:58.991+0000] {extract.py:151} INFO - movie iteration 10 and filmamker iteration 3 for movie_id : tt8790086 and filmmaker_id: nm0391344
+[2024-12-27T13:22:16.086+0000] {extract.py:151} INFO - movie iteration 10 and filmamker iteration 4 for movie_id : tt8790086 and filmmaker_id: nm1093951
+[2024-12-27T13:22:35.766+0000] {extract.py:151} INFO - movie iteration 10 and filmamker iteration 5 for movie_id : tt8790086 and filmmaker_id: nm3663196
+[2024-12-27T13:22:53.112+0000] {extract.py:151} INFO - movie iteration 10 and filmamker iteration 6 for movie_id : tt8790086 and filmmaker_id: nm9538520
+[2024-12-27T13:23:10.312+0000] {extract.py:151} INFO - movie iteration 11 and filmamker iteration 0 for movie_id : tt14948432 and filmmaker_id: nm0440458
+[2024-12-27T13:23:30.232+0000] {extract.py:151} INFO - movie iteration 11 and filmamker iteration 1 for movie_id : tt14948432 and filmmaker_id: nm0604555
+[2024-12-27T13:23:53.267+0000] {extract.py:151} INFO - movie iteration 11 and filmamker iteration 2 for movie_id : tt14948432 and filmmaker_id: nm1205652
+[2024-12-27T13:24:15.605+0000] {extract.py:151} INFO - movie iteration 11 and filmamker iteration 3 for movie_id : tt14948432 and filmmaker_id: nm0425005
+[2024-12-27T13:24:37.324+0000] {extract.py:151} INFO - movie iteration 11 and filmamker iteration 4 for movie_id : tt14948432 and filmmaker_id: nm0262635
+[2024-12-27T13:25:00.610+0000] {extract.py:151} INFO - movie iteration 11 and filmamker iteration 5 for movie_id : tt14948432 and filmmaker_id: nm0005154
+[2024-12-27T13:25:21.359+0000] {extract.py:151} INFO - movie iteration 12 and filmamker iteration 0 for movie_id : tt2347285 and filmmaker_id: nm0420817
+[2024-12-27T13:25:37.113+0000] {extract.py:151} INFO - movie iteration 12 and filmamker iteration 1 for movie_id : tt2347285 and filmmaker_id: nm0732393
+[2024-12-27T13:25:52.924+0000] {extract.py:151} INFO - movie iteration 12 and filmamker iteration 2 for movie_id : tt2347285 and filmmaker_id: nm1480232
+[2024-12-27T13:26:08.959+0000] {extract.py:151} INFO - movie iteration 12 and filmamker iteration 3 for movie_id : tt2347285 and filmmaker_id: nm3056833
+[2024-12-27T13:26:24.266+0000] {extract.py:151} INFO - movie iteration 12 and filmamker iteration 4 for movie_id : tt2347285 and filmmaker_id: nm14398475
+[2024-12-27T13:26:39.721+0000] {extract.py:151} INFO - movie iteration 12 and filmamker iteration 5 for movie_id : tt2347285 and filmmaker_id: nm8407821
+[2024-12-27T13:26:56.117+0000] {extract.py:151} INFO - movie iteration 12 and filmamker iteration 6 for movie_id : tt2347285 and filmmaker_id: nm0339460
+[2024-12-27T13:27:19.342+0000] {extract.py:151} INFO - movie iteration 13 and filmamker iteration 0 for movie_id : tt14824600 and filmmaker_id: nm0436784
+[2024-12-27T13:27:39.943+0000] {extract.py:151} INFO - movie iteration 13 and filmamker iteration 1 for movie_id : tt14824600 and filmmaker_id: nm2731620
+[2024-12-27T13:27:57.810+0000] {extract.py:151} INFO - movie iteration 13 and filmamker iteration 2 for movie_id : tt14824600 and filmmaker_id: nm2176993
+[2024-12-27T13:28:12.513+0000] {extract.py:151} INFO - movie iteration 13 and filmamker iteration 3 for movie_id : tt14824600 and filmmaker_id: nm3907831
+[2024-12-27T13:28:30.476+0000] {extract.py:151} INFO - movie iteration 13 and filmamker iteration 4 for movie_id : tt14824600 and filmmaker_id: nm0004051
+[2024-12-27T13:28:56.340+0000] {extract.py:151} INFO - movie iteration 13 and filmamker iteration 5 for movie_id : tt14824600 and filmmaker_id: nm3230329
+[2024-12-27T13:29:17.004+0000] {extract.py:151} INFO - movie iteration 13 and filmamker iteration 6 for movie_id : tt14824600 and filmmaker_id: nm0001584
+[2024-12-27T13:29:47.750+0000] {extract.py:151} INFO - movie iteration 14 and filmamker iteration 0 for movie_id : tt8999762 and filmmaker_id: nm1227232
+[2024-12-27T13:30:20.326+0000] {extract.py:151} INFO - movie iteration 14 and filmamker iteration 1 for movie_id : tt8999762 and filmmaker_id: nm1227232
+[2024-12-27T13:30:51.614+0000] {extract.py:151} INFO - movie iteration 14 and filmamker iteration 2 for movie_id : tt8999762 and filmmaker_id: nm2178754
+[2024-12-27T13:31:27.020+0000] {extract.py:151} INFO - movie iteration 14 and filmamker iteration 3 for movie_id : tt8999762 and filmmaker_id: nm0004778
+[2024-12-27T13:32:11.397+0000] {extract.py:151} INFO - movie iteration 14 and filmamker iteration 4 for movie_id : tt8999762 and filmmaker_id: nm0428065
+[2024-12-27T13:32:59.372+0000] {extract.py:151} INFO - movie iteration 14 and filmamker iteration 5 for movie_id : tt8999762 and filmmaker_id: nm0001602
+[2024-12-27T13:34:12.367+0000] {extract.py:151} INFO - movie iteration 15 and filmamker iteration 0 for movie_id : tt21823606 and filmmaker_id: nm0251986
+[2024-12-27T13:36:34.329+0000] {connectionpool.py:827} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=52877): Read timed out. (read timeout=120)")': /session/a6df3db942bd0cba6ef5caa1dfad31b5/source
+[2024-12-27T13:36:54.357+0000] {job.py:229} INFO - Heartbeat recovered after 139.92 seconds
+[2024-12-27T13:36:58.224+0000] {extract.py:186} ERROR - Failed movie iteration 15 and filmamker iteration 0 for movie_id : tt21823606 and filmmaker_id: nm0251986
+[2024-12-27T13:36:58.233+0000] {extract.py:187} ERROR - Message: invalid session id
+Stacktrace:
+#0 0x55baac1db8fa <unknown>
+#1 0x55baabcecb7d <unknown>
+#2 0x55baabd2e057 <unknown>
+#3 0x55baabd2f32e <unknown>
+#4 0x55baac1a800b <unknown>
+#5 0x55baac1abf97 <unknown>
+#6 0x55baac19471c <unknown>
+#7 0x55baac1acb17 <unknown>
+#8 0x55baac1796cf <unknown>
+#9 0x55baac1ca6b8 <unknown>
+#10 0x55baac1ca880 <unknown>
+#11 0x55baac1da776 <unknown>
+#12 0x7fbc569d21c4 <unknown>
+Traceback (most recent call last):
+  File "/opt/src/extract.py", line 174, in movie_cast_filmmakers_extract
+    filmmaker_dict['page_source'][type]['source']=driver.page_source
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 485, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+#0 0x55baac1db8fa <unknown>
+#1 0x55baabcecb7d <unknown>
+#2 0x55baabd2e057 <unknown>
+#3 0x55baabd2f32e <unknown>
+#4 0x55baac1a800b <unknown>
+#5 0x55baac1abf97 <unknown>
+#6 0x55baac19471c <unknown>
+#7 0x55baac1acb17 <unknown>
+#8 0x55baac1796cf <unknown>
+#9 0x55baac1ca6b8 <unknown>
+#10 0x55baac1ca880 <unknown>
+#11 0x55baac1da776 <unknown>
+#12 0x7fbc569d21c4 <unknown>
+
+[2024-12-27T13:36:58.407+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/src/extract.py", line 189, in movie_cast_filmmakers_extract
+    driver.close()
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 495, in close
+    self.execute(Command.CLOSE)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+#0 0x55baac1db8fa <unknown>
+#1 0x55baabcecb7d <unknown>
+#2 0x55baabd2d553 <unknown>
+#3 0x55baabd5f9d4 <unknown>
+#4 0x55baabd5a225 <unknown>
+#5 0x55baabd5930c <unknown>
+#6 0x55baabcb7488 <unknown>
+#7 0x55baac1a800b <unknown>
+#8 0x55baac1abf97 <unknown>
+#9 0x55baac19471c <unknown>
+#10 0x55baac1acb17 <unknown>
+#11 0x55baac1796cf <unknown>
+#12 0x55baabcb5efc <unknown>
+#13 0x7fbc5697024a <unknown>
+
+[2024-12-27T13:36:58.748+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=scrape_filmmakers, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241227T125104, end_date=20241227T133658
+[2024-12-27T13:36:58.927+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-27T13:36:58.953+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 73 for task scrape_filmmakers (Message: invalid session id
+Stacktrace:
+#0 0x55baac1db8fa <unknown>
+#1 0x55baabcecb7d <unknown>
+#2 0x55baabd2d553 <unknown>
+#3 0x55baabd5f9d4 <unknown>
+#4 0x55baabd5a225 <unknown>
+#5 0x55baabd5930c <unknown>
+#6 0x55baabcb7488 <unknown>
+#7 0x55baac1a800b <unknown>
+#8 0x55baac1abf97 <unknown>
+#9 0x55baac19471c <unknown>
+#10 0x55baac1acb17 <unknown>
+#11 0x55baac1796cf <unknown>
+#12 0x55baabcb5efc <unknown>
+#13 0x7fbc5697024a <unknown>
+; 1382)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/src/extract.py", line 189, in movie_cast_filmmakers_extract
+    driver.close()
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 495, in close
+    self.execute(Command.CLOSE)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+#0 0x55baac1db8fa <unknown>
+#1 0x55baabcecb7d <unknown>
+#2 0x55baabd2d553 <unknown>
+#3 0x55baabd5f9d4 <unknown>
+#4 0x55baabd5a225 <unknown>
+#5 0x55baabd5930c <unknown>
+#6 0x55baabcb7488 <unknown>
+#7 0x55baac1a800b <unknown>
+#8 0x55baac1abf97 <unknown>
+#9 0x55baac19471c <unknown>
+#10 0x55baac1acb17 <unknown>
+#11 0x55baac1796cf <unknown>
+#12 0x55baabcb5efc <unknown>
+#13 0x7fbc5697024a <unknown>
+
+[2024-12-27T13:36:59.229+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-27T13:36:59.637+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-27T13:36:59.668+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

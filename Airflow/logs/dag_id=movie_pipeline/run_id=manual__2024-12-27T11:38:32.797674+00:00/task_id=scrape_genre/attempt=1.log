@@ -1,0 +1,253 @@
+[2024-12-27T12:51:03.819+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-27T12:51:04.509+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-27T12:51:04.544+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-27T12:51:04.548+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-27T12:51:04.616+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_genre> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-27T12:51:04.632+0000] {standard_task_runner.py:72} INFO - Started process 1378 to run task
+[2024-12-27T12:51:04.648+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_genre', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpojchs4jm']
+[2024-12-27T12:51:04.654+0000] {standard_task_runner.py:105} INFO - Job 71: Subtask scrape_genre
+[2024-12-27T12:51:04.961+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_genre manual__2024-12-27T11:38:32.797674+00:00 [running]> on host b92f2c33c491
+[2024-12-27T12:51:05.879+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_genre' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-27T12:51:05.885+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-27T12:51:11.201+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration0 for movie_id: tt13186482 and genre_id: in0000092
+[2024-12-27T12:52:07.485+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration1 for movie_id: tt13186482 and genre_id: in0000028
+[2024-12-27T12:52:33.514+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration2 for movie_id: tt13186482 and genre_id: in0000012
+[2024-12-27T12:52:56.482+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration3 for movie_id: tt13186482 and genre_id: in0000026
+[2024-12-27T12:53:27.951+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration4 for movie_id: tt13186482 and genre_id: in0000076
+[2024-12-27T12:53:48.869+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration5 for movie_id: tt13186482 and genre_id: in0000093
+[2024-12-27T12:54:15.562+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration6 for movie_id: tt13186482 and genre_id: in0000098
+[2024-12-27T12:54:39.947+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration7 for movie_id: tt13186482 and genre_id: in0000133
+[2024-12-27T12:55:02.486+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration0 for movie_id: tt5040012 and genre_id: in0000095
+[2024-12-27T12:55:23.593+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration1 for movie_id: tt5040012 and genre_id: in0000117
+[2024-12-27T12:55:50.793+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration2 for movie_id: tt5040012 and genre_id: in0000119
+[2024-12-27T12:56:12.392+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration3 for movie_id: tt5040012 and genre_id: in0000098
+[2024-12-27T12:56:32.295+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration4 for movie_id: tt5040012 and genre_id: in0000112
+[2024-12-27T12:56:55.869+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration5 for movie_id: tt5040012 and genre_id: in0000139
+[2024-12-27T12:57:18.754+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration0 for movie_id: tt18259086 and genre_id: in0000092
+[2024-12-27T12:57:44.631+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration1 for movie_id: tt18259086 and genre_id: in0000016
+[2024-12-27T12:58:07.352+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration2 for movie_id: tt18259086 and genre_id: in0000008
+[2024-12-27T12:58:27.368+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration3 for movie_id: tt18259086 and genre_id: in0000099
+[2024-12-27T12:59:01.746+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration4 for movie_id: tt18259086 and genre_id: in0000001
+[2024-12-27T12:59:28.842+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration5 for movie_id: tt18259086 and genre_id: in0000012
+[2024-12-27T12:59:50.917+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration6 for movie_id: tt18259086 and genre_id: in0000034
+[2024-12-27T13:00:08.497+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration7 for movie_id: tt18259086 and genre_id: in0000093
+[2024-12-27T13:00:26.559+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration8 for movie_id: tt18259086 and genre_id: in0000098
+[2024-12-27T13:00:42.462+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration9 for movie_id: tt18259086 and genre_id: in0000162
+[2024-12-27T13:01:00.193+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration0 for movie_id: tt11563598 and genre_id: in0000075
+[2024-12-27T13:01:15.232+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration1 for movie_id: tt11563598 and genre_id: in0000083
+[2024-12-27T13:01:30.073+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration2 for movie_id: tt11563598 and genre_id: in0000072
+[2024-12-27T13:01:44.687+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration3 for movie_id: tt11563598 and genre_id: in0000076
+[2024-12-27T13:01:57.869+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration4 for movie_id: tt11563598 and genre_id: in0000130
+[2024-12-27T13:02:12.352+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration0 for movie_id: tt1262426 and genre_id: in0000097
+[2024-12-27T13:02:27.302+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration1 for movie_id: tt1262426 and genre_id: in0000134
+[2024-12-27T13:02:42.117+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration2 for movie_id: tt1262426 and genre_id: in0000098
+[2024-12-27T13:02:58.099+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration3 for movie_id: tt1262426 and genre_id: in0000133
+[2024-12-27T13:03:11.998+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration4 for movie_id: tt1262426 and genre_id: in0000152
+[2024-12-27T13:03:27.411+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration0 for movie_id: tt13622970 and genre_id: in0000028
+[2024-12-27T13:03:40.185+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration1 for movie_id: tt13622970 and genre_id: in0000021
+[2024-12-27T13:03:57.091+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration2 for movie_id: tt13622970 and genre_id: in0000012
+[2024-12-27T13:04:09.339+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration3 for movie_id: tt13622970 and genre_id: in0000026
+[2024-12-27T13:04:21.463+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration4 for movie_id: tt13622970 and genre_id: in0000034
+[2024-12-27T13:04:34.428+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration5 for movie_id: tt13622970 and genre_id: in0000093
+[2024-12-27T13:04:46.415+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration6 for movie_id: tt13622970 and genre_id: in0000098
+[2024-12-27T13:05:00.273+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration7 for movie_id: tt13622970 and genre_id: in0000133
+[2024-12-27T13:05:11.938+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration0 for movie_id: tt6133444 and genre_id: in0000169
+[2024-12-27T13:05:28.415+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration1 for movie_id: tt6133444 and genre_id: in0000075
+[2024-12-27T13:05:39.780+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration2 for movie_id: tt6133444 and genre_id: in0000072
+[2024-12-27T13:05:51.537+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration3 for movie_id: tt6133444 and genre_id: in0000076
+[2024-12-27T13:06:03.615+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration4 for movie_id: tt6133444 and genre_id: in0000174
+[2024-12-27T13:06:18.294+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration0 for movie_id: tt30057084 and genre_id: in0000178
+[2024-12-27T13:06:31.117+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration1 for movie_id: tt30057084 and genre_id: in0000052
+[2024-12-27T13:06:43.435+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration2 for movie_id: tt30057084 and genre_id: in0000076
+[2024-12-27T13:06:55.875+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration3 for movie_id: tt30057084 and genre_id: in0000139
+[2024-12-27T13:07:11.159+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration4 for movie_id: tt30057084 and genre_id: in0000186
+[2024-12-27T13:07:24.991+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration0 for movie_id: tt9218128 and genre_id: in0000002
+[2024-12-27T13:07:41.363+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration1 for movie_id: tt9218128 and genre_id: in0000015
+[2024-12-27T13:07:57.714+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration2 for movie_id: tt9218128 and genre_id: in0000077
+[2024-12-27T13:08:16.007+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration3 for movie_id: tt9218128 and genre_id: in0000083
+[2024-12-27T13:08:30.855+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration4 for movie_id: tt9218128 and genre_id: in0000009
+[2024-12-27T13:09:04.708+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration5 for movie_id: tt9218128 and genre_id: in0000001
+[2024-12-27T13:09:32.586+0000] {job.py:229} INFO - Heartbeat recovered after 14.56 seconds
+[2024-12-27T13:09:33.167+0000] {extract.py:260} ERROR - Failed movie_iteration: 8, genre_iteration5 for movie_id: tt9218128 and genre_id: in0000001
+[2024-12-27T13:09:33.190+0000] {extract.py:261} ERROR - Message: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: chrome=131.0.6778.204)
+Stacktrace:
+#0 0x5588dccbc8fa <unknown>
+#1 0x5588dc7cdb7d <unknown>
+#2 0x5588dc7b5c7e <unknown>
+#3 0x5588dc7b3d06 <unknown>
+#4 0x5588dc7b44ef <unknown>
+#5 0x5588dc7c3d87 <unknown>
+#6 0x5588dc7daf95 <unknown>
+#7 0x5588dc85f69c <unknown>
+#8 0x5588dc840893 <unknown>
+#9 0x5588dc80f30d <unknown>
+#10 0x5588dc81032e <unknown>
+#11 0x5588dcc8900b <unknown>
+#12 0x5588dcc8cf97 <unknown>
+#13 0x5588dcc7571c <unknown>
+#14 0x5588dcc8db17 <unknown>
+#15 0x5588dcc5a6cf <unknown>
+#16 0x5588dccab6b8 <unknown>
+#17 0x5588dccab880 <unknown>
+#18 0x5588dccbb776 <unknown>
+#19 0x7fe45b3381c4 <unknown>
+Traceback (most recent call last):
+  File "/opt/src/extract.py", line 242, in genre_scraper
+    driver.get(genre_link_us_box_office_collection_sorted)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: chrome=131.0.6778.204)
+Stacktrace:
+#0 0x5588dccbc8fa <unknown>
+#1 0x5588dc7cdb7d <unknown>
+#2 0x5588dc7b5c7e <unknown>
+#3 0x5588dc7b3d06 <unknown>
+#4 0x5588dc7b44ef <unknown>
+#5 0x5588dc7c3d87 <unknown>
+#6 0x5588dc7daf95 <unknown>
+#7 0x5588dc85f69c <unknown>
+#8 0x5588dc840893 <unknown>
+#9 0x5588dc80f30d <unknown>
+#10 0x5588dc81032e <unknown>
+#11 0x5588dcc8900b <unknown>
+#12 0x5588dcc8cf97 <unknown>
+#13 0x5588dcc7571c <unknown>
+#14 0x5588dcc8db17 <unknown>
+#15 0x5588dcc5a6cf <unknown>
+#16 0x5588dccab6b8 <unknown>
+#17 0x5588dccab880 <unknown>
+#18 0x5588dccbb776 <unknown>
+#19 0x7fe45b3381c4 <unknown>
+
+[2024-12-27T13:09:34.370+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/src/extract.py", line 263, in genre_scraper
+    driver.close()
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 495, in close
+    self.execute(Command.CLOSE)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+#0 0x5588dccbc8fa <unknown>
+#1 0x5588dc7cdb7d <unknown>
+#2 0x5588dc80f057 <unknown>
+#3 0x5588dc81032e <unknown>
+#4 0x5588dcc8900b <unknown>
+#5 0x5588dcc8cf97 <unknown>
+#6 0x5588dcc7571c <unknown>
+#7 0x5588dcc8db17 <unknown>
+#8 0x5588dcc5a6cf <unknown>
+#9 0x5588dccab6b8 <unknown>
+#10 0x5588dccab880 <unknown>
+#11 0x5588dccbb776 <unknown>
+#12 0x7fe45b3381c4 <unknown>
+
+[2024-12-27T13:09:34.580+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=scrape_genre, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241227T125104, end_date=20241227T130934
+[2024-12-27T13:09:34.850+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-27T13:09:34.878+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 71 for task scrape_genre (Message: invalid session id
+Stacktrace:
+#0 0x5588dccbc8fa <unknown>
+#1 0x5588dc7cdb7d <unknown>
+#2 0x5588dc80f057 <unknown>
+#3 0x5588dc81032e <unknown>
+#4 0x5588dcc8900b <unknown>
+#5 0x5588dcc8cf97 <unknown>
+#6 0x5588dcc7571c <unknown>
+#7 0x5588dcc8db17 <unknown>
+#8 0x5588dcc5a6cf <unknown>
+#9 0x5588dccab6b8 <unknown>
+#10 0x5588dccab880 <unknown>
+#11 0x5588dccbb776 <unknown>
+#12 0x7fe45b3381c4 <unknown>
+; 1378)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/src/extract.py", line 263, in genre_scraper
+    driver.close()
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 495, in close
+    self.execute(Command.CLOSE)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+#0 0x5588dccbc8fa <unknown>
+#1 0x5588dc7cdb7d <unknown>
+#2 0x5588dc80f057 <unknown>
+#3 0x5588dc81032e <unknown>
+#4 0x5588dcc8900b <unknown>
+#5 0x5588dcc8cf97 <unknown>
+#6 0x5588dcc7571c <unknown>
+#7 0x5588dcc8db17 <unknown>
+#8 0x5588dcc5a6cf <unknown>
+#9 0x5588dccab6b8 <unknown>
+#10 0x5588dccab880 <unknown>
+#11 0x5588dccbb776 <unknown>
+#12 0x7fe45b3381c4 <unknown>
+
+[2024-12-27T13:09:35.319+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-27T13:09:35.854+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-27T13:09:35.916+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

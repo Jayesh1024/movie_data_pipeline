@@ -1,0 +1,241 @@
+[2025-01-10T08:08:27.942+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-10T08:08:28.118+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T08:08:28.153+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T08:08:28.155+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 1
+[2025-01-10T08:08:28.225+0000] {taskinstance.py:2889} INFO - Executing <Task(DatabricksNotebookOperator): run_databricks_notebook> on 2025-01-09 00:00:00+00:00
+[2025-01-10T08:08:28.245+0000] {standard_task_runner.py:72} INFO - Started process 183 to run task
+[2025-01-10T08:08:28.265+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'run_databricks_notebook', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '156', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpi7f92ig8']
+[2025-01-10T08:08:28.275+0000] {standard_task_runner.py:105} INFO - Job 156: Subtask run_databricks_notebook
+[2025-01-10T08:08:28.574+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [running]> on host 4c5be024ee58
+[2025-01-10T08:08:30.105+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='run_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-10T08:08:30.109+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-10T08:08:30.191+0000] {base.py:84} INFO - Retrieving connection 'databricks_default'
+[2025-01-10T08:08:31.863+0000] {databricks.py:1098} INFO - Check the job run in Databricks: https://dbc-642e039b-9d51.cloud.databricks.com/?o=2557426697257658#job/554686165794938/run/302484448760585
+[2025-01-10T08:08:33.528+0000] {databricks.py:1171} INFO - Check the task run in Databricks: https://dbc-642e039b-9d51.cloud.databricks.com/?o=2557426697257658#job/554686165794938/run/302484448760585
+[2025-01-10T08:08:33.568+0000] {databricks.py:1173} INFO - Current state of the the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:08:39.188+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:08:44.832+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:08:49.989+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:08:55.171+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:09:00.631+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:09:06.092+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:09:11.750+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:09:16.964+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:09:22.191+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:09:27.356+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T08:09:32.565+0000] {databricks.py:1195} INFO - Current state of the databricks task movie_pipeline__run_databricks_notebook is PENDING
+[2025-01-10T15:13:06.765+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-10T15:13:06.831+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T15:13:06.892+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-10T15:13:06.894+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-10T15:13:06.941+0000] {taskinstance.py:2889} INFO - Executing <Task(DatabricksNotebookOperator): run_databricks_notebook> on 2025-01-09 00:00:00+00:00
+[2025-01-10T15:13:06.953+0000] {standard_task_runner.py:72} INFO - Started process 1482 to run task
+[2025-01-10T15:13:06.962+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'run_databricks_notebook', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpjhblhpfl']
+[2025-01-10T15:13:06.969+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask run_databricks_notebook
+[2025-01-10T15:13:07.117+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.run_databricks_notebook scheduled__2025-01-09T00:00:00+00:00 [running]> on host 8bfb9ef5b0f1
+[2025-01-10T15:13:07.331+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='run_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-10T15:13:07.336+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-10T15:13:07.371+0000] {base.py:84} INFO - Retrieving connection 'databricks_default'
+[2025-01-10T15:13:07.377+0000] {databricks_base.py:651} INFO - Using basic auth.
+[2025-01-10T15:13:07.388+0000] {databricks_base.py:616} ERROR - Attempt 1 API Request to Databricks failed with reason: <Future at 0x7f64557d1d90 state=finished raised ConnectionError>
+[2025-01-10T15:13:08.402+0000] {databricks_base.py:616} ERROR - Attempt 2 API Request to Databricks failed with reason: <Future at 0x7f64557f9670 state=finished raised ConnectionError>
+[2025-01-10T15:13:10.413+0000] {databricks_base.py:616} ERROR - Attempt 3 API Request to Databricks failed with reason: <Future at 0x7f64557f9f10 state=finished raised ConnectionError>
+[2025-01-10T15:13:10.446+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f64557f9d90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='localhost', port=443): Max retries exceeded with url: /api/2.1/jobs/runs/submit (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f64557f9d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 676, in _do_api_call
+    response = request_func(
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='localhost', port=443): Max retries exceeded with url: /api/2.1/jobs/runs/submit (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f64557f9d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 667, in _do_api_call
+    for attempt in self._get_retry_object():
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 419, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x7f64557f9f10 state=finished raised ConnectionError>]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1215, in execute
+    self._launch_job(context=context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1096, in _launch_job
+    self.databricks_run_id = self._hook.submit_run(run_json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks.py", line 263, in submit_run
+    response = self._do_api_call(SUBMIT_RUN_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 689, in _do_api_call
+    raise AirflowException(f"API requests to Databricks failed {self.retry_limit} times. Giving up.")
+airflow.exceptions.AirflowException: API requests to Databricks failed 3 times. Giving up.
+[2025-01-10T15:13:10.460+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=run_databricks_notebook, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250110T151306, end_date=20250110T151310
+[2025-01-10T15:13:10.514+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-10T15:13:10.524+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 5 for task run_databricks_notebook (API requests to Databricks failed 3 times. Giving up.; 1482)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f64557f9d90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='localhost', port=443): Max retries exceeded with url: /api/2.1/jobs/runs/submit (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f64557f9d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 676, in _do_api_call
+    response = request_func(
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='localhost', port=443): Max retries exceeded with url: /api/2.1/jobs/runs/submit (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f64557f9d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 667, in _do_api_call
+    for attempt in self._get_retry_object():
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.9/site-packages/tenacity/__init__.py", line 419, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x7f64557f9f10 state=finished raised ConnectionError>]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1215, in execute
+    self._launch_job(context=context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 1096, in _launch_job
+    self.databricks_run_id = self._hook.submit_run(run_json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks.py", line 263, in submit_run
+    response = self._do_api_call(SUBMIT_RUN_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/hooks/databricks_base.py", line 689, in _do_api_call
+    raise AirflowException(f"API requests to Databricks failed {self.retry_limit} times. Giving up.")
+airflow.exceptions.AirflowException: API requests to Databricks failed 3 times. Giving up.
+[2025-01-10T15:13:10.590+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-10T15:13:10.689+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-10T15:13:10.697+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

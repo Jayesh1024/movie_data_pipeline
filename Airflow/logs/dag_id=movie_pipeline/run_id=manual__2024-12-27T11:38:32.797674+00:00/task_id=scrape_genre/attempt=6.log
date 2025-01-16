@@ -1,0 +1,177 @@
+[2024-12-28T12:35:00.804+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-28T12:35:02.251+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-28T12:35:02.325+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-28T12:35:02.326+0000] {taskinstance.py:2866} INFO - Starting attempt 6 of 6
+[2024-12-28T12:35:04.479+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_genre> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-28T12:35:04.496+0000] {standard_task_runner.py:72} INFO - Started process 274 to run task
+[2024-12-28T12:35:04.534+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_genre', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpf5yf_7u4']
+[2024-12-28T12:35:04.555+0000] {standard_task_runner.py:105} INFO - Job 94: Subtask scrape_genre
+[2024-12-28T12:35:05.311+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_genre manual__2024-12-27T11:38:32.797674+00:00 [running]> on host e0a3add0f1ca
+[2024-12-28T12:35:06.105+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_genre' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-28T12:35:06.111+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-28T12:35:25.428+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration0 for movie_id: tt13186482 and genre_id: in0000092
+[2024-12-28T12:36:44.652+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration1 for movie_id: tt13186482 and genre_id: in0000028
+[2024-12-28T12:37:04.724+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration2 for movie_id: tt13186482 and genre_id: in0000012
+[2024-12-28T12:37:35.673+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration3 for movie_id: tt13186482 and genre_id: in0000026
+[2024-12-28T12:37:58.621+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration4 for movie_id: tt13186482 and genre_id: in0000076
+[2024-12-28T12:38:14.758+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration5 for movie_id: tt13186482 and genre_id: in0000093
+[2024-12-28T12:38:38.506+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration6 for movie_id: tt13186482 and genre_id: in0000098
+[2024-12-28T12:38:52.367+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration7 for movie_id: tt13186482 and genre_id: in0000133
+[2024-12-28T12:39:11.078+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration0 for movie_id: tt5040012 and genre_id: in0000095
+[2024-12-28T12:39:26.770+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration1 for movie_id: tt5040012 and genre_id: in0000117
+[2024-12-28T12:40:01.419+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration2 for movie_id: tt5040012 and genre_id: in0000119
+[2024-12-28T12:40:39.260+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration3 for movie_id: tt5040012 and genre_id: in0000098
+[2024-12-28T12:40:53.439+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration4 for movie_id: tt5040012 and genre_id: in0000112
+[2024-12-28T12:41:06.361+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration5 for movie_id: tt5040012 and genre_id: in0000139
+[2024-12-28T12:41:23.197+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration0 for movie_id: tt18259086 and genre_id: in0000092
+[2024-12-28T12:41:49.262+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration1 for movie_id: tt18259086 and genre_id: in0000016
+[2024-12-28T12:42:12.588+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration2 for movie_id: tt18259086 and genre_id: in0000008
+[2024-12-28T12:42:32.650+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration3 for movie_id: tt18259086 and genre_id: in0000099
+[2024-12-28T12:42:47.532+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration4 for movie_id: tt18259086 and genre_id: in0000001
+[2024-12-28T12:43:01.689+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration5 for movie_id: tt18259086 and genre_id: in0000012
+[2024-12-28T12:43:19.485+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration6 for movie_id: tt18259086 and genre_id: in0000034
+[2024-12-28T12:43:41.133+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration7 for movie_id: tt18259086 and genre_id: in0000093
+[2024-12-28T12:43:54.890+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration8 for movie_id: tt18259086 and genre_id: in0000098
+[2024-12-28T12:44:05.887+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration9 for movie_id: tt18259086 and genre_id: in0000162
+[2024-12-28T12:44:18.656+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration0 for movie_id: tt11563598 and genre_id: in0000075
+[2024-12-28T12:44:32.953+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration1 for movie_id: tt11563598 and genre_id: in0000083
+[2024-12-28T12:44:43.784+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration2 for movie_id: tt11563598 and genre_id: in0000072
+[2024-12-28T12:44:54.186+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration3 for movie_id: tt11563598 and genre_id: in0000076
+[2024-12-28T12:45:11.871+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration4 for movie_id: tt11563598 and genre_id: in0000130
+[2024-12-28T12:45:38.540+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration0 for movie_id: tt1262426 and genre_id: in0000097
+[2024-12-28T12:45:56.058+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration1 for movie_id: tt1262426 and genre_id: in0000134
+[2024-12-28T12:46:13.694+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration2 for movie_id: tt1262426 and genre_id: in0000098
+[2024-12-28T12:46:31.163+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration3 for movie_id: tt1262426 and genre_id: in0000133
+[2024-12-28T12:46:45.931+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration4 for movie_id: tt1262426 and genre_id: in0000152
+[2024-12-28T12:47:00.603+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration0 for movie_id: tt13622970 and genre_id: in0000028
+[2024-12-28T12:47:11.826+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration1 for movie_id: tt13622970 and genre_id: in0000021
+[2024-12-28T12:47:26.439+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration2 for movie_id: tt13622970 and genre_id: in0000012
+[2024-12-28T12:47:39.488+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration3 for movie_id: tt13622970 and genre_id: in0000026
+[2024-12-28T12:47:49.937+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration4 for movie_id: tt13622970 and genre_id: in0000034
+[2024-12-28T12:47:59.865+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration5 for movie_id: tt13622970 and genre_id: in0000093
+[2024-12-28T12:48:11.445+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration6 for movie_id: tt13622970 and genre_id: in0000098
+[2024-12-28T12:48:24.341+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration7 for movie_id: tt13622970 and genre_id: in0000133
+[2024-12-28T12:48:36.692+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration0 for movie_id: tt6133444 and genre_id: in0000169
+[2024-12-28T12:48:50.229+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration1 for movie_id: tt6133444 and genre_id: in0000075
+[2024-12-28T12:49:00.265+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration2 for movie_id: tt6133444 and genre_id: in0000072
+[2024-12-28T12:49:09.945+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration3 for movie_id: tt6133444 and genre_id: in0000076
+[2024-12-28T12:49:22.432+0000] {extract.py:235} INFO - movie_iteration: 6, genre_iteration4 for movie_id: tt6133444 and genre_id: in0000174
+[2024-12-28T12:49:34.478+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration0 for movie_id: tt30057084 and genre_id: in0000178
+[2024-12-28T12:49:58.549+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration1 for movie_id: tt30057084 and genre_id: in0000052
+[2024-12-28T12:50:13.098+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration2 for movie_id: tt30057084 and genre_id: in0000076
+[2024-12-28T12:50:33.076+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration3 for movie_id: tt30057084 and genre_id: in0000139
+[2024-12-28T12:50:46.796+0000] {extract.py:235} INFO - movie_iteration: 7, genre_iteration4 for movie_id: tt30057084 and genre_id: in0000186
+[2024-12-28T12:51:01.669+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration0 for movie_id: tt9218128 and genre_id: in0000002
+[2024-12-28T12:51:15.792+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration1 for movie_id: tt9218128 and genre_id: in0000015
+[2024-12-28T12:51:28.386+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration2 for movie_id: tt9218128 and genre_id: in0000077
+[2024-12-28T12:51:43.779+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration3 for movie_id: tt9218128 and genre_id: in0000083
+[2024-12-28T12:51:59.440+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration4 for movie_id: tt9218128 and genre_id: in0000009
+[2024-12-28T12:52:16.569+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration5 for movie_id: tt9218128 and genre_id: in0000001
+[2024-12-28T12:52:29.861+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration6 for movie_id: tt9218128 and genre_id: in0000012
+[2024-12-28T12:52:44.617+0000] {extract.py:235} INFO - movie_iteration: 8, genre_iteration7 for movie_id: tt9218128 and genre_id: in0000076
+[2024-12-28T12:53:05.320+0000] {extract.py:235} INFO - movie_iteration: 9, genre_iteration0 for movie_id: tt29137778 and genre_id: in0000001
+[2024-12-28T12:53:34.298+0000] {extract.py:235} INFO - movie_iteration: 9, genre_iteration1 for movie_id: tt29137778 and genre_id: in0000076
+[2024-12-28T12:53:52.993+0000] {extract.py:235} INFO - movie_iteration: 9, genre_iteration2 for movie_id: tt29137778 and genre_id: in0000186
+[2024-12-28T12:54:06.300+0000] {extract.py:235} INFO - movie_iteration: 10, genre_iteration0 for movie_id: tt8790086 and genre_id: in0000007
+[2024-12-28T12:54:18.433+0000] {extract.py:235} INFO - movie_iteration: 10, genre_iteration1 for movie_id: tt8790086 and genre_id: in0000008
+[2024-12-28T12:54:30.865+0000] {extract.py:235} INFO - movie_iteration: 10, genre_iteration2 for movie_id: tt8790086 and genre_id: in0000001
+[2024-12-28T12:54:43.868+0000] {extract.py:235} INFO - movie_iteration: 10, genre_iteration3 for movie_id: tt8790086 and genre_id: in0000186
+[2024-12-28T12:54:56.802+0000] {extract.py:235} INFO - movie_iteration: 11, genre_iteration0 for movie_id: tt14948432 and genre_id: in0000194
+[2024-12-28T12:55:35.350+0000] {extract.py:235} INFO - movie_iteration: 11, genre_iteration1 for movie_id: tt14948432 and genre_id: in0000001
+[2024-12-28T12:55:49.395+0000] {extract.py:235} INFO - movie_iteration: 11, genre_iteration2 for movie_id: tt14948432 and genre_id: in0000012
+[2024-12-28T12:56:03.963+0000] {extract.py:235} INFO - movie_iteration: 11, genre_iteration3 for movie_id: tt14948432 and genre_id: in0000034
+[2024-12-28T12:56:20.653+0000] {extract.py:235} INFO - movie_iteration: 11, genre_iteration4 for movie_id: tt14948432 and genre_id: in0000098
+[2024-12-28T12:56:36.339+0000] {extract.py:235} INFO - movie_iteration: 11, genre_iteration5 for movie_id: tt14948432 and genre_id: in0000192
+[2024-12-28T12:56:52.732+0000] {extract.py:235} INFO - movie_iteration: 11, genre_iteration6 for movie_id: tt14948432 and genre_id: in0000139
+[2024-12-28T12:57:11.948+0000] {extract.py:235} INFO - movie_iteration: 12, genre_iteration0 for movie_id: tt2347285 and genre_id: in0000012
+[2024-12-28T12:57:24.576+0000] {extract.py:235} INFO - movie_iteration: 12, genre_iteration1 for movie_id: tt2347285 and genre_id: in0000034
+[2024-12-28T12:57:36.018+0000] {extract.py:235} INFO - movie_iteration: 12, genre_iteration2 for movie_id: tt2347285 and genre_id: in0000076
+[2024-12-28T12:57:58.063+0000] {extract.py:235} INFO - movie_iteration: 12, genre_iteration3 for movie_id: tt2347285 and genre_id: in0000098
+[2024-12-28T12:58:11.837+0000] {extract.py:235} INFO - movie_iteration: 12, genre_iteration4 for movie_id: tt2347285 and genre_id: in0000192
+[2024-12-28T12:58:27.319+0000] {extract.py:235} INFO - movie_iteration: 12, genre_iteration5 for movie_id: tt2347285 and genre_id: in0000139
+[2024-12-28T12:58:41.364+0000] {extract.py:235} INFO - movie_iteration: 12, genre_iteration6 for movie_id: tt2347285 and genre_id: in0000152
+[2024-12-28T12:58:51.820+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration0 for movie_id: tt14824600 and genre_id: in0000015
+[2024-12-28T12:59:01.748+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration1 for movie_id: tt14824600 and genre_id: in0000095
+[2024-12-28T12:59:13.465+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration2 for movie_id: tt14824600 and genre_id: in0000096
+[2024-12-28T12:59:24.717+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration3 for movie_id: tt14824600 and genre_id: in0000100
+[2024-12-28T12:59:39.747+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration4 for movie_id: tt14824600 and genre_id: in0000001
+[2024-12-28T12:59:51.198+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration5 for movie_id: tt14824600 and genre_id: in0000012
+[2024-12-28T13:00:05.297+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration6 for movie_id: tt14824600 and genre_id: in0000026
+[2024-12-28T13:00:22.854+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration7 for movie_id: tt14824600 and genre_id: in0000076
+[2024-12-28T13:00:34.271+0000] {extract.py:235} INFO - movie_iteration: 13, genre_iteration8 for movie_id: tt14824600 and genre_id: in0000098
+[2024-12-28T13:01:00.277+0000] {extract.py:235} INFO - movie_iteration: 14, genre_iteration0 for movie_id: tt8999762 and genre_id: in0000077
+[2024-12-28T13:01:16.384+0000] {extract.py:235} INFO - movie_iteration: 14, genre_iteration1 for movie_id: tt8999762 and genre_id: in0000076
+[2024-12-28T13:01:36.316+0000] {extract.py:235} INFO - movie_iteration: 15, genre_iteration0 for movie_id: tt21823606 and genre_id: in0000032
+[2024-12-28T13:02:33.188+0000] {extract.py:235} INFO - movie_iteration: 15, genre_iteration1 for movie_id: tt21823606 and genre_id: in0000034
+[2024-12-28T13:02:49.287+0000] {job.py:229} INFO - Heartbeat recovered after 13.80 seconds
+[2024-12-28T13:03:20.653+0000] {job.py:229} INFO - Heartbeat recovered after 32.10 seconds
+[2024-12-28T13:03:51.390+0000] {extract.py:235} INFO - movie_iteration: 15, genre_iteration2 for movie_id: tt21823606 and genre_id: in0000076
+[2024-12-28T13:04:17.068+0000] {extract.py:235} INFO - movie_iteration: 16, genre_iteration0 for movie_id: tt20215234 and genre_id: in0000176
+[2024-12-28T13:04:52.170+0000] {extract.py:235} INFO - movie_iteration: 16, genre_iteration1 for movie_id: tt20215234 and genre_id: in0000076
+[2024-12-28T13:05:31.211+0000] {extract.py:235} INFO - movie_iteration: 16, genre_iteration2 for movie_id: tt20215234 and genre_id: in0000139
+[2024-12-28T13:06:04.207+0000] {extract.py:235} INFO - movie_iteration: 16, genre_iteration3 for movie_id: tt20215234 and genre_id: in0000186
+[2024-12-28T13:06:46.276+0000] {extract.py:235} INFO - movie_iteration: 17, genre_iteration0 for movie_id: tt23055660 and genre_id: in0000076
+[2024-12-28T13:09:27.075+0000] {extract.py:260} ERROR - Failed movie_iteration: 17, genre_iteration 0 for movie_id: tt23055660 and genre_id: in0000076
+[2024-12-28T13:15:07.399+0000] {job.py:229} INFO - Heartbeat recovered after 454.76 seconds
+[2024-12-28T13:11:46.451+0000] {extract.py:261} ERROR - HTTPConnectionPool(host='localhost', port=49513): Read timed out. (read timeout=120)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.9/socket.py", line 716, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/src/extract.py", line 242, in genre_scraper
+    driver.get(genre_link_us_box_office_collection_sorted)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.9/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 358, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=49513): Read timed out. (read timeout=120)
+[2024-12-28T13:15:19.961+0000] {job.py:229} INFO - Heartbeat recovered after 16.62 seconds
+[2024-12-28T13:15:26.707+0000] {logging_mixin.py:190} INFO - Saving genre html pages
+[2024-12-28T13:16:33.694+0000] {job.py:229} INFO - Heartbeat recovered after 12.10 seconds
+[2024-12-28T13:16:47.200+0000] {job.py:229} INFO - Heartbeat recovered after 14.39 seconds
+[2024-12-28T13:18:34.558+0000] {job.py:229} INFO - Heartbeat recovered after 14.50 seconds
+[2024-12-28T13:18:45.242+0000] {job.py:229} INFO - Heartbeat recovered after 11.70 seconds
+[2024-12-28T13:19:07.264+0000] {python.py:240} INFO - Done. Returned value was: run_20241225/genre_html_20241225.json
+[2024-12-28T13:19:12.506+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-28T13:19:12.595+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=scrape_genre, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241228T123502, end_date=20241228T131912
+[2024-12-28T13:19:17.297+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-28T13:19:19.854+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2024-12-28T13:19:21.751+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-28T13:19:21.877+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,406 @@
+[2024-12-19T22:00:24.171+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-19T22:00:24.186+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.parse_collection_page backfill__2024-12-16T00:00:00+00:00 [queued]>
+[2024-12-19T22:00:24.203+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.parse_collection_page backfill__2024-12-16T00:00:00+00:00 [queued]>
+[2024-12-19T22:00:24.203+0530] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-19T22:00:24.222+0530] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): parse_collection_page> on 2024-12-16 00:00:00+00:00
+[2024-12-19T22:00:24.230+0530] {logging_mixin.py:190} WARNING - /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=55807) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-19T22:00:24.232+0530] {standard_task_runner.py:72} INFO - Started process 55825 to run task
+[2024-12-19T22:00:24.233+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'parse_collection_page', 'backfill__2024-12-16T00:00:00+00:00', '--job-id', '278', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T/tmp1iod7jog']
+[2024-12-19T22:00:24.237+0530] {standard_task_runner.py:105} INFO - Job 278: Subtask parse_collection_page
+[2024-12-19T22:00:24.297+0530] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.parse_collection_page backfill__2024-12-16T00:00:00+00:00 [running]> on host Jayeshs-MacBook-Air.local
+[2024-12-19T22:00:24.404+0530] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='parse_collection_page' AIRFLOW_CTX_EXECUTION_DATE='2024-12-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='backfill__2024-12-16T00:00:00+00:00'
+[2024-12-19T22:00:24.406+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-19T22:00:24.407+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-19T22:00:24.408+0530] {logging_mixin.py:190} INFO - Current task name:parse_collection_page state:running start_date:2024-12-19 16:30:24.190309+00:00
+[2024-12-19T22:00:24.409+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline and current dag run status:running
+[2024-12-19T22:00:24.410+0530] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-19T22:00:24.476+0530] {parse.py:68} INFO - Row number: 0 in collection page
+[2024-12-19T22:00:24.477+0530] {parse.py:68} INFO - Row number: 1 in collection page
+[2024-12-19T22:00:24.479+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 1
+[2024-12-19T22:00:24.479+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 1
+[2024-12-19T22:00:24.480+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 1
+[2024-12-19T22:00:24.481+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 1
+[2024-12-19T22:00:24.482+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 1
+[2024-12-19T22:00:24.483+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 1
+[2024-12-19T22:00:24.484+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 1
+[2024-12-19T22:00:24.485+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 1
+[2024-12-19T22:00:24.486+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 1
+[2024-12-19T22:00:24.487+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 1
+[2024-12-19T22:00:24.488+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 1
+[2024-12-19T22:00:24.489+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 1
+[2024-12-19T22:00:24.489+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 1
+[2024-12-19T22:00:24.490+0530] {parse.py:68} INFO - Row number: 2 in collection page
+[2024-12-19T22:00:24.492+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 2
+[2024-12-19T22:00:24.494+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 2
+[2024-12-19T22:00:24.495+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 2
+[2024-12-19T22:00:24.496+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 2
+[2024-12-19T22:00:24.496+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 2
+[2024-12-19T22:00:24.497+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 2
+[2024-12-19T22:00:24.498+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 2
+[2024-12-19T22:00:24.499+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 2
+[2024-12-19T22:00:24.499+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 2
+[2024-12-19T22:00:24.501+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 2
+[2024-12-19T22:00:24.502+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 2
+[2024-12-19T22:00:24.503+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 2
+[2024-12-19T22:00:24.504+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 2
+[2024-12-19T22:00:24.504+0530] {parse.py:68} INFO - Row number: 3 in collection page
+[2024-12-19T22:00:24.505+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 3
+[2024-12-19T22:00:24.506+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 3
+[2024-12-19T22:00:24.507+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 3
+[2024-12-19T22:00:24.508+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 3
+[2024-12-19T22:00:24.509+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 3
+[2024-12-19T22:00:24.511+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 3
+[2024-12-19T22:00:24.511+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 3
+[2024-12-19T22:00:24.512+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 3
+[2024-12-19T22:00:24.513+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 3
+[2024-12-19T22:00:24.514+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 3
+[2024-12-19T22:00:24.514+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 3
+[2024-12-19T22:00:24.515+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 3
+[2024-12-19T22:00:24.516+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 3
+[2024-12-19T22:00:24.517+0530] {parse.py:68} INFO - Row number: 4 in collection page
+[2024-12-19T22:00:24.519+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 4
+[2024-12-19T22:00:24.520+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 4
+[2024-12-19T22:00:24.520+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 4
+[2024-12-19T22:00:24.521+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 4
+[2024-12-19T22:00:24.522+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 4
+[2024-12-19T22:00:24.523+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 4
+[2024-12-19T22:00:24.523+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 4
+[2024-12-19T22:00:24.524+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 4
+[2024-12-19T22:00:24.526+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 4
+[2024-12-19T22:00:24.527+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 4
+[2024-12-19T22:00:24.528+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 4
+[2024-12-19T22:00:24.529+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 4
+[2024-12-19T22:00:24.530+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 4
+[2024-12-19T22:00:24.531+0530] {parse.py:68} INFO - Row number: 5 in collection page
+[2024-12-19T22:00:24.531+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 5
+[2024-12-19T22:00:24.532+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 5
+[2024-12-19T22:00:24.533+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 5
+[2024-12-19T22:00:24.535+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 5
+[2024-12-19T22:00:24.536+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 5
+[2024-12-19T22:00:24.536+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 5
+[2024-12-19T22:00:24.537+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 5
+[2024-12-19T22:00:24.538+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 5
+[2024-12-19T22:00:24.539+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 5
+[2024-12-19T22:00:24.539+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 5
+[2024-12-19T22:00:24.540+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 5
+[2024-12-19T22:00:24.541+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 5
+[2024-12-19T22:00:24.542+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 5
+[2024-12-19T22:00:24.543+0530] {parse.py:68} INFO - Row number: 6 in collection page
+[2024-12-19T22:00:24.544+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 6
+[2024-12-19T22:00:24.545+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 6
+[2024-12-19T22:00:24.546+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 6
+[2024-12-19T22:00:24.549+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 6
+[2024-12-19T22:00:24.550+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 6
+[2024-12-19T22:00:24.552+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 6
+[2024-12-19T22:00:24.552+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 6
+[2024-12-19T22:00:24.553+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 6
+[2024-12-19T22:00:24.554+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 6
+[2024-12-19T22:00:24.555+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 6
+[2024-12-19T22:00:24.555+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 6
+[2024-12-19T22:00:24.556+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 6
+[2024-12-19T22:00:24.557+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 6
+[2024-12-19T22:00:24.558+0530] {parse.py:68} INFO - Row number: 7 in collection page
+[2024-12-19T22:00:24.559+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 7
+[2024-12-19T22:00:24.560+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 7
+[2024-12-19T22:00:24.561+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 7
+[2024-12-19T22:00:24.562+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 7
+[2024-12-19T22:00:24.563+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 7
+[2024-12-19T22:00:24.563+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 7
+[2024-12-19T22:00:24.564+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 7
+[2024-12-19T22:00:24.565+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 7
+[2024-12-19T22:00:24.566+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 7
+[2024-12-19T22:00:24.566+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 7
+[2024-12-19T22:00:24.571+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 7
+[2024-12-19T22:00:24.574+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 7
+[2024-12-19T22:00:24.577+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 7
+[2024-12-19T22:00:24.578+0530] {parse.py:68} INFO - Row number: 8 in collection page
+[2024-12-19T22:00:24.579+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 8
+[2024-12-19T22:00:24.580+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 8
+[2024-12-19T22:00:24.580+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 8
+[2024-12-19T22:00:24.581+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 8
+[2024-12-19T22:00:24.582+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 8
+[2024-12-19T22:00:24.583+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 8
+[2024-12-19T22:00:24.585+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 8
+[2024-12-19T22:00:24.587+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 8
+[2024-12-19T22:00:24.588+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 8
+[2024-12-19T22:00:24.589+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 8
+[2024-12-19T22:00:24.589+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 8
+[2024-12-19T22:00:24.590+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 8
+[2024-12-19T22:00:24.591+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 8
+[2024-12-19T22:00:24.592+0530] {parse.py:68} INFO - Row number: 9 in collection page
+[2024-12-19T22:00:24.593+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 9
+[2024-12-19T22:00:24.594+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 9
+[2024-12-19T22:00:24.595+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 9
+[2024-12-19T22:00:24.596+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 9
+[2024-12-19T22:00:24.597+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 9
+[2024-12-19T22:00:24.597+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 9
+[2024-12-19T22:00:24.598+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 9
+[2024-12-19T22:00:24.599+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 9
+[2024-12-19T22:00:24.600+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 9
+[2024-12-19T22:00:24.602+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 9
+[2024-12-19T22:00:24.603+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 9
+[2024-12-19T22:00:24.604+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 9
+[2024-12-19T22:00:24.605+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 9
+[2024-12-19T22:00:24.606+0530] {parse.py:68} INFO - Row number: 10 in collection page
+[2024-12-19T22:00:24.607+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 10
+[2024-12-19T22:00:24.607+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 10
+[2024-12-19T22:00:24.609+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 10
+[2024-12-19T22:00:24.610+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 10
+[2024-12-19T22:00:24.611+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 10
+[2024-12-19T22:00:24.612+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 10
+[2024-12-19T22:00:24.612+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 10
+[2024-12-19T22:00:24.613+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 10
+[2024-12-19T22:00:24.614+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 10
+[2024-12-19T22:00:24.615+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 10
+[2024-12-19T22:00:24.615+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 10
+[2024-12-19T22:00:24.618+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 10
+[2024-12-19T22:00:24.619+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 10
+[2024-12-19T22:00:24.620+0530] {parse.py:68} INFO - Row number: 11 in collection page
+[2024-12-19T22:00:24.621+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 11
+[2024-12-19T22:00:24.622+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 11
+[2024-12-19T22:00:24.623+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 11
+[2024-12-19T22:00:24.623+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 11
+[2024-12-19T22:00:24.624+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 11
+[2024-12-19T22:00:24.626+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 11
+[2024-12-19T22:00:24.627+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 11
+[2024-12-19T22:00:24.628+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 11
+[2024-12-19T22:00:24.629+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 11
+[2024-12-19T22:00:24.630+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 11
+[2024-12-19T22:00:24.630+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 11
+[2024-12-19T22:00:24.632+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 11
+[2024-12-19T22:00:24.633+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 11
+[2024-12-19T22:00:24.636+0530] {parse.py:68} INFO - Row number: 12 in collection page
+[2024-12-19T22:00:24.638+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 12
+[2024-12-19T22:00:24.639+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 12
+[2024-12-19T22:00:24.640+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 12
+[2024-12-19T22:00:24.641+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 12
+[2024-12-19T22:00:24.642+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 12
+[2024-12-19T22:00:24.644+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 12
+[2024-12-19T22:00:24.645+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 12
+[2024-12-19T22:00:24.646+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 12
+[2024-12-19T22:00:24.646+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 12
+[2024-12-19T22:00:24.647+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 12
+[2024-12-19T22:00:24.648+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 12
+[2024-12-19T22:00:24.649+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 12
+[2024-12-19T22:00:24.650+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 12
+[2024-12-19T22:00:24.653+0530] {parse.py:68} INFO - Row number: 13 in collection page
+[2024-12-19T22:00:24.654+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 13
+[2024-12-19T22:00:24.655+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 13
+[2024-12-19T22:00:24.655+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 13
+[2024-12-19T22:00:24.656+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 13
+[2024-12-19T22:00:24.657+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 13
+[2024-12-19T22:00:24.658+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 13
+[2024-12-19T22:00:24.659+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 13
+[2024-12-19T22:00:24.660+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 13
+[2024-12-19T22:00:24.661+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 13
+[2024-12-19T22:00:24.662+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 13
+[2024-12-19T22:00:24.662+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 13
+[2024-12-19T22:00:24.663+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 13
+[2024-12-19T22:00:24.664+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 13
+[2024-12-19T22:00:24.665+0530] {parse.py:68} INFO - Row number: 14 in collection page
+[2024-12-19T22:00:24.666+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 14
+[2024-12-19T22:00:24.666+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 14
+[2024-12-19T22:00:24.669+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 14
+[2024-12-19T22:00:24.670+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 14
+[2024-12-19T22:00:24.671+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 14
+[2024-12-19T22:00:24.672+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 14
+[2024-12-19T22:00:24.672+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 14
+[2024-12-19T22:00:24.673+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 14
+[2024-12-19T22:00:24.674+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 14
+[2024-12-19T22:00:24.675+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 14
+[2024-12-19T22:00:24.676+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 14
+[2024-12-19T22:00:24.677+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 14
+[2024-12-19T22:00:24.678+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 14
+[2024-12-19T22:00:24.679+0530] {parse.py:68} INFO - Row number: 15 in collection page
+[2024-12-19T22:00:24.680+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 15
+[2024-12-19T22:00:24.681+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 15
+[2024-12-19T22:00:24.682+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 15
+[2024-12-19T22:00:24.682+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 15
+[2024-12-19T22:00:24.685+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 15
+[2024-12-19T22:00:24.686+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 15
+[2024-12-19T22:00:24.687+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 15
+[2024-12-19T22:00:24.688+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 15
+[2024-12-19T22:00:24.689+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 15
+[2024-12-19T22:00:24.690+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 15
+[2024-12-19T22:00:24.690+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 15
+[2024-12-19T22:00:24.691+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 15
+[2024-12-19T22:00:24.693+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 15
+[2024-12-19T22:00:24.694+0530] {parse.py:68} INFO - Row number: 16 in collection page
+[2024-12-19T22:00:24.695+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 16
+[2024-12-19T22:00:24.696+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 16
+[2024-12-19T22:00:24.697+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 16
+[2024-12-19T22:00:24.698+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 16
+[2024-12-19T22:00:24.698+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 16
+[2024-12-19T22:00:24.699+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 16
+[2024-12-19T22:00:24.700+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 16
+[2024-12-19T22:00:24.703+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 16
+[2024-12-19T22:00:24.704+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 16
+[2024-12-19T22:00:24.705+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 16
+[2024-12-19T22:00:24.705+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 16
+[2024-12-19T22:00:24.706+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 16
+[2024-12-19T22:00:24.707+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 16
+[2024-12-19T22:00:24.708+0530] {parse.py:68} INFO - Row number: 17 in collection page
+[2024-12-19T22:00:24.709+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 17
+[2024-12-19T22:00:24.710+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 17
+[2024-12-19T22:00:24.711+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 17
+[2024-12-19T22:00:24.713+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 17
+[2024-12-19T22:00:24.714+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 17
+[2024-12-19T22:00:24.715+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 17
+[2024-12-19T22:00:24.716+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 17
+[2024-12-19T22:00:24.716+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 17
+[2024-12-19T22:00:24.719+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 17
+[2024-12-19T22:00:24.720+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 17
+[2024-12-19T22:00:24.721+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 17
+[2024-12-19T22:00:24.722+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 17
+[2024-12-19T22:00:24.722+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 17
+[2024-12-19T22:00:24.723+0530] {parse.py:68} INFO - Row number: 18 in collection page
+[2024-12-19T22:00:24.724+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 18
+[2024-12-19T22:00:24.725+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 18
+[2024-12-19T22:00:24.727+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 18
+[2024-12-19T22:00:24.728+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 18
+[2024-12-19T22:00:24.729+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 18
+[2024-12-19T22:00:24.730+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 18
+[2024-12-19T22:00:24.730+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 18
+[2024-12-19T22:00:24.731+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 18
+[2024-12-19T22:00:24.732+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 18
+[2024-12-19T22:00:24.732+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 18
+[2024-12-19T22:00:24.735+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 18
+[2024-12-19T22:00:24.736+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 18
+[2024-12-19T22:00:24.737+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 18
+[2024-12-19T22:00:24.738+0530] {parse.py:68} INFO - Row number: 19 in collection page
+[2024-12-19T22:00:24.739+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 19
+[2024-12-19T22:00:24.739+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 19
+[2024-12-19T22:00:24.740+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 19
+[2024-12-19T22:00:24.741+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 19
+[2024-12-19T22:00:24.742+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 19
+[2024-12-19T22:00:24.743+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 19
+[2024-12-19T22:00:24.744+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 19
+[2024-12-19T22:00:24.745+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 19
+[2024-12-19T22:00:24.746+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 19
+[2024-12-19T22:00:24.747+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 19
+[2024-12-19T22:00:24.748+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 19
+[2024-12-19T22:00:24.748+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 19
+[2024-12-19T22:00:24.749+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 19
+[2024-12-19T22:00:24.750+0530] {parse.py:68} INFO - Row number: 20 in collection page
+[2024-12-19T22:00:24.753+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 20
+[2024-12-19T22:00:24.754+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 20
+[2024-12-19T22:00:24.754+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 20
+[2024-12-19T22:00:24.755+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 20
+[2024-12-19T22:00:24.756+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 20
+[2024-12-19T22:00:24.757+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 20
+[2024-12-19T22:00:24.757+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 20
+[2024-12-19T22:00:24.758+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 20
+[2024-12-19T22:00:24.759+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 20
+[2024-12-19T22:00:24.760+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 20
+[2024-12-19T22:00:24.761+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 20
+[2024-12-19T22:00:24.762+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 20
+[2024-12-19T22:00:24.763+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 20
+[2024-12-19T22:00:24.763+0530] {parse.py:68} INFO - Row number: 21 in collection page
+[2024-12-19T22:00:24.764+0530] {parse.py:76} INFO - Cell number: 0 in Row number: 21
+[2024-12-19T22:00:24.765+0530] {parse.py:76} INFO - Cell number: 1 in Row number: 21
+[2024-12-19T22:00:24.766+0530] {parse.py:76} INFO - Cell number: 2 in Row number: 21
+[2024-12-19T22:00:24.767+0530] {parse.py:76} INFO - Cell number: 3 in Row number: 21
+[2024-12-19T22:00:24.770+0530] {parse.py:76} INFO - Cell number: 4 in Row number: 21
+[2024-12-19T22:00:24.771+0530] {parse.py:76} INFO - Cell number: 5 in Row number: 21
+[2024-12-19T22:00:24.771+0530] {parse.py:76} INFO - Cell number: 6 in Row number: 21
+[2024-12-19T22:00:24.772+0530] {parse.py:76} INFO - Cell number: 7 in Row number: 21
+[2024-12-19T22:00:24.773+0530] {parse.py:76} INFO - Cell number: 8 in Row number: 21
+[2024-12-19T22:00:24.774+0530] {parse.py:76} INFO - Cell number: 9 in Row number: 21
+[2024-12-19T22:00:24.774+0530] {parse.py:76} INFO - Cell number: 10 in Row number: 21
+[2024-12-19T22:00:24.775+0530] {parse.py:76} INFO - Cell number: 11 in Row number: 21
+[2024-12-19T22:00:24.776+0530] {parse.py:76} INFO - Cell number: 12 in Row number: 21
+[2024-12-19T22:00:24.778+0530] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/parse.py", line 94, in fact_parser
+    with open(path,'w') as f:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'run_2024-12-16/collection_parsed_2024-12-16.json'
+[2024-12-19T22:00:24.791+0530] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-12-19T22:00:24.793+0530] {logging_mixin.py:190} INFO - Task start:2024-12-19 16:30:24.190309+00:00 end:2024-12-19 16:30:24.790981+00:00 duration:0.600672
+[2024-12-19T22:00:24.794+0530] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): parse_collection_page> dag:<DAG: movie_pipeline> dagrun:<DagRun movie_pipeline @ 2024-12-16 00:00:00+00:00: backfill__2024-12-16T00:00:00+00:00, state:running, queued_at: 2024-12-19 16:28:52.665211+00:00. externally triggered: False>
+[2024-12-19T22:00:24.795+0530] {logging_mixin.py:190} INFO - Failure caused by [Errno 2] No such file or directory: 'run_2024-12-16/collection_parsed_2024-12-16.json'
+[2024-12-19T22:00:24.795+0530] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=parse_collection_page, run_id=backfill__2024-12-16T00:00:00+00:00, execution_date=20241216T000000, start_date=20241219T163024, end_date=20241219T163024
+[2024-12-19T22:00:24.814+0530] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-19T22:00:24.815+0530] {standard_task_runner.py:124} ERROR - Failed to execute job 278 for task parse_collection_page ([Errno 2] No such file or directory: 'run_2024-12-16/collection_parsed_2024-12-16.json'; 55825)
+Traceback (most recent call last):
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/parse.py", line 94, in fact_parser
+    with open(path,'w') as f:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'run_2024-12-16/collection_parsed_2024-12-16.json'
+[2024-12-19T22:00:24.836+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-19T22:00:24.863+0530] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-19T22:00:24.870+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

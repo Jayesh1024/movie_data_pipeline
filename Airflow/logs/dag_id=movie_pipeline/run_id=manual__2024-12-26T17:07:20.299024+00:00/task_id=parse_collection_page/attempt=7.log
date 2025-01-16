@@ -1,0 +1,145 @@
+[2024-12-26T17:31:27.622+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-26T17:31:28.026+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.parse_collection_page manual__2024-12-26T17:07:20.299024+00:00 [queued]>
+[2024-12-26T17:31:28.071+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.parse_collection_page manual__2024-12-26T17:07:20.299024+00:00 [queued]>
+[2024-12-26T17:31:28.074+0000] {taskinstance.py:2866} INFO - Starting attempt 7 of 7
+[2024-12-26T17:31:28.142+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): parse_collection_page> on 2024-12-26 17:07:20.299024+00:00
+[2024-12-26T17:31:28.160+0000] {standard_task_runner.py:72} INFO - Started process 4676 to run task
+[2024-12-26T17:31:28.173+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'parse_collection_page', 'manual__2024-12-26T17:07:20.299024+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpqspvv99x']
+[2024-12-26T17:31:28.178+0000] {standard_task_runner.py:105} INFO - Job 53: Subtask parse_collection_page
+[2024-12-26T17:31:28.344+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.parse_collection_page manual__2024-12-26T17:07:20.299024+00:00 [running]> on host 1712831d7ea4
+[2024-12-26T17:31:28.789+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='parse_collection_page' AIRFLOW_CTX_EXECUTION_DATE='2024-12-26T17:07:20.299024+00:00' AIRFLOW_CTX_TRY_NUMBER='7' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-26T17:07:20.299024+00:00'
+[2024-12-26T17:31:28.903+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-26T17:31:29.390+0000] {parse.py:68} INFO - Row number: 0 in collection page
+[2024-12-26T17:31:29.406+0000] {parse.py:68} INFO - Row number: 1 in collection page
+[2024-12-26T17:31:29.414+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 1
+[2024-12-26T17:31:29.418+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 1
+[2024-12-26T17:31:29.423+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 1
+[2024-12-26T17:31:29.425+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 1
+[2024-12-26T17:31:29.434+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 1
+[2024-12-26T17:31:29.465+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 1
+[2024-12-26T17:31:29.473+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 1
+[2024-12-26T17:31:29.475+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 1
+[2024-12-26T17:31:29.482+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 1
+[2024-12-26T17:31:29.485+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 1
+[2024-12-26T17:31:29.507+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 1
+[2024-12-26T17:31:29.510+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 1
+[2024-12-26T17:31:29.514+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 1
+[2024-12-26T17:31:29.521+0000] {parse.py:68} INFO - Row number: 2 in collection page
+[2024-12-26T17:31:29.524+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 2
+[2024-12-26T17:31:29.526+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 2
+[2024-12-26T17:31:29.530+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 2
+[2024-12-26T17:31:29.534+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 2
+[2024-12-26T17:31:29.537+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 2
+[2024-12-26T17:31:29.540+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 2
+[2024-12-26T17:31:29.553+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 2
+[2024-12-26T17:31:29.564+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 2
+[2024-12-26T17:31:29.566+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 2
+[2024-12-26T17:31:29.567+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 2
+[2024-12-26T17:31:29.569+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 2
+[2024-12-26T17:31:29.571+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 2
+[2024-12-26T17:31:29.573+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 2
+[2024-12-26T17:31:29.574+0000] {parse.py:68} INFO - Row number: 3 in collection page
+[2024-12-26T17:31:29.575+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 3
+[2024-12-26T17:31:29.577+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 3
+[2024-12-26T17:31:29.579+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 3
+[2024-12-26T17:31:29.580+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 3
+[2024-12-26T17:31:29.581+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 3
+[2024-12-26T17:31:29.583+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 3
+[2024-12-26T17:31:29.584+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 3
+[2024-12-26T17:31:29.587+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 3
+[2024-12-26T17:31:29.593+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 3
+[2024-12-26T17:31:29.597+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 3
+[2024-12-26T17:31:29.600+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 3
+[2024-12-26T17:31:29.603+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 3
+[2024-12-26T17:31:29.605+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 3
+[2024-12-26T17:31:29.607+0000] {parse.py:68} INFO - Row number: 4 in collection page
+[2024-12-26T17:31:29.610+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 4
+[2024-12-26T17:31:29.614+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 4
+[2024-12-26T17:31:29.625+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 4
+[2024-12-26T17:31:29.627+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 4
+[2024-12-26T17:31:29.628+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 4
+[2024-12-26T17:31:29.630+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 4
+[2024-12-26T17:31:29.632+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 4
+[2024-12-26T17:31:29.633+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 4
+[2024-12-26T17:31:29.634+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 4
+[2024-12-26T17:31:29.637+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 4
+[2024-12-26T17:31:29.639+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 4
+[2024-12-26T17:31:29.641+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 4
+[2024-12-26T17:31:29.644+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 4
+[2024-12-26T17:31:29.646+0000] {parse.py:68} INFO - Row number: 5 in collection page
+[2024-12-26T17:31:29.648+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 5
+[2024-12-26T17:31:29.650+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 5
+[2024-12-26T17:31:29.654+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 5
+[2024-12-26T17:31:29.658+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 5
+[2024-12-26T17:31:29.660+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 5
+[2024-12-26T17:31:29.664+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 5
+[2024-12-26T17:31:29.665+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 5
+[2024-12-26T17:31:29.666+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 5
+[2024-12-26T17:31:29.668+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 5
+[2024-12-26T17:31:29.671+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 5
+[2024-12-26T17:31:29.672+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 5
+[2024-12-26T17:31:29.674+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 5
+[2024-12-26T17:31:29.675+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 5
+[2024-12-26T17:31:29.677+0000] {parse.py:68} INFO - Row number: 6 in collection page
+[2024-12-26T17:31:29.679+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 6
+[2024-12-26T17:31:29.681+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 6
+[2024-12-26T17:31:29.682+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 6
+[2024-12-26T17:31:29.684+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 6
+[2024-12-26T17:31:29.686+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 6
+[2024-12-26T17:31:29.688+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 6
+[2024-12-26T17:31:29.690+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 6
+[2024-12-26T17:31:29.692+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 6
+[2024-12-26T17:31:29.696+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 6
+[2024-12-26T17:31:29.697+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 6
+[2024-12-26T17:31:29.699+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 6
+[2024-12-26T17:31:29.700+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 6
+[2024-12-26T17:31:29.703+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 6
+[2024-12-26T17:31:29.706+0000] {parse.py:68} INFO - Row number: 7 in collection page
+[2024-12-26T17:31:29.709+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 7
+[2024-12-26T17:31:29.712+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 7
+[2024-12-26T17:31:29.714+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 7
+[2024-12-26T17:31:29.716+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 7
+[2024-12-26T17:31:29.718+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 7
+[2024-12-26T17:31:29.720+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 7
+[2024-12-26T17:31:29.723+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 7
+[2024-12-26T17:31:29.724+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 7
+[2024-12-26T17:31:29.725+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 7
+[2024-12-26T17:31:29.727+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 7
+[2024-12-26T17:31:29.729+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 7
+[2024-12-26T17:31:29.731+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 7
+[2024-12-26T17:31:29.732+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 7
+[2024-12-26T17:31:29.733+0000] {parse.py:68} INFO - Row number: 8 in collection page
+[2024-12-26T17:31:29.735+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 8
+[2024-12-26T17:31:29.737+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 8
+[2024-12-26T17:31:29.749+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 8
+[2024-12-26T17:31:29.756+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 8
+[2024-12-26T17:31:29.764+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 8
+[2024-12-26T17:31:29.765+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 8
+[2024-12-26T17:31:29.767+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 8
+[2024-12-26T17:31:29.769+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 8
+[2024-12-26T17:31:29.771+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 8
+[2024-12-26T17:31:29.773+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 8
+[2024-12-26T17:31:29.774+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 8
+[2024-12-26T17:31:29.775+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 8
+[2024-12-26T17:31:29.777+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 8
+[2024-12-26T17:31:29.779+0000] {parse.py:68} INFO - Row number: 9 in collection page
+[2024-12-26T17:31:29.781+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 9
+[2024-12-26T17:31:29.782+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 9
+[2024-12-26T17:31:29.783+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 9
+[2024-12-26T17:31:29.786+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 9
+[2024-12-26T17:31:29.788+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 9
+[2024-12-26T17:31:29.789+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 9
+[2024-12-26T17:31:29.795+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 9
+[2024-12-26T17:31:29.808+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 9
+[2024-12-26T17:31:29.811+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 9
+[2024-12-26T17:31:29.813+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 9
+[2024-12-26T17:31:29.816+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 9
+[2024-12-26T17:31:29.817+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 9
+[2024-12-26T17:31:29.820+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 9
+[2024-12-26T17:31:29.828+0000] {parse.py:96} INFO - collection page parsed for run date: 2024-12-24 and saved to path: run_20241224/collection_parsed_20241224.json
+[2024-12-26T17:31:29.830+0000] {python.py:240} INFO - Done. Returned value was: run_20241224/collection_parsed_20241224.json
+[2024-12-26T17:31:29.916+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-26T17:31:29.917+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=parse_collection_page, run_id=manual__2024-12-26T17:07:20.299024+00:00, execution_date=20241226T170720, start_date=20241226T173128, end_date=20241226T173129
+[2024-12-26T17:31:29.979+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-26T17:31:30.122+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-26T17:31:30.127+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

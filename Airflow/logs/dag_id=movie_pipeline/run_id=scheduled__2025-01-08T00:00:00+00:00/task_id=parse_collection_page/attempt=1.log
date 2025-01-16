@@ -1,0 +1,285 @@
+[2025-01-09T12:28:14.854+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-09T12:28:14.990+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.parse_collection_page scheduled__2025-01-08T00:00:00+00:00 [queued]>
+[2025-01-09T12:28:15.032+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.parse_collection_page scheduled__2025-01-08T00:00:00+00:00 [queued]>
+[2025-01-09T12:28:15.036+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-09T12:28:15.121+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): parse_collection_page> on 2025-01-08 00:00:00+00:00
+[2025-01-09T12:28:15.134+0000] {standard_task_runner.py:72} INFO - Started process 344 to run task
+[2025-01-09T12:28:15.156+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'parse_collection_page', 'scheduled__2025-01-08T00:00:00+00:00', '--job-id', '138', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpicm0m3ki']
+[2025-01-09T12:28:15.178+0000] {standard_task_runner.py:105} INFO - Job 138: Subtask parse_collection_page
+[2025-01-09T12:28:15.432+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.parse_collection_page scheduled__2025-01-08T00:00:00+00:00 [running]> on host 78b847e880a5
+[2025-01-09T12:28:16.129+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='parse_collection_page' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-08T00:00:00+00:00'
+[2025-01-09T12:28:16.136+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-09T12:28:16.333+0000] {parse.py:68} INFO - Row number: 0 in collection page
+[2025-01-09T12:28:16.337+0000] {parse.py:68} INFO - Row number: 1 in collection page
+[2025-01-09T12:28:16.340+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 1
+[2025-01-09T12:28:16.345+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 1
+[2025-01-09T12:28:16.348+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 1
+[2025-01-09T12:28:16.351+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 1
+[2025-01-09T12:28:16.354+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 1
+[2025-01-09T12:28:16.362+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 1
+[2025-01-09T12:28:16.363+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 1
+[2025-01-09T12:28:16.366+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 1
+[2025-01-09T12:28:16.369+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 1
+[2025-01-09T12:28:16.372+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 1
+[2025-01-09T12:28:16.379+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 1
+[2025-01-09T12:28:16.381+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 1
+[2025-01-09T12:28:16.383+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 1
+[2025-01-09T12:28:16.388+0000] {parse.py:68} INFO - Row number: 2 in collection page
+[2025-01-09T12:28:16.390+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 2
+[2025-01-09T12:28:16.397+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 2
+[2025-01-09T12:28:16.399+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 2
+[2025-01-09T12:28:16.403+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 2
+[2025-01-09T12:28:16.406+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 2
+[2025-01-09T12:28:16.407+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 2
+[2025-01-09T12:28:16.415+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 2
+[2025-01-09T12:28:16.422+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 2
+[2025-01-09T12:28:16.430+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 2
+[2025-01-09T12:28:16.433+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 2
+[2025-01-09T12:28:16.435+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 2
+[2025-01-09T12:28:16.438+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 2
+[2025-01-09T12:28:16.440+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 2
+[2025-01-09T12:28:16.449+0000] {parse.py:68} INFO - Row number: 3 in collection page
+[2025-01-09T12:28:16.457+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 3
+[2025-01-09T12:28:16.465+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 3
+[2025-01-09T12:28:16.467+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 3
+[2025-01-09T12:28:16.480+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 3
+[2025-01-09T12:28:16.488+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 3
+[2025-01-09T12:28:16.490+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 3
+[2025-01-09T12:28:16.495+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 3
+[2025-01-09T12:28:16.497+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 3
+[2025-01-09T12:28:16.499+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 3
+[2025-01-09T12:28:16.501+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 3
+[2025-01-09T12:28:16.503+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 3
+[2025-01-09T12:28:16.505+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 3
+[2025-01-09T12:28:16.507+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 3
+[2025-01-09T12:28:16.512+0000] {parse.py:68} INFO - Row number: 4 in collection page
+[2025-01-09T12:28:16.515+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 4
+[2025-01-09T12:28:16.521+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 4
+[2025-01-09T12:28:16.523+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 4
+[2025-01-09T12:28:16.541+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 4
+[2025-01-09T12:28:16.548+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 4
+[2025-01-09T12:28:16.551+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 4
+[2025-01-09T12:28:16.554+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 4
+[2025-01-09T12:28:16.557+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 4
+[2025-01-09T12:28:16.563+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 4
+[2025-01-09T12:28:16.566+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 4
+[2025-01-09T12:28:16.569+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 4
+[2025-01-09T12:28:16.573+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 4
+[2025-01-09T12:28:16.579+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 4
+[2025-01-09T12:28:16.581+0000] {parse.py:68} INFO - Row number: 5 in collection page
+[2025-01-09T12:28:16.584+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 5
+[2025-01-09T12:28:16.587+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 5
+[2025-01-09T12:28:16.590+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 5
+[2025-01-09T12:28:16.596+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 5
+[2025-01-09T12:28:16.598+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 5
+[2025-01-09T12:28:16.601+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 5
+[2025-01-09T12:28:16.605+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 5
+[2025-01-09T12:28:16.613+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 5
+[2025-01-09T12:28:16.621+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 5
+[2025-01-09T12:28:16.627+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 5
+[2025-01-09T12:28:16.630+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 5
+[2025-01-09T12:28:16.631+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 5
+[2025-01-09T12:28:16.633+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 5
+[2025-01-09T12:28:16.635+0000] {parse.py:68} INFO - Row number: 6 in collection page
+[2025-01-09T12:28:16.638+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 6
+[2025-01-09T12:28:16.639+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 6
+[2025-01-09T12:28:16.641+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 6
+[2025-01-09T12:28:16.646+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 6
+[2025-01-09T12:28:16.648+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 6
+[2025-01-09T12:28:16.650+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 6
+[2025-01-09T12:28:16.652+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 6
+[2025-01-09T12:28:16.655+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 6
+[2025-01-09T12:28:16.656+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 6
+[2025-01-09T12:28:16.658+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 6
+[2025-01-09T12:28:16.664+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 6
+[2025-01-09T12:28:16.665+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 6
+[2025-01-09T12:28:16.667+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 6
+[2025-01-09T12:28:16.672+0000] {parse.py:68} INFO - Row number: 7 in collection page
+[2025-01-09T12:28:16.674+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 7
+[2025-01-09T12:28:16.679+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 7
+[2025-01-09T12:28:16.680+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 7
+[2025-01-09T12:28:16.682+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 7
+[2025-01-09T12:28:16.684+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 7
+[2025-01-09T12:28:16.686+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 7
+[2025-01-09T12:28:16.689+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 7
+[2025-01-09T12:28:16.690+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 7
+[2025-01-09T12:28:16.695+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 7
+[2025-01-09T12:28:16.697+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 7
+[2025-01-09T12:28:16.698+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 7
+[2025-01-09T12:28:16.700+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 7
+[2025-01-09T12:28:16.702+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 7
+[2025-01-09T12:28:16.705+0000] {parse.py:68} INFO - Row number: 8 in collection page
+[2025-01-09T12:28:16.707+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 8
+[2025-01-09T12:28:16.711+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 8
+[2025-01-09T12:28:16.715+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 8
+[2025-01-09T12:28:16.717+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 8
+[2025-01-09T12:28:16.722+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 8
+[2025-01-09T12:28:16.724+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 8
+[2025-01-09T12:28:16.729+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 8
+[2025-01-09T12:28:16.731+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 8
+[2025-01-09T12:28:16.732+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 8
+[2025-01-09T12:28:16.735+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 8
+[2025-01-09T12:28:16.737+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 8
+[2025-01-09T12:28:16.739+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 8
+[2025-01-09T12:28:16.741+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 8
+[2025-01-09T12:28:16.747+0000] {parse.py:68} INFO - Row number: 9 in collection page
+[2025-01-09T12:28:16.748+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 9
+[2025-01-09T12:28:16.752+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 9
+[2025-01-09T12:28:16.755+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 9
+[2025-01-09T12:28:16.757+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 9
+[2025-01-09T12:28:16.760+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 9
+[2025-01-09T12:28:16.763+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 9
+[2025-01-09T12:28:16.765+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 9
+[2025-01-09T12:28:16.767+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 9
+[2025-01-09T12:28:16.769+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 9
+[2025-01-09T12:28:16.772+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 9
+[2025-01-09T12:28:16.774+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 9
+[2025-01-09T12:28:16.779+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 9
+[2025-01-09T12:28:16.781+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 9
+[2025-01-09T12:28:16.782+0000] {parse.py:68} INFO - Row number: 10 in collection page
+[2025-01-09T12:28:16.784+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 10
+[2025-01-09T12:28:16.786+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 10
+[2025-01-09T12:28:16.789+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 10
+[2025-01-09T12:28:16.791+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 10
+[2025-01-09T12:28:16.796+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 10
+[2025-01-09T12:28:16.797+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 10
+[2025-01-09T12:28:16.799+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 10
+[2025-01-09T12:28:16.801+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 10
+[2025-01-09T12:28:16.803+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 10
+[2025-01-09T12:28:16.805+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 10
+[2025-01-09T12:28:16.807+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 10
+[2025-01-09T12:28:16.810+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 10
+[2025-01-09T12:28:16.813+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 10
+[2025-01-09T12:28:16.815+0000] {parse.py:68} INFO - Row number: 11 in collection page
+[2025-01-09T12:28:16.818+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 11
+[2025-01-09T12:28:16.820+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 11
+[2025-01-09T12:28:16.823+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 11
+[2025-01-09T12:28:16.825+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 11
+[2025-01-09T12:28:16.829+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 11
+[2025-01-09T12:28:16.831+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 11
+[2025-01-09T12:28:16.832+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 11
+[2025-01-09T12:28:16.834+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 11
+[2025-01-09T12:28:16.836+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 11
+[2025-01-09T12:28:16.839+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 11
+[2025-01-09T12:28:16.840+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 11
+[2025-01-09T12:28:16.845+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 11
+[2025-01-09T12:28:16.847+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 11
+[2025-01-09T12:28:16.848+0000] {parse.py:68} INFO - Row number: 12 in collection page
+[2025-01-09T12:28:16.850+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 12
+[2025-01-09T12:28:16.852+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 12
+[2025-01-09T12:28:16.857+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 12
+[2025-01-09T12:28:16.859+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 12
+[2025-01-09T12:28:16.863+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 12
+[2025-01-09T12:28:16.864+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 12
+[2025-01-09T12:28:16.866+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 12
+[2025-01-09T12:28:16.868+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 12
+[2025-01-09T12:28:16.870+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 12
+[2025-01-09T12:28:16.872+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 12
+[2025-01-09T12:28:16.874+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 12
+[2025-01-09T12:28:16.877+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 12
+[2025-01-09T12:28:16.880+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 12
+[2025-01-09T12:28:16.881+0000] {parse.py:68} INFO - Row number: 13 in collection page
+[2025-01-09T12:28:16.883+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 13
+[2025-01-09T12:28:16.885+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 13
+[2025-01-09T12:28:16.887+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 13
+[2025-01-09T12:28:16.889+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 13
+[2025-01-09T12:28:16.891+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 13
+[2025-01-09T12:28:16.896+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 13
+[2025-01-09T12:28:16.897+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 13
+[2025-01-09T12:28:16.899+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 13
+[2025-01-09T12:28:16.900+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 13
+[2025-01-09T12:28:16.902+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 13
+[2025-01-09T12:28:16.904+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 13
+[2025-01-09T12:28:16.906+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 13
+[2025-01-09T12:28:16.907+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 13
+[2025-01-09T12:28:16.912+0000] {parse.py:68} INFO - Row number: 14 in collection page
+[2025-01-09T12:28:16.916+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 14
+[2025-01-09T12:28:16.921+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 14
+[2025-01-09T12:28:16.923+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 14
+[2025-01-09T12:28:16.927+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 14
+[2025-01-09T12:28:16.936+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 14
+[2025-01-09T12:28:16.944+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 14
+[2025-01-09T12:28:16.946+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 14
+[2025-01-09T12:28:16.948+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 14
+[2025-01-09T12:28:16.950+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 14
+[2025-01-09T12:28:16.954+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 14
+[2025-01-09T12:28:16.956+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 14
+[2025-01-09T12:28:16.963+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 14
+[2025-01-09T12:28:16.965+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 14
+[2025-01-09T12:28:16.968+0000] {parse.py:68} INFO - Row number: 15 in collection page
+[2025-01-09T12:28:16.989+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 15
+[2025-01-09T12:28:16.991+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 15
+[2025-01-09T12:28:16.998+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 15
+[2025-01-09T12:28:17.001+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 15
+[2025-01-09T12:28:17.005+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 15
+[2025-01-09T12:28:17.007+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 15
+[2025-01-09T12:28:17.013+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 15
+[2025-01-09T12:28:17.015+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 15
+[2025-01-09T12:28:17.017+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 15
+[2025-01-09T12:28:17.021+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 15
+[2025-01-09T12:28:17.024+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 15
+[2025-01-09T12:28:17.030+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 15
+[2025-01-09T12:28:17.032+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 15
+[2025-01-09T12:28:17.036+0000] {parse.py:68} INFO - Row number: 16 in collection page
+[2025-01-09T12:28:17.039+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 16
+[2025-01-09T12:28:17.041+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 16
+[2025-01-09T12:28:17.047+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 16
+[2025-01-09T12:28:17.049+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 16
+[2025-01-09T12:28:17.052+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 16
+[2025-01-09T12:28:17.054+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 16
+[2025-01-09T12:28:17.057+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 16
+[2025-01-09T12:28:17.060+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 16
+[2025-01-09T12:28:17.063+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 16
+[2025-01-09T12:28:17.065+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 16
+[2025-01-09T12:28:17.067+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 16
+[2025-01-09T12:28:17.073+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 16
+[2025-01-09T12:28:17.075+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 16
+[2025-01-09T12:28:17.080+0000] {parse.py:68} INFO - Row number: 17 in collection page
+[2025-01-09T12:28:17.082+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 17
+[2025-01-09T12:28:17.085+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 17
+[2025-01-09T12:28:17.088+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 17
+[2025-01-09T12:28:17.094+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 17
+[2025-01-09T12:28:17.096+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 17
+[2025-01-09T12:28:17.099+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 17
+[2025-01-09T12:28:17.102+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 17
+[2025-01-09T12:28:17.107+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 17
+[2025-01-09T12:28:17.119+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 17
+[2025-01-09T12:28:17.148+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 17
+[2025-01-09T12:28:17.170+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 17
+[2025-01-09T12:28:17.187+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 17
+[2025-01-09T12:28:17.196+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 17
+[2025-01-09T12:28:17.200+0000] {parse.py:68} INFO - Row number: 18 in collection page
+[2025-01-09T12:28:17.208+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 18
+[2025-01-09T12:28:17.217+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 18
+[2025-01-09T12:28:17.220+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 18
+[2025-01-09T12:28:17.231+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 18
+[2025-01-09T12:28:17.233+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 18
+[2025-01-09T12:28:17.239+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 18
+[2025-01-09T12:28:17.248+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 18
+[2025-01-09T12:28:17.251+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 18
+[2025-01-09T12:28:17.255+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 18
+[2025-01-09T12:28:17.262+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 18
+[2025-01-09T12:28:17.267+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 18
+[2025-01-09T12:28:17.270+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 18
+[2025-01-09T12:28:17.279+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 18
+[2025-01-09T12:28:17.281+0000] {parse.py:68} INFO - Row number: 19 in collection page
+[2025-01-09T12:28:17.282+0000] {parse.py:76} INFO - Cell number: 0 in Row number: 19
+[2025-01-09T12:28:17.284+0000] {parse.py:76} INFO - Cell number: 1 in Row number: 19
+[2025-01-09T12:28:17.286+0000] {parse.py:76} INFO - Cell number: 2 in Row number: 19
+[2025-01-09T12:28:17.289+0000] {parse.py:76} INFO - Cell number: 3 in Row number: 19
+[2025-01-09T12:28:17.291+0000] {parse.py:76} INFO - Cell number: 4 in Row number: 19
+[2025-01-09T12:28:17.297+0000] {parse.py:76} INFO - Cell number: 5 in Row number: 19
+[2025-01-09T12:28:17.300+0000] {parse.py:76} INFO - Cell number: 6 in Row number: 19
+[2025-01-09T12:28:17.307+0000] {parse.py:76} INFO - Cell number: 7 in Row number: 19
+[2025-01-09T12:28:17.329+0000] {parse.py:76} INFO - Cell number: 8 in Row number: 19
+[2025-01-09T12:28:17.332+0000] {parse.py:76} INFO - Cell number: 9 in Row number: 19
+[2025-01-09T12:28:17.334+0000] {parse.py:76} INFO - Cell number: 10 in Row number: 19
+[2025-01-09T12:28:17.338+0000] {parse.py:76} INFO - Cell number: 11 in Row number: 19
+[2025-01-09T12:28:17.340+0000] {parse.py:76} INFO - Cell number: 12 in Row number: 19
+[2025-01-09T12:28:17.350+0000] {parse.py:97} INFO - collection page parsed for run date: 2025-01-06 and saved to path: run_20250106/collection_parsed_20250106.json
+[2025-01-09T12:28:17.355+0000] {python.py:240} INFO - Done. Returned value was: run_20250106/collection_parsed_20250106.json
+[2025-01-09T12:28:17.502+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-09T12:28:17.505+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=parse_collection_page, run_id=scheduled__2025-01-08T00:00:00+00:00, execution_date=20250108T000000, start_date=20250109T122814, end_date=20250109T122817
+[2025-01-09T12:28:17.631+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-09T12:28:17.800+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-09T12:28:17.807+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

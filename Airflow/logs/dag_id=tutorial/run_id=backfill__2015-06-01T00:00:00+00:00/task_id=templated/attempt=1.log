@@ -1,0 +1,39 @@
+[2024-12-12T22:44:26.688+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-12T22:44:26.713+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tutorial.templated backfill__2015-06-01T00:00:00+00:00 [queued]>
+[2024-12-12T22:44:26.724+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tutorial.templated backfill__2015-06-01T00:00:00+00:00 [queued]>
+[2024-12-12T22:44:26.725+0530] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-12T22:44:26.749+0530] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): templated> on 2015-06-01 00:00:00+00:00
+[2024-12-12T22:44:26.757+0530] {logging_mixin.py:190} WARNING - /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=48778) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-12T22:44:26.759+0530] {standard_task_runner.py:72} INFO - Started process 48794 to run task
+[2024-12-12T22:44:26.762+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'tutorial', 'templated', 'backfill__2015-06-01T00:00:00+00:00', '--job-id', '26', '--pool', 'default_pool', '--raw', '--subdir', '/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/example_dags/tutorial.py', '--cfg-path', '/var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T/tmp1fen88q6']
+[2024-12-12T22:44:26.766+0530] {standard_task_runner.py:105} INFO - Job 26: Subtask templated
+[2024-12-12T22:44:26.835+0530] {task_command.py:467} INFO - Running <TaskInstance: tutorial.templated backfill__2015-06-01T00:00:00+00:00 [running]> on host Jayeshs-MacBook-Air.local
+[2024-12-12T22:44:26.931+0530] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='airflow@example.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='tutorial' AIRFLOW_CTX_TASK_ID='templated' AIRFLOW_CTX_EXECUTION_DATE='2015-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='backfill__2015-06-01T00:00:00+00:00'
+[2024-12-12T22:44:26.933+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-12T22:44:26.934+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-12T22:44:26.935+0530] {logging_mixin.py:190} INFO - Current task name:templated state:running start_date:2024-12-12 17:14:26.714201+00:00
+[2024-12-12T22:44:26.935+0530] {logging_mixin.py:190} INFO - Dag name:tutorial and current dag run status:running
+[2024-12-12T22:44:26.936+0530] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-12T22:44:26.937+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T
+[2024-12-12T22:44:26.938+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n\n    echo "2015-06-01"\n    echo "2015-06-08"\n\n    echo "2015-06-01"\n    echo "2015-06-08"\n\n    echo "2015-06-01"\n    echo "2015-06-08"\n\n    echo "2015-06-01"\n    echo "2015-06-08"\n\n    echo "2015-06-01"\n    echo "2015-06-08"\n']
+[2024-12-12T22:44:26.949+0530] {subprocess.py:99} INFO - Output:
+[2024-12-12T22:44:26.954+0530] {subprocess.py:106} INFO - 2015-06-01
+[2024-12-12T22:44:26.955+0530] {subprocess.py:106} INFO - 2015-06-08
+[2024-12-12T22:44:26.956+0530] {subprocess.py:106} INFO - 2015-06-01
+[2024-12-12T22:44:26.957+0530] {subprocess.py:106} INFO - 2015-06-08
+[2024-12-12T22:44:26.959+0530] {subprocess.py:106} INFO - 2015-06-01
+[2024-12-12T22:44:26.960+0530] {subprocess.py:106} INFO - 2015-06-08
+[2024-12-12T22:44:26.960+0530] {subprocess.py:106} INFO - 2015-06-01
+[2024-12-12T22:44:26.961+0530] {subprocess.py:106} INFO - 2015-06-08
+[2024-12-12T22:44:26.962+0530] {subprocess.py:106} INFO - 2015-06-01
+[2024-12-12T22:44:26.962+0530] {subprocess.py:106} INFO - 2015-06-08
+[2024-12-12T22:44:26.963+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-12-12T22:44:26.984+0530] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-12T22:44:26.985+0530] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=tutorial, task_id=templated, run_id=backfill__2015-06-01T00:00:00+00:00, execution_date=20150601T000000, start_date=20241212T171426, end_date=20241212T171426
+[2024-12-12T22:44:26.996+0530] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-12T22:44:26.996+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-12T22:44:26.997+0530] {logging_mixin.py:190} INFO - Dag name:tutorial queued_at:None
+[2024-12-12T22:44:26.998+0530] {logging_mixin.py:190} INFO - Task hostname:Jayeshs-MacBook-Air.local operator:BashOperator
+[2024-12-12T22:44:27.036+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-12T22:44:27.059+0530] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-12T22:44:27.060+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

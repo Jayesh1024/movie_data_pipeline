@@ -1,0 +1,21 @@
+[2024-12-29T04:29:40.997+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-29T04:29:41.307+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre scheduled__2024-12-28T00:00:00+00:00 [queued]>
+[2024-12-29T04:29:41.331+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre scheduled__2024-12-28T00:00:00+00:00 [queued]>
+[2024-12-29T04:29:41.333+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-29T04:29:41.383+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_genre> on 2024-12-28 00:00:00+00:00
+[2024-12-29T04:29:41.397+0000] {standard_task_runner.py:72} INFO - Started process 1868 to run task
+[2024-12-29T04:29:41.405+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_genre', 'scheduled__2024-12-28T00:00:00+00:00', '--job-id', '108', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpfgmgldtk']
+[2024-12-29T04:29:41.429+0000] {standard_task_runner.py:105} INFO - Job 108: Subtask scrape_genre
+[2024-12-29T04:29:41.631+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_genre scheduled__2024-12-28T00:00:00+00:00 [running]> on host e0a3add0f1ca
+[2024-12-29T04:29:42.189+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_genre' AIRFLOW_CTX_EXECUTION_DATE='2024-12-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-28T00:00:00+00:00'
+[2024-12-29T04:29:42.196+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-29T04:29:44.974+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration0 for movie_id: tt13186482 and genre_id: in0000092
+[2024-12-29T04:30:08.133+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-12-29T04:30:08.311+0000] {process_utils.py:132} INFO - Sending 15 to group 1868. PIDs of all processes in the group: [1917, 1934, 1943, 1944, 1968, 1972, 2036, 1989, 2042, 2170, 2278, 2035, 1868]
+[2024-12-29T04:30:08.331+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1868
+[2024-12-29T04:30:08.354+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-29T04:30:08.380+0000] {connectionpool.py:827} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcdd34fe5e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/9d558433004d0979a76f9b70e7bc1a90/window
+[2024-12-29T04:30:08.397+0000] {connectionpool.py:827} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcdd34fe820>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/9d558433004d0979a76f9b70e7bc1a90/window
+[2024-12-29T04:30:08.437+0000] {connectionpool.py:827} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcdd34fec10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/9d558433004d0979a76f9b70e7bc1a90/window
+[2024-12-29T04:30:08.521+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-12-29T04:30:08.722+0000] {process_utils.py:132} INFO - Sending 15 to group 1868. PIDs of all processes in the group: [1917, 1868]

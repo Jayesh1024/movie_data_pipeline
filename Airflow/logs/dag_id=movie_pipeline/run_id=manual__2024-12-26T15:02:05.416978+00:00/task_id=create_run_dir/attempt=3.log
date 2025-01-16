@@ -1,0 +1,17 @@
+[2024-12-26T15:16:28.453+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-26T15:16:28.519+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir manual__2024-12-26T15:02:05.416978+00:00 [queued]>
+[2024-12-26T15:16:28.871+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir manual__2024-12-26T15:02:05.416978+00:00 [queued]>
+[2024-12-26T15:16:28.873+0000] {taskinstance.py:2866} INFO - Starting attempt 3 of 3
+[2024-12-26T15:16:28.912+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_run_dir> on 2024-12-26 15:02:05.416978+00:00
+[2024-12-26T15:16:28.925+0000] {standard_task_runner.py:72} INFO - Started process 997 to run task
+[2024-12-26T15:16:28.933+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'create_run_dir', 'manual__2024-12-26T15:02:05.416978+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpwrpoxsyv']
+[2024-12-26T15:16:28.944+0000] {standard_task_runner.py:105} INFO - Job 36: Subtask create_run_dir
+[2024-12-26T15:16:29.147+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.create_run_dir manual__2024-12-26T15:02:05.416978+00:00 [running]> on host 1712831d7ea4
+[2024-12-26T15:16:29.385+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='create_run_dir' AIRFLOW_CTX_EXECUTION_DATE='2024-12-26T15:02:05.416978+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-26T15:02:05.416978+00:00'
+[2024-12-26T15:16:29.389+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-26T15:16:29.411+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-26T15:16:29.449+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-26T15:16:29.452+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=create_run_dir, run_id=manual__2024-12-26T15:02:05.416978+00:00, execution_date=20241226T150205, start_date=20241226T151628, end_date=20241226T151629
+[2024-12-26T15:16:29.497+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-26T15:16:29.723+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-26T15:16:29.732+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

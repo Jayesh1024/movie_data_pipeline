@@ -1,0 +1,118 @@
+[2024-12-28T13:19:56.032+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-28T13:20:11.640+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.parse_genre manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-28T13:20:11.863+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.parse_genre manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-28T13:20:11.917+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-28T13:20:12.646+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): parse_genre> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-28T13:20:12.759+0000] {standard_task_runner.py:72} INFO - Started process 5676 to run task
+[2024-12-28T13:20:12.935+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'parse_genre', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp6bnw2qpx']
+[2024-12-28T13:20:13.096+0000] {standard_task_runner.py:105} INFO - Job 96: Subtask parse_genre
+[2024-12-28T13:20:15.622+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.parse_genre manual__2024-12-27T11:38:32.797674+00:00 [running]> on host e0a3add0f1ca
+[2024-12-28T13:20:20.822+0000] {job.py:229} INFO - Heartbeat recovered after 31.35 seconds
+[2024-12-28T13:20:23.853+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='parse_genre' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-28T13:20:23.918+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-28T13:21:48.483+0000] {parse.py:332} INFO - Iteration: 0 and movie_id: tt13186482
+[2024-12-28T13:21:57.049+0000] {job.py:229} INFO - Heartbeat recovered after 13.05 seconds
+[2024-12-28T13:22:06.710+0000] {parse.py:332} INFO - Iteration: 1 and movie_id: tt13186482
+[2024-12-28T13:22:18.297+0000] {parse.py:332} INFO - Iteration: 2 and movie_id: tt13186482
+[2024-12-28T13:22:20.661+0000] {parse.py:332} INFO - Iteration: 3 and movie_id: tt13186482
+[2024-12-28T13:22:23.388+0000] {parse.py:332} INFO - Iteration: 4 and movie_id: tt13186482
+[2024-12-28T13:22:27.396+0000] {parse.py:332} INFO - Iteration: 5 and movie_id: tt13186482
+[2024-12-28T13:22:29.663+0000] {parse.py:332} INFO - Iteration: 6 and movie_id: tt13186482
+[2024-12-28T13:22:31.695+0000] {parse.py:332} INFO - Iteration: 7 and movie_id: tt13186482
+[2024-12-28T13:22:33.756+0000] {parse.py:332} INFO - Iteration: 8 and movie_id: tt5040012
+[2024-12-28T13:22:43.647+0000] {parse.py:332} INFO - Iteration: 9 and movie_id: tt5040012
+[2024-12-28T13:22:47.363+0000] {parse.py:332} INFO - Iteration: 10 and movie_id: tt5040012
+[2024-12-28T13:22:51.591+0000] {parse.py:332} INFO - Iteration: 11 and movie_id: tt5040012
+[2024-12-28T13:22:54.148+0000] {parse.py:332} INFO - Iteration: 12 and movie_id: tt5040012
+[2024-12-28T13:22:56.075+0000] {parse.py:332} INFO - Iteration: 13 and movie_id: tt5040012
+[2024-12-28T13:22:57.971+0000] {parse.py:332} INFO - Iteration: 14 and movie_id: tt18259086
+[2024-12-28T13:23:00.173+0000] {parse.py:332} INFO - Iteration: 15 and movie_id: tt18259086
+[2024-12-28T13:23:02.205+0000] {parse.py:332} INFO - Iteration: 16 and movie_id: tt18259086
+[2024-12-28T13:23:03.720+0000] {parse.py:332} INFO - Iteration: 17 and movie_id: tt18259086
+[2024-12-28T13:23:05.596+0000] {parse.py:332} INFO - Iteration: 18 and movie_id: tt18259086
+[2024-12-28T13:23:07.205+0000] {parse.py:332} INFO - Iteration: 19 and movie_id: tt18259086
+[2024-12-28T13:23:10.585+0000] {parse.py:332} INFO - Iteration: 20 and movie_id: tt18259086
+[2024-12-28T13:23:15.084+0000] {parse.py:332} INFO - Iteration: 21 and movie_id: tt18259086
+[2024-12-28T13:23:22.071+0000] {parse.py:332} INFO - Iteration: 22 and movie_id: tt18259086
+[2024-12-28T13:23:26.493+0000] {parse.py:332} INFO - Iteration: 23 and movie_id: tt18259086
+[2024-12-28T13:23:29.822+0000] {parse.py:332} INFO - Iteration: 24 and movie_id: tt11563598
+[2024-12-28T13:23:32.497+0000] {parse.py:332} INFO - Iteration: 25 and movie_id: tt11563598
+[2024-12-28T13:23:34.342+0000] {parse.py:332} INFO - Iteration: 26 and movie_id: tt11563598
+[2024-12-28T13:23:36.427+0000] {parse.py:332} INFO - Iteration: 27 and movie_id: tt11563598
+[2024-12-28T13:23:38.519+0000] {parse.py:332} INFO - Iteration: 28 and movie_id: tt11563598
+[2024-12-28T13:23:41.072+0000] {parse.py:332} INFO - Iteration: 29 and movie_id: tt1262426
+[2024-12-28T13:23:42.404+0000] {parse.py:332} INFO - Iteration: 30 and movie_id: tt1262426
+[2024-12-28T13:23:44.098+0000] {parse.py:332} INFO - Iteration: 31 and movie_id: tt1262426
+[2024-12-28T13:23:45.705+0000] {parse.py:332} INFO - Iteration: 32 and movie_id: tt1262426
+[2024-12-28T13:23:47.539+0000] {parse.py:332} INFO - Iteration: 33 and movie_id: tt1262426
+[2024-12-28T13:23:49.140+0000] {parse.py:332} INFO - Iteration: 34 and movie_id: tt13622970
+[2024-12-28T13:23:50.674+0000] {parse.py:332} INFO - Iteration: 35 and movie_id: tt13622970
+[2024-12-28T13:23:51.820+0000] {parse.py:332} INFO - Iteration: 36 and movie_id: tt13622970
+[2024-12-28T13:23:54.013+0000] {parse.py:332} INFO - Iteration: 37 and movie_id: tt13622970
+[2024-12-28T13:23:55.606+0000] {parse.py:332} INFO - Iteration: 38 and movie_id: tt13622970
+[2024-12-28T13:23:56.826+0000] {parse.py:332} INFO - Iteration: 39 and movie_id: tt13622970
+[2024-12-28T13:23:58.573+0000] {parse.py:332} INFO - Iteration: 40 and movie_id: tt13622970
+[2024-12-28T13:24:01.011+0000] {parse.py:332} INFO - Iteration: 41 and movie_id: tt13622970
+[2024-12-28T13:24:02.577+0000] {parse.py:332} INFO - Iteration: 42 and movie_id: tt6133444
+[2024-12-28T13:24:04.163+0000] {parse.py:332} INFO - Iteration: 43 and movie_id: tt6133444
+[2024-12-28T13:24:05.485+0000] {parse.py:332} INFO - Iteration: 44 and movie_id: tt6133444
+[2024-12-28T13:24:06.656+0000] {parse.py:332} INFO - Iteration: 45 and movie_id: tt6133444
+[2024-12-28T13:24:09.058+0000] {parse.py:332} INFO - Iteration: 46 and movie_id: tt6133444
+[2024-12-28T13:24:12.047+0000] {parse.py:332} INFO - Iteration: 47 and movie_id: tt30057084
+[2024-12-28T13:24:13.435+0000] {parse.py:332} INFO - Iteration: 48 and movie_id: tt30057084
+[2024-12-28T13:24:15.040+0000] {parse.py:332} INFO - Iteration: 49 and movie_id: tt30057084
+[2024-12-28T13:24:16.359+0000] {parse.py:332} INFO - Iteration: 50 and movie_id: tt30057084
+[2024-12-28T13:24:17.895+0000] {parse.py:332} INFO - Iteration: 51 and movie_id: tt30057084
+[2024-12-28T13:24:19.183+0000] {parse.py:332} INFO - Iteration: 52 and movie_id: tt9218128
+[2024-12-28T13:24:21.900+0000] {parse.py:332} INFO - Iteration: 53 and movie_id: tt9218128
+[2024-12-28T13:24:23.047+0000] {parse.py:332} INFO - Iteration: 54 and movie_id: tt9218128
+[2024-12-28T13:24:24.597+0000] {parse.py:332} INFO - Iteration: 55 and movie_id: tt9218128
+[2024-12-28T13:24:25.603+0000] {parse.py:332} INFO - Iteration: 56 and movie_id: tt9218128
+[2024-12-28T13:24:27.028+0000] {parse.py:332} INFO - Iteration: 57 and movie_id: tt9218128
+[2024-12-28T13:24:28.021+0000] {parse.py:332} INFO - Iteration: 58 and movie_id: tt9218128
+[2024-12-28T13:24:29.640+0000] {parse.py:332} INFO - Iteration: 59 and movie_id: tt9218128
+[2024-12-28T13:24:31.128+0000] {parse.py:332} INFO - Iteration: 60 and movie_id: tt29137778
+[2024-12-28T13:24:32.568+0000] {parse.py:332} INFO - Iteration: 61 and movie_id: tt29137778
+[2024-12-28T13:24:34.553+0000] {parse.py:332} INFO - Iteration: 62 and movie_id: tt29137778
+[2024-12-28T13:24:36.941+0000] {parse.py:332} INFO - Iteration: 63 and movie_id: tt8790086
+[2024-12-28T13:24:39.153+0000] {parse.py:332} INFO - Iteration: 64 and movie_id: tt8790086
+[2024-12-28T13:24:41.221+0000] {parse.py:332} INFO - Iteration: 65 and movie_id: tt8790086
+[2024-12-28T13:24:42.625+0000] {parse.py:332} INFO - Iteration: 66 and movie_id: tt8790086
+[2024-12-28T13:24:43.846+0000] {parse.py:332} INFO - Iteration: 67 and movie_id: tt14948432
+[2024-12-28T13:24:45.141+0000] {parse.py:332} INFO - Iteration: 68 and movie_id: tt14948432
+[2024-12-28T13:24:46.748+0000] {parse.py:332} INFO - Iteration: 69 and movie_id: tt14948432
+[2024-12-28T13:24:48.024+0000] {parse.py:332} INFO - Iteration: 70 and movie_id: tt14948432
+[2024-12-28T13:24:50.398+0000] {parse.py:332} INFO - Iteration: 71 and movie_id: tt14948432
+[2024-12-28T13:24:52.032+0000] {parse.py:332} INFO - Iteration: 72 and movie_id: tt14948432
+[2024-12-28T13:24:53.811+0000] {parse.py:332} INFO - Iteration: 73 and movie_id: tt14948432
+[2024-12-28T13:24:55.319+0000] {parse.py:332} INFO - Iteration: 74 and movie_id: tt2347285
+[2024-12-28T13:24:57.071+0000] {parse.py:332} INFO - Iteration: 75 and movie_id: tt2347285
+[2024-12-28T13:24:58.301+0000] {parse.py:332} INFO - Iteration: 76 and movie_id: tt2347285
+[2024-12-28T13:25:00.430+0000] {parse.py:332} INFO - Iteration: 77 and movie_id: tt2347285
+[2024-12-28T13:25:01.854+0000] {parse.py:332} INFO - Iteration: 78 and movie_id: tt2347285
+[2024-12-28T13:25:02.946+0000] {parse.py:332} INFO - Iteration: 79 and movie_id: tt2347285
+[2024-12-28T13:25:05.119+0000] {parse.py:332} INFO - Iteration: 80 and movie_id: tt2347285
+[2024-12-28T13:25:06.126+0000] {parse.py:332} INFO - Iteration: 81 and movie_id: tt14824600
+[2024-12-28T13:25:07.089+0000] {parse.py:332} INFO - Iteration: 82 and movie_id: tt14824600
+[2024-12-28T13:25:07.865+0000] {parse.py:332} INFO - Iteration: 83 and movie_id: tt14824600
+[2024-12-28T13:25:09.099+0000] {parse.py:332} INFO - Iteration: 84 and movie_id: tt14824600
+[2024-12-28T13:25:09.848+0000] {parse.py:332} INFO - Iteration: 85 and movie_id: tt14824600
+[2024-12-28T13:25:10.757+0000] {parse.py:332} INFO - Iteration: 86 and movie_id: tt14824600
+[2024-12-28T13:25:11.477+0000] {parse.py:332} INFO - Iteration: 87 and movie_id: tt14824600
+[2024-12-28T13:25:12.496+0000] {parse.py:332} INFO - Iteration: 88 and movie_id: tt14824600
+[2024-12-28T13:25:13.412+0000] {parse.py:332} INFO - Iteration: 89 and movie_id: tt14824600
+[2024-12-28T13:25:14.256+0000] {parse.py:332} INFO - Iteration: 90 and movie_id: tt8999762
+[2024-12-28T13:25:15.371+0000] {parse.py:332} INFO - Iteration: 91 and movie_id: tt8999762
+[2024-12-28T13:25:16.262+0000] {parse.py:332} INFO - Iteration: 92 and movie_id: tt21823606
+[2024-12-28T13:25:17.372+0000] {parse.py:332} INFO - Iteration: 93 and movie_id: tt21823606
+[2024-12-28T13:25:18.333+0000] {parse.py:332} INFO - Iteration: 94 and movie_id: tt21823606
+[2024-12-28T13:25:19.583+0000] {parse.py:332} INFO - Iteration: 95 and movie_id: tt20215234
+[2024-12-28T13:25:20.678+0000] {parse.py:332} INFO - Iteration: 96 and movie_id: tt20215234
+[2024-12-28T13:25:21.529+0000] {parse.py:332} INFO - Iteration: 97 and movie_id: tt20215234
+[2024-12-28T13:25:22.642+0000] {parse.py:332} INFO - Iteration: 98 and movie_id: tt20215234
+[2024-12-28T13:25:23.593+0000] {python.py:240} INFO - Done. Returned value was: run_20241225/genre_parsed_20241225.json
+[2024-12-28T13:25:23.680+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-28T13:25:23.683+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=parse_genre, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241228T132011, end_date=20241228T132523
+[2024-12-28T13:25:23.817+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-28T13:25:23.897+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-28T13:25:23.902+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

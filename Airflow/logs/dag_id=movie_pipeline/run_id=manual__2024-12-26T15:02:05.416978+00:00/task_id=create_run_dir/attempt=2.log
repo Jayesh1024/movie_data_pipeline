@@ -1,0 +1,106 @@
+[2024-12-26T15:02:36.436+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-26T15:02:36.496+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir manual__2024-12-26T15:02:05.416978+00:00 [queued]>
+[2024-12-26T15:02:36.759+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.create_run_dir manual__2024-12-26T15:02:05.416978+00:00 [queued]>
+[2024-12-26T15:02:36.761+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-26T15:02:36.795+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_run_dir> on 2024-12-26 15:02:05.416978+00:00
+[2024-12-26T15:02:36.811+0000] {standard_task_runner.py:72} INFO - Started process 580 to run task
+[2024-12-26T15:02:36.821+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'create_run_dir', 'manual__2024-12-26T15:02:05.416978+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmprqu2os_b']
+[2024-12-26T15:02:36.830+0000] {standard_task_runner.py:105} INFO - Job 35: Subtask create_run_dir
+[2024-12-26T15:02:37.101+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.create_run_dir manual__2024-12-26T15:02:05.416978+00:00 [running]> on host 1712831d7ea4
+[2024-12-26T15:02:37.333+0000] {abstractoperator.py:783} ERROR - Exception rendering Jinja template for task 'create_run_dir', field 'op_args'. Template: ['{{ds-1}}']
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/abstractoperator.py", line 775, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 183, in render_template
+    return [self.render_template(element, context, jinja_env, oids) for element in value]
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 183, in <listcomp>
+    return [self.render_template(element, context, jinja_env, oids) for element in value]
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 171, in render_template
+    return self._render(template, context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/abstractoperator.py", line 730, in _render
+    return super()._render(template, context, dag=dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 127, in _render
+    return render_template_to_string(template, context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/helpers.py", line 301, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/helpers.py", line 296, in render_template
+    return "".join(nodes)
+  File "<template>", line 12, in root
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+[2024-12-26T15:02:37.337+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3115, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3534, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 1438, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/abstractoperator.py", line 775, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 183, in render_template
+    return [self.render_template(element, context, jinja_env, oids) for element in value]
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 183, in <listcomp>
+    return [self.render_template(element, context, jinja_env, oids) for element in value]
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 171, in render_template
+    return self._render(template, context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/abstractoperator.py", line 730, in _render
+    return super()._render(template, context, dag=dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 127, in _render
+    return render_template_to_string(template, context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/helpers.py", line 301, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/helpers.py", line 296, in render_template
+    return "".join(nodes)
+  File "<template>", line 12, in root
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+[2024-12-26T15:02:37.372+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=movie_pipeline, task_id=create_run_dir, run_id=manual__2024-12-26T15:02:05.416978+00:00, execution_date=20241226T150205, start_date=20241226T150236, end_date=20241226T150237
+[2024-12-26T15:02:37.417+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-26T15:02:37.421+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 35 for task create_run_dir (unsupported operand type(s) for -: 'str' and 'int'; 580)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3115, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3534, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 1438, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/abstractoperator.py", line 775, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 183, in render_template
+    return [self.render_template(element, context, jinja_env, oids) for element in value]
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 183, in <listcomp>
+    return [self.render_template(element, context, jinja_env, oids) for element in value]
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 171, in render_template
+    return self._render(template, context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/abstractoperator.py", line 730, in _render
+    return super()._render(template, context, dag=dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/template/templater.py", line 127, in _render
+    return render_template_to_string(template, context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/helpers.py", line 301, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/helpers.py", line 296, in render_template
+    return "".join(nodes)
+  File "<template>", line 12, in root
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+[2024-12-26T15:02:37.477+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-26T15:02:37.561+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-26T15:02:37.575+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

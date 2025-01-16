@@ -1,0 +1,530 @@
+[2024-12-29T05:33:53.100+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-29T05:33:53.174+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.parse_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-29T05:33:55.992+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.parse_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [queued]>
+[2024-12-29T05:33:55.995+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-29T05:33:56.029+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): parse_filmmakers> on 2024-12-27 11:38:32.797674+00:00
+[2024-12-29T05:33:56.050+0000] {standard_task_runner.py:72} INFO - Started process 7822 to run task
+[2024-12-29T05:33:56.073+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'parse_filmmakers', 'manual__2024-12-27T11:38:32.797674+00:00', '--job-id', '119', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpc9ueowpu']
+[2024-12-29T05:33:56.089+0000] {standard_task_runner.py:105} INFO - Job 119: Subtask parse_filmmakers
+[2024-12-29T05:33:56.344+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.parse_filmmakers manual__2024-12-27T11:38:32.797674+00:00 [running]> on host 5b3ca2f211c1
+[2024-12-29T05:33:56.699+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='parse_filmmakers' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T11:38:32.797674+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T11:38:32.797674+00:00'
+[2024-12-29T05:33:56.704+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-29T05:34:20.418+0000] {parse.py:413} INFO - Iteration: 0
+[2024-12-29T05:34:23.146+0000] {parse.py:413} INFO - Iteration: 1
+[2024-12-29T05:34:25.059+0000] {parse.py:413} INFO - Iteration: 2
+[2024-12-29T05:34:26.354+0000] {parse.py:413} INFO - Iteration: 3
+[2024-12-29T05:34:27.881+0000] {parse.py:413} INFO - Iteration: 4
+[2024-12-29T05:34:29.039+0000] {parse.py:413} INFO - Iteration: 5
+[2024-12-29T05:34:30.866+0000] {parse.py:413} INFO - Iteration: 6
+[2024-12-29T05:34:31.906+0000] {parse.py:413} INFO - Iteration: 7
+[2024-12-29T05:34:33.270+0000] {parse.py:413} INFO - Iteration: 8
+[2024-12-29T05:34:34.838+0000] {parse.py:413} INFO - Iteration: 9
+[2024-12-29T05:34:36.433+0000] {parse.py:413} INFO - Iteration: 10
+[2024-12-29T05:34:38.624+0000] {parse.py:413} INFO - Iteration: 11
+[2024-12-29T05:34:39.582+0000] {parse.py:413} INFO - Iteration: 12
+[2024-12-29T05:34:41.516+0000] {parse.py:413} INFO - Iteration: 13
+[2024-12-29T05:34:43.733+0000] {parse.py:413} INFO - Iteration: 14
+[2024-12-29T05:34:45.224+0000] {parse.py:413} INFO - Iteration: 15
+[2024-12-29T05:34:46.669+0000] {parse.py:413} INFO - Iteration: 16
+[2024-12-29T05:34:47.986+0000] {parse.py:413} INFO - Iteration: 17
+[2024-12-29T05:34:49.075+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:34:49.087+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:34:49.089+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:34:49.091+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:34:49.176+0000] {parse.py:413} INFO - Iteration: 18
+[2024-12-29T05:34:51.092+0000] {parse.py:413} INFO - Iteration: 19
+[2024-12-29T05:34:52.987+0000] {parse.py:413} INFO - Iteration: 20
+[2024-12-29T05:34:55.380+0000] {parse.py:413} INFO - Iteration: 21
+[2024-12-29T05:34:57.161+0000] {parse.py:413} INFO - Iteration: 22
+[2024-12-29T05:34:58.750+0000] {parse.py:413} INFO - Iteration: 23
+[2024-12-29T05:35:00.232+0000] {parse.py:413} INFO - Iteration: 24
+[2024-12-29T05:35:01.194+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:35:01.197+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:01.199+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:01.201+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:01.276+0000] {parse.py:413} INFO - Iteration: 25
+[2024-12-29T05:35:02.779+0000] {parse.py:413} INFO - Iteration: 26
+[2024-12-29T05:35:04.600+0000] {parse.py:413} INFO - Iteration: 27
+[2024-12-29T05:35:06.742+0000] {parse.py:413} INFO - Iteration: 28
+[2024-12-29T05:35:08.850+0000] {parse.py:413} INFO - Iteration: 29
+[2024-12-29T05:35:09.808+0000] {parse.py:413} INFO - Iteration: 30
+[2024-12-29T05:35:11.296+0000] {parse.py:413} INFO - Iteration: 31
+[2024-12-29T05:35:12.347+0000] {parse.py:413} INFO - Iteration: 32
+[2024-12-29T05:35:13.500+0000] {parse.py:413} INFO - Iteration: 33
+[2024-12-29T05:35:15.005+0000] {parse.py:413} INFO - Iteration: 34
+[2024-12-29T05:35:17.126+0000] {parse.py:413} INFO - Iteration: 35
+[2024-12-29T05:35:18.071+0000] {parse.py:413} INFO - Iteration: 36
+[2024-12-29T05:35:19.317+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:35:19.318+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:19.320+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:19.321+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:19.396+0000] {parse.py:413} INFO - Iteration: 37
+[2024-12-29T05:35:20.578+0000] {parse.py:413} INFO - Iteration: 38
+[2024-12-29T05:35:21.650+0000] {parse.py:413} INFO - Iteration: 39
+[2024-12-29T05:35:22.896+0000] {parse.py:413} INFO - Iteration: 40
+[2024-12-29T05:35:23.770+0000] {parse.py:457} ERROR - time data 'Australia' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Australia' does not match format '%B %d, %Y'
+[2024-12-29T05:35:23.772+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:23.773+0000] {parse.py:466} ERROR - list index out of range
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 461, in filmmaker_parser
+    location=filmmaker_birth_details[1].text
+IndexError: list index out of range
+[2024-12-29T05:35:23.776+0000] {parse.py:468} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:23.777+0000] {parse.py:470} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:23.851+0000] {parse.py:413} INFO - Iteration: 41
+[2024-12-29T05:35:25.432+0000] {parse.py:413} INFO - Iteration: 42
+[2024-12-29T05:35:27.827+0000] {parse.py:413} INFO - Iteration: 43
+[2024-12-29T05:35:28.527+0000] {parse.py:466} ERROR - list index out of range
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 461, in filmmaker_parser
+    location=filmmaker_birth_details[1].text
+IndexError: list index out of range
+[2024-12-29T05:35:28.529+0000] {parse.py:468} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:28.533+0000] {parse.py:470} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:28.641+0000] {parse.py:413} INFO - Iteration: 44
+[2024-12-29T05:35:30.352+0000] {parse.py:457} ERROR - time data 'April 27' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'April 27' does not match format '%B %d, %Y'
+[2024-12-29T05:35:30.357+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:30.437+0000] {parse.py:413} INFO - Iteration: 45
+[2024-12-29T05:35:31.946+0000] {parse.py:413} INFO - Iteration: 46
+[2024-12-29T05:35:32.969+0000] {parse.py:457} ERROR - time data 'January 8' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'January 8' does not match format '%B %d, %Y'
+[2024-12-29T05:35:32.971+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:33.068+0000] {parse.py:413} INFO - Iteration: 47
+[2024-12-29T05:35:34.576+0000] {parse.py:413} INFO - Iteration: 48
+[2024-12-29T05:35:35.609+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:35:35.612+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:35.613+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:35.615+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:35.709+0000] {parse.py:413} INFO - Iteration: 49
+[2024-12-29T05:35:37.219+0000] {parse.py:413} INFO - Iteration: 50
+[2024-12-29T05:35:38.588+0000] {parse.py:413} INFO - Iteration: 51
+[2024-12-29T05:35:40.478+0000] {parse.py:413} INFO - Iteration: 52
+[2024-12-29T05:35:41.755+0000] {parse.py:413} INFO - Iteration: 53
+[2024-12-29T05:35:43.655+0000] {parse.py:413} INFO - Iteration: 54
+[2024-12-29T05:35:45.946+0000] {parse.py:413} INFO - Iteration: 55
+[2024-12-29T05:35:47.240+0000] {parse.py:466} ERROR - list index out of range
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 461, in filmmaker_parser
+    location=filmmaker_birth_details[1].text
+IndexError: list index out of range
+[2024-12-29T05:35:47.242+0000] {parse.py:468} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:47.244+0000] {parse.py:470} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:47.337+0000] {parse.py:413} INFO - Iteration: 56
+[2024-12-29T05:35:48.847+0000] {parse.py:457} ERROR - time data 'November 10' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'November 10' does not match format '%B %d, %Y'
+[2024-12-29T05:35:48.850+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:48.924+0000] {parse.py:413} INFO - Iteration: 57
+[2024-12-29T05:35:50.103+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:35:50.108+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:50.110+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:50.111+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:50.187+0000] {parse.py:413} INFO - Iteration: 58
+[2024-12-29T05:35:51.193+0000] {parse.py:413} INFO - Iteration: 59
+[2024-12-29T05:35:53.113+0000] {parse.py:413} INFO - Iteration: 60
+[2024-12-29T05:35:54.943+0000] {parse.py:413} INFO - Iteration: 61
+[2024-12-29T05:35:56.219+0000] {parse.py:457} ERROR - time data 'Sydney, Australia' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Sydney, Australia' does not match format '%B %d, %Y'
+[2024-12-29T05:35:56.225+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:56.227+0000] {parse.py:466} ERROR - list index out of range
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 461, in filmmaker_parser
+    location=filmmaker_birth_details[1].text
+IndexError: list index out of range
+[2024-12-29T05:35:56.228+0000] {parse.py:468} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:56.230+0000] {parse.py:470} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:56.315+0000] {parse.py:413} INFO - Iteration: 62
+[2024-12-29T05:35:57.793+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:35:57.798+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:57.802+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:57.803+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:35:57.879+0000] {parse.py:413} INFO - Iteration: 63
+[2024-12-29T05:35:59.020+0000] {parse.py:457} ERROR - time data 'May 9' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'May 9' does not match format '%B %d, %Y'
+[2024-12-29T05:35:59.024+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:59.105+0000] {parse.py:413} INFO - Iteration: 64
+[2024-12-29T05:35:59.934+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:35:59.936+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:35:59.938+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:35:59.941+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:00.051+0000] {parse.py:413} INFO - Iteration: 65
+[2024-12-29T05:36:01.661+0000] {parse.py:413} INFO - Iteration: 66
+[2024-12-29T05:36:03.543+0000] {parse.py:413} INFO - Iteration: 67
+[2024-12-29T05:36:05.241+0000] {parse.py:413} INFO - Iteration: 68
+[2024-12-29T05:36:06.355+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:06.358+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:06.360+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:06.361+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:06.499+0000] {parse.py:413} INFO - Iteration: 69
+[2024-12-29T05:36:07.941+0000] {parse.py:457} ERROR - time data '1956' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '1956' does not match format '%B %d, %Y'
+[2024-12-29T05:36:07.943+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:08.030+0000] {parse.py:413} INFO - Iteration: 70
+[2024-12-29T05:36:09.276+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:09.277+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:09.279+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:09.280+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:09.364+0000] {parse.py:413} INFO - Iteration: 71
+[2024-12-29T05:36:10.477+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:10.479+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:10.481+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:10.482+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:10.593+0000] {parse.py:413} INFO - Iteration: 72
+[2024-12-29T05:36:12.249+0000] {parse.py:413} INFO - Iteration: 73
+[2024-12-29T05:36:13.537+0000] {parse.py:413} INFO - Iteration: 74
+[2024-12-29T05:36:14.801+0000] {parse.py:413} INFO - Iteration: 75
+[2024-12-29T05:36:16.708+0000] {parse.py:413} INFO - Iteration: 76
+[2024-12-29T05:36:19.020+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:19.023+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:19.026+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:19.028+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:19.138+0000] {parse.py:413} INFO - Iteration: 77
+[2024-12-29T05:36:20.668+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:20.679+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:20.690+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:20.696+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:20.821+0000] {parse.py:413} INFO - Iteration: 78
+[2024-12-29T05:36:22.714+0000] {parse.py:413} INFO - Iteration: 79
+[2024-12-29T05:36:24.586+0000] {parse.py:413} INFO - Iteration: 80
+[2024-12-29T05:36:26.682+0000] {parse.py:413} INFO - Iteration: 81
+[2024-12-29T05:36:28.278+0000] {parse.py:413} INFO - Iteration: 82
+[2024-12-29T05:36:29.730+0000] {parse.py:413} INFO - Iteration: 83
+[2024-12-29T05:36:30.795+0000] {parse.py:457} ERROR - time data 'November 14' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'November 14' does not match format '%B %d, %Y'
+[2024-12-29T05:36:30.796+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:30.893+0000] {parse.py:413} INFO - Iteration: 84
+[2024-12-29T05:36:31.846+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:31.848+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:31.849+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:31.851+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:31.938+0000] {parse.py:413} INFO - Iteration: 85
+[2024-12-29T05:36:32.712+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:32.714+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:32.716+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:32.718+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:32.805+0000] {parse.py:413} INFO - Iteration: 86
+[2024-12-29T05:36:34.052+0000] {parse.py:466} ERROR - list index out of range
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 461, in filmmaker_parser
+    location=filmmaker_birth_details[1].text
+IndexError: list index out of range
+[2024-12-29T05:36:34.053+0000] {parse.py:468} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:34.055+0000] {parse.py:470} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:34.143+0000] {parse.py:413} INFO - Iteration: 87
+[2024-12-29T05:36:35.910+0000] {parse.py:413} INFO - Iteration: 88
+[2024-12-29T05:36:37.244+0000] {parse.py:413} INFO - Iteration: 89
+[2024-12-29T05:36:38.447+0000] {parse.py:413} INFO - Iteration: 90
+[2024-12-29T05:36:39.138+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:39.140+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:39.142+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:39.144+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:39.518+0000] {parse.py:413} INFO - Iteration: 91
+[2024-12-29T05:36:40.386+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:36:40.388+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:36:40.394+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:36:40.396+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:36:40.495+0000] {parse.py:413} INFO - Iteration: 92
+[2024-12-29T05:36:42.278+0000] {parse.py:413} INFO - Iteration: 93
+[2024-12-29T05:36:43.530+0000] {parse.py:413} INFO - Iteration: 94
+[2024-12-29T05:36:45.372+0000] {parse.py:413} INFO - Iteration: 95
+[2024-12-29T05:36:47.004+0000] {parse.py:413} INFO - Iteration: 96
+[2024-12-29T05:36:48.837+0000] {parse.py:413} INFO - Iteration: 97
+[2024-12-29T05:36:50.218+0000] {parse.py:413} INFO - Iteration: 98
+[2024-12-29T05:36:52.031+0000] {parse.py:413} INFO - Iteration: 99
+[2024-12-29T05:36:53.312+0000] {parse.py:413} INFO - Iteration: 100
+[2024-12-29T05:36:55.357+0000] {parse.py:413} INFO - Iteration: 101
+[2024-12-29T05:36:57.369+0000] {parse.py:413} INFO - Iteration: 102
+[2024-12-29T05:36:59.470+0000] {parse.py:413} INFO - Iteration: 103
+[2024-12-29T05:37:01.082+0000] {parse.py:413} INFO - Iteration: 104
+[2024-12-29T05:37:03.219+0000] {parse.py:413} INFO - Iteration: 105
+[2024-12-29T05:37:03.913+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:03.914+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:03.916+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:03.918+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:04.011+0000] {parse.py:413} INFO - Iteration: 106
+[2024-12-29T05:37:06.245+0000] {parse.py:413} INFO - Iteration: 107
+[2024-12-29T05:37:07.691+0000] {parse.py:413} INFO - Iteration: 108
+[2024-12-29T05:37:08.871+0000] {parse.py:413} INFO - Iteration: 109
+[2024-12-29T05:37:10.813+0000] {parse.py:413} INFO - Iteration: 110
+[2024-12-29T05:37:12.785+0000] {parse.py:413} INFO - Iteration: 111
+[2024-12-29T05:37:14.977+0000] {parse.py:413} INFO - Iteration: 112
+[2024-12-29T05:37:15.688+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:15.689+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:15.692+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:15.693+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:15.773+0000] {parse.py:413} INFO - Iteration: 113
+[2024-12-29T05:37:16.960+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:16.965+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:16.969+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:16.982+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:17.139+0000] {parse.py:413} INFO - Iteration: 114
+[2024-12-29T05:37:18.956+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:18.960+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:18.962+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:18.963+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:19.054+0000] {parse.py:413} INFO - Iteration: 115
+[2024-12-29T05:37:19.848+0000] {parse.py:413} INFO - Iteration: 116
+[2024-12-29T05:37:20.978+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:20.980+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:20.981+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:20.982+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:21.058+0000] {parse.py:413} INFO - Iteration: 117
+[2024-12-29T05:37:21.977+0000] {parse.py:457} ERROR - time data 'July 24' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'July 24' does not match format '%B %d, %Y'
+[2024-12-29T05:37:21.980+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:22.094+0000] {parse.py:413} INFO - Iteration: 118
+[2024-12-29T05:37:23.906+0000] {parse.py:413} INFO - Iteration: 119
+[2024-12-29T05:37:25.247+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:25.249+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:25.250+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:25.252+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:25.349+0000] {parse.py:413} INFO - Iteration: 120
+[2024-12-29T05:37:26.113+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:26.115+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:26.117+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:26.119+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:26.197+0000] {parse.py:413} INFO - Iteration: 121
+[2024-12-29T05:37:27.423+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:27.425+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:27.427+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:27.429+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:27.513+0000] {parse.py:413} INFO - Iteration: 122
+[2024-12-29T05:37:28.604+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:28.606+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:28.608+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:28.614+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:28.729+0000] {parse.py:413} INFO - Iteration: 123
+[2024-12-29T05:37:30.194+0000] {parse.py:413} INFO - Iteration: 124
+[2024-12-29T05:37:31.361+0000] {parse.py:413} INFO - Iteration: 125
+[2024-12-29T05:37:32.504+0000] {parse.py:413} INFO - Iteration: 126
+[2024-12-29T05:37:34.112+0000] {parse.py:413} INFO - Iteration: 127
+[2024-12-29T05:37:35.697+0000] {parse.py:413} INFO - Iteration: 128
+[2024-12-29T05:37:37.607+0000] {parse.py:413} INFO - Iteration: 129
+[2024-12-29T05:37:38.954+0000] {parse.py:413} INFO - Iteration: 130
+[2024-12-29T05:37:40.494+0000] {parse.py:413} INFO - Iteration: 131
+[2024-12-29T05:37:42.228+0000] {parse.py:413} INFO - Iteration: 132
+[2024-12-29T05:37:43.768+0000] {parse.py:413} INFO - Iteration: 133
+[2024-12-29T05:37:45.846+0000] {parse.py:413} INFO - Iteration: 134
+[2024-12-29T05:37:46.753+0000] {parse.py:457} ERROR - time data '1982' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '1982' does not match format '%B %d, %Y'
+[2024-12-29T05:37:46.755+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:46.858+0000] {parse.py:413} INFO - Iteration: 135
+[2024-12-29T05:37:47.876+0000] {parse.py:413} INFO - Iteration: 136
+[2024-12-29T05:37:49.172+0000] {parse.py:457} ERROR - time data '1982' does not match format '%B %d, %Y'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 455, in filmmaker_parser
+    filmmaker_dict['dob']=str(datetime.strptime(dob,"%B %d, %Y").date())
+  File "/usr/local/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '1982' does not match format '%B %d, %Y'
+[2024-12-29T05:37:49.174+0000] {parse.py:459} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:49.261+0000] {parse.py:413} INFO - Iteration: 137
+[2024-12-29T05:37:50.175+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:50.177+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:50.178+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:50.180+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:50.259+0000] {parse.py:413} INFO - Iteration: 138
+[2024-12-29T05:37:52.197+0000] {parse.py:413} INFO - Iteration: 139
+[2024-12-29T05:37:53.871+0000] {parse.py:413} INFO - Iteration: 140
+[2024-12-29T05:37:55.614+0000] {parse.py:413} INFO - Iteration: 141
+[2024-12-29T05:37:57.371+0000] {parse.py:413} INFO - Iteration: 142
+[2024-12-29T05:37:59.098+0000] {parse.py:413} INFO - Iteration: 143
+[2024-12-29T05:37:59.783+0000] {parse.py:449} ERROR - 'NoneType' object has no attribute 'select'
+Traceback (most recent call last):
+  File "/opt/src/parse.py", line 447, in filmmaker_parser
+    filmmaker_birth_details=soup_profile.find('li',attrs={'data-testid':'nm_pd_bl'}).select("div>ul>li")
+AttributeError: 'NoneType' object has no attribute 'select'
+[2024-12-29T05:37:59.785+0000] {parse.py:473} WARNING - filmmaker_dict['dob'] set to NONE
+[2024-12-29T05:37:59.786+0000] {parse.py:475} WARNING - filmmaker_dict['place_of_birth'] set to NONE
+[2024-12-29T05:37:59.788+0000] {parse.py:477} WARNING - filmmaker_dict['country'] set to NONE
+[2024-12-29T05:37:59.872+0000] {parse.py:413} INFO - Iteration: 144
+[2024-12-29T05:38:01.551+0000] {parse.py:413} INFO - Iteration: 145
+[2024-12-29T05:38:02.978+0000] {parse.py:413} INFO - Iteration: 146
+[2024-12-29T05:38:04.011+0000] {parse.py:413} INFO - Iteration: 147
+[2024-12-29T05:38:05.719+0000] {parse.py:413} INFO - Iteration: 148
+[2024-12-29T05:38:07.921+0000] {parse.py:413} INFO - Iteration: 149
+[2024-12-29T05:38:09.790+0000] {parse.py:413} INFO - Iteration: 150
+[2024-12-29T05:38:11.722+0000] {parse.py:413} INFO - Iteration: 151
+[2024-12-29T05:38:13.957+0000] {python.py:240} INFO - Done. Returned value was: run_20241225/filmmaker_parsed_20241225.json
+[2024-12-29T05:38:14.046+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-29T05:38:14.048+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=parse_filmmakers, run_id=manual__2024-12-27T11:38:32.797674+00:00, execution_date=20241227T113832, start_date=20241229T053353, end_date=20241229T053814
+[2024-12-29T05:38:14.328+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-29T05:38:14.400+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-29T05:38:14.404+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,30 @@
+[2024-12-17T07:56:20.802+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-17T07:56:20.813+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.logicaldate_render manual__2024-12-17T02:26:07.750836+00:00 [queued]>
+[2024-12-17T07:56:20.821+0530] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.logicaldate_render manual__2024-12-17T02:26:07.750836+00:00 [queued]>
+[2024-12-17T07:56:20.822+0530] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-17T07:56:20.838+0530] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): logicaldate_render> on 2024-12-17 02:26:07.750836+00:00
+[2024-12-17T07:56:20.845+0530] {logging_mixin.py:190} WARNING - /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=33817) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-17T07:56:20.846+0530] {standard_task_runner.py:72} INFO - Started process 33824 to run task
+[2024-12-17T07:56:20.849+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'logicaldate_render', 'manual__2024-12-17T02:26:07.750836+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T/tmpoyq2uwf9']
+[2024-12-17T07:56:20.852+0530] {standard_task_runner.py:105} INFO - Job 151: Subtask logicaldate_render
+[2024-12-17T07:56:20.965+0530] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.logicaldate_render manual__2024-12-17T02:26:07.750836+00:00 [running]> on host Jayeshs-MacBook-Air.local
+[2024-12-17T07:56:21.107+0530] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='logicaldate_render' AIRFLOW_CTX_EXECUTION_DATE='2024-12-17T02:26:07.750836+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-17T02:26:07.750836+00:00'
+[2024-12-17T07:56:21.108+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-17T07:56:21.109+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-17T07:56:21.109+0530] {logging_mixin.py:190} INFO - Current task name:logicaldate_render state:running start_date:2024-12-17 02:26:20.813649+00:00
+[2024-12-17T07:56:21.110+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline and current dag run status:running
+[2024-12-17T07:56:21.110+0530] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-17T07:56:21.112+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/h6/l2cjrfls77b6_h6zs5w5vn4r0000gn/T
+[2024-12-17T07:56:21.113+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', "echo '2024-12-17'"]
+[2024-12-17T07:56:21.124+0530] {subprocess.py:99} INFO - Output:
+[2024-12-17T07:56:21.132+0530] {subprocess.py:106} INFO - 2024-12-17
+[2024-12-17T07:56:21.133+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2024-12-17T07:56:21.153+0530] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-17T07:56:21.154+0530] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=logicaldate_render, run_id=manual__2024-12-17T02:26:07.750836+00:00, execution_date=20241217T022607, start_date=20241217T022620, end_date=20241217T022621
+[2024-12-17T07:56:21.166+0530] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-17T07:56:21.166+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-17T07:56:21.167+0530] {logging_mixin.py:190} INFO - Dag name:movie_pipeline queued_at:2024-12-17 02:26:07.766622+00:00
+[2024-12-17T07:56:21.167+0530] {logging_mixin.py:190} INFO - Task hostname:Jayeshs-MacBook-Air.local operator:BashOperator
+[2024-12-17T07:56:21.184+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-17T07:56:21.211+0530] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-17T07:56:21.218+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

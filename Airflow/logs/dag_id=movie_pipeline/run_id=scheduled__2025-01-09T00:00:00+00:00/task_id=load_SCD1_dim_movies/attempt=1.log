@@ -1,0 +1,99 @@
+[2025-01-13T13:54:53.076+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-13T13:54:54.208+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.load_SCD1_dim_movies scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:54.562+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.load_SCD1_dim_movies scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-01-13T13:54:54.596+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-13T13:54:55.067+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): load_SCD1_dim_movies> on 2025-01-09 00:00:00+00:00
+[2025-01-13T13:54:55.168+0000] {standard_task_runner.py:72} INFO - Started process 48004 to run task
+[2025-01-13T13:54:55.234+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'load_SCD1_dim_movies', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp5cyuoupm']
+[2025-01-13T13:54:55.257+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask load_SCD1_dim_movies
+[2025-01-13T13:55:01.417+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.load_SCD1_dim_movies scheduled__2025-01-09T00:00:00+00:00 [running]> on host 8bfb9ef5b0f1
+[2025-01-13T13:55:04.189+0000] {job.py:229} INFO - Heartbeat recovered after 12.62 seconds
+[2025-01-13T13:55:11.874+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='load_SCD1_dim_movies' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-01-13T13:55:11.883+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-13T13:55:11.904+0000] {sql.py:278} INFO - Executing: -- SCD1 implementation for jayesh.dim_movies table
+MERGE INTO jayesh.dim_movies AS t
+USING jayesh.dim_movies_staging AS s
+ON t.movie_id=s.movie_id
+
+WHEN MATCHED AND (t.post_release_days<>s.post_release_days OR
+                    t.imdb_rating<>s.imdb_rating OR
+                    t.num_of_rating<>s.num_of_rating
+)
+THEN
+    UPDATE SET 
+            post_release_days=s.post_release_days,
+            imdb_rating=s.imdb_rating,
+            num_of_rating=s.num_of_rating,
+            effective_from=s.effective_from,
+            extracted_at=s.extracted_at
+
+
+WHEN NOT MATCHED
+THEN
+    INSERT VALUES(
+        DEFAULT,
+        s.movie_id,
+        s.release_id,
+        s.movie_name,
+        s.release_date_id,
+        s.rating,
+        s.duration,
+        s.post_release_days,
+        s.widest_release,
+        s.imdb_rating,
+        s.num_of_rating,
+        s.distributor_id,
+        s.effective_from,
+        s.extracted_at
+    );
+
+TRUNCATE dim_movies_staging;
+
+
+[2025-01-13T13:55:12.022+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:12.170+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-01-13T13:55:12.579+0000] {sql.py:553} INFO - Running statement: -- SCD1 implementation for jayesh.dim_movies table
+MERGE INTO jayesh.dim_movies AS t
+USING jayesh.dim_movies_staging AS s
+ON t.movie_id=s.movie_id
+
+WHEN MATCHED AND (t.post_release_days<>s.post_release_days OR
+                    t.imdb_rating<>s.imdb_rating OR
+                    t.num_of_rating<>s.num_of_rating
+)
+THEN
+    UPDATE SET 
+            post_release_days=s.post_release_days,
+            imdb_rating=s.imdb_rating,
+            num_of_rating=s.num_of_rating,
+            effective_from=s.effective_from,
+            extracted_at=s.extracted_at
+
+
+WHEN NOT MATCHED
+THEN
+    INSERT VALUES(
+        DEFAULT,
+        s.movie_id,
+        s.release_id,
+        s.movie_name,
+        s.release_date_id,
+        s.rating,
+        s.duration,
+        s.post_release_days,
+        s.widest_release,
+        s.imdb_rating,
+        s.num_of_rating,
+        s.distributor_id,
+        s.effective_from,
+        s.extracted_at
+    );
+
+TRUNCATE dim_movies_staging;
+
+, parameters: None
+[2025-01-13T13:55:12.721+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-13T13:55:12.724+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=load_SCD1_dim_movies, run_id=scheduled__2025-01-09T00:00:00+00:00, execution_date=20250109T000000, start_date=20250113T135454, end_date=20250113T135512
+[2025-01-13T13:55:12.883+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-13T13:55:13.028+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-13T13:55:13.038+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

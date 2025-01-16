@@ -1,0 +1,7 @@
+[2024-12-19T23:59:10.458+0530] {processor.py:186} INFO - Started process (PID=66848) to work on /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_complex.py
+[2024-12-19T23:59:10.459+0530] {processor.py:914} INFO - Processing file /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_complex.py for tasks to queue
+[2024-12-19T23:59:10.460+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:59:10.460+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_complex.py
+[2024-12-19T23:59:10.484+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_complex.py
+[2024-12-19T23:59:10.877+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:59:10.877+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-19T23:59:10.891+0530] {logging_mixin.py:190} INFO - [2024-12-19T23:59:10.890+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-12-19T23:59:10.920+0530] {processor.py:208} INFO - Processing /Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src/Airflow/dags/example_complex.py took 0.466 seconds

@@ -1,0 +1,50 @@
+[2024-12-29T04:23:28.855+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-29T04:23:28.912+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_movies scheduled__2024-12-28T00:00:00+00:00 [queued]>
+[2024-12-29T04:23:29.139+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_movies scheduled__2024-12-28T00:00:00+00:00 [queued]>
+[2024-12-29T04:23:29.140+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-29T04:23:29.169+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_movies> on 2024-12-28 00:00:00+00:00
+[2024-12-29T04:23:29.177+0000] {standard_task_runner.py:72} INFO - Started process 349 to run task
+[2024-12-29T04:23:29.185+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_movies', 'scheduled__2024-12-28T00:00:00+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp4htf96r9']
+[2024-12-29T04:23:29.189+0000] {standard_task_runner.py:105} INFO - Job 106: Subtask scrape_movies
+[2024-12-29T04:23:29.310+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_movies scheduled__2024-12-28T00:00:00+00:00 [running]> on host e0a3add0f1ca
+[2024-12-29T04:23:29.544+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_movies' AIRFLOW_CTX_EXECUTION_DATE='2024-12-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-28T00:00:00+00:00'
+[2024-12-29T04:23:29.546+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-29T04:23:30.395+0000] {extract.py:57} INFO - Iteration: 0, release id: rl1511097089
+[2024-12-29T04:23:42.150+0000] {extract.py:57} INFO - Iteration: 1, release id: rl886211329
+[2024-12-29T04:23:50.085+0000] {extract.py:57} INFO - Iteration: 2, release id: rl2537783297
+[2024-12-29T04:23:57.138+0000] {extract.py:57} INFO - Iteration: 3, release id: rl1199474177
+[2024-12-29T04:24:08.090+0000] {extract.py:57} INFO - Iteration: 4, release id: rl862748673
+[2024-12-29T04:24:17.325+0000] {extract.py:57} INFO - Iteration: 5, release id: rl2843508737
+[2024-12-29T04:24:27.674+0000] {extract.py:57} INFO - Iteration: 6, release id: rl2926346241
+[2024-12-29T04:24:40.195+0000] {extract.py:57} INFO - Iteration: 7, release id: rl1778156289
+[2024-12-29T04:24:51.199+0000] {extract.py:57} INFO - Iteration: 8, release id: rl2557247489
+[2024-12-29T04:25:00.615+0000] {extract.py:57} INFO - Iteration: 9, release id: rl2778432257
+[2024-12-29T04:25:10.688+0000] {extract.py:57} INFO - Iteration: 10, release id: rl259556097
+[2024-12-29T04:25:24.288+0000] {extract.py:57} INFO - Iteration: 11, release id: rl3123675905
+[2024-12-29T04:25:33.121+0000] {extract.py:57} INFO - Iteration: 12, release id: rl457277441
+[2024-12-29T04:25:43.913+0000] {extract.py:57} INFO - Iteration: 13, release id: rl2841083905
+[2024-12-29T04:26:00.138+0000] {extract.py:57} INFO - Iteration: 14, release id: rl856522753
+[2024-12-29T04:26:11.185+0000] {extract.py:57} INFO - Iteration: 15, release id: rl3277815809
+[2024-12-29T04:26:22.597+0000] {extract.py:57} INFO - Iteration: 16, release id: rl779911169
+[2024-12-29T04:26:34.171+0000] {extract.py:57} INFO - Iteration: 17, release id: rl3898179585
+[2024-12-29T04:26:45.053+0000] {extract.py:57} INFO - Iteration: 18, release id: rl3443949569
+[2024-12-29T04:26:55.184+0000] {extract.py:57} INFO - Iteration: 19, release id: rl677871617
+[2024-12-29T04:27:06.303+0000] {extract.py:57} INFO - Iteration: 20, release id: rl740655105
+[2024-12-29T04:27:14.655+0000] {extract.py:57} INFO - Iteration: 21, release id: rl2383183873
+[2024-12-29T04:27:26.420+0000] {extract.py:57} INFO - Iteration: 22, release id: rl3156377601
+[2024-12-29T04:27:37.896+0000] {extract.py:57} INFO - Iteration: 23, release id: rl3881074689
+[2024-12-29T04:27:47.801+0000] {extract.py:57} INFO - Iteration: 24, release id: rl571047937
+[2024-12-29T04:27:55.736+0000] {extract.py:57} INFO - Iteration: 25, release id: rl3290006273
+[2024-12-29T04:28:04.696+0000] {extract.py:57} INFO - Iteration: 26, release id: rl612139009
+[2024-12-29T04:28:14.904+0000] {extract.py:57} INFO - Iteration: 27, release id: rl1433501697
+[2024-12-29T04:28:22.659+0000] {extract.py:57} INFO - Iteration: 28, release id: rl2030272513
+[2024-12-29T04:28:38.024+0000] {extract.py:57} INFO - Iteration: 29, release id: rl2684977153
+[2024-12-29T04:28:50.181+0000] {extract.py:57} INFO - Iteration: 30, release id: rl2248638465
+[2024-12-29T04:28:59.165+0000] {extract.py:57} INFO - Iteration: 31, release id: rl1612611585
+[2024-12-29T04:29:06.806+0000] {extract.py:57} INFO - Iteration: 32, release id: rl1662877697
+[2024-12-29T04:29:17.780+0000] {python.py:240} INFO - Done. Returned value was: run_20241226/movies_html_source_20241226.json
+[2024-12-29T04:29:18.135+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-29T04:29:18.138+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=movie_pipeline, task_id=scrape_movies, run_id=scheduled__2024-12-28T00:00:00+00:00, execution_date=20241228T000000, start_date=20241229T042328, end_date=20241229T042918
+[2024-12-29T04:29:18.391+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-29T04:29:18.755+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-29T04:29:18.759+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

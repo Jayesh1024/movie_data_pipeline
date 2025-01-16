@@ -1,0 +1,51 @@
+[2025-01-09T12:34:21.399+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-09T12:34:21.550+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre scheduled__2025-01-08T00:00:00+00:00 [queued]>
+[2025-01-09T12:34:21.610+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: movie_pipeline.scrape_genre scheduled__2025-01-08T00:00:00+00:00 [queued]>
+[2025-01-09T12:34:21.635+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-09T12:34:21.704+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): scrape_genre> on 2025-01-08 00:00:00+00:00
+[2025-01-09T12:34:21.730+0000] {standard_task_runner.py:72} INFO - Started process 1355 to run task
+[2025-01-09T12:34:21.742+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'movie_pipeline', 'scrape_genre', 'scheduled__2025-01-08T00:00:00+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp2qrt_g_i']
+[2025-01-09T12:34:21.751+0000] {standard_task_runner.py:105} INFO - Job 142: Subtask scrape_genre
+[2025-01-09T12:34:22.128+0000] {task_command.py:467} INFO - Running <TaskInstance: movie_pipeline.scrape_genre scheduled__2025-01-08T00:00:00+00:00 [running]> on host 78b847e880a5
+[2025-01-09T12:34:23.050+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='movie_pipeline' AIRFLOW_CTX_TASK_ID='scrape_genre' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-08T00:00:00+00:00'
+[2025-01-09T12:34:23.056+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-09T12:34:27.356+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration0 for movie_id: tt13186482 and genre_id: in0000092
+[2025-01-09T12:35:59.013+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration1 for movie_id: tt13186482 and genre_id: in0000028
+[2025-01-09T12:36:29.669+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration2 for movie_id: tt13186482 and genre_id: in0000012
+[2025-01-09T12:36:51.682+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration3 for movie_id: tt13186482 and genre_id: in0000026
+[2025-01-09T12:37:18.347+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration4 for movie_id: tt13186482 and genre_id: in0000076
+[2025-01-09T12:38:26.994+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration5 for movie_id: tt13186482 and genre_id: in0000093
+[2025-01-09T12:38:55.689+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration6 for movie_id: tt13186482 and genre_id: in0000098
+[2025-01-09T12:39:47.559+0000] {extract.py:235} INFO - movie_iteration: 0, genre_iteration7 for movie_id: tt13186482 and genre_id: in0000133
+[2025-01-09T12:40:14.730+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration0 for movie_id: tt18259086 and genre_id: in0000092
+[2025-01-09T12:40:41.569+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration1 for movie_id: tt18259086 and genre_id: in0000016
+[2025-01-09T12:41:13.045+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration2 for movie_id: tt18259086 and genre_id: in0000008
+[2025-01-09T12:42:11.533+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration3 for movie_id: tt18259086 and genre_id: in0000099
+[2025-01-09T12:43:09.747+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration4 for movie_id: tt18259086 and genre_id: in0000001
+[2025-01-09T12:43:47.254+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration5 for movie_id: tt18259086 and genre_id: in0000012
+[2025-01-09T12:44:08.888+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration6 for movie_id: tt18259086 and genre_id: in0000034
+[2025-01-09T12:44:31.549+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration7 for movie_id: tt18259086 and genre_id: in0000093
+[2025-01-09T12:44:56.739+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration8 for movie_id: tt18259086 and genre_id: in0000098
+[2025-01-09T12:45:22.614+0000] {extract.py:235} INFO - movie_iteration: 1, genre_iteration9 for movie_id: tt18259086 and genre_id: in0000162
+[2025-01-09T12:46:19.771+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration0 for movie_id: tt5040012 and genre_id: in0000095
+[2025-01-09T12:46:54.790+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration1 for movie_id: tt5040012 and genre_id: in0000117
+[2025-01-09T12:48:11.201+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration2 for movie_id: tt5040012 and genre_id: in0000119
+[2025-01-09T12:48:44.395+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration3 for movie_id: tt5040012 and genre_id: in0000098
+[2025-01-09T12:49:07.533+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration4 for movie_id: tt5040012 and genre_id: in0000112
+[2025-01-09T12:49:24.935+0000] {extract.py:235} INFO - movie_iteration: 2, genre_iteration5 for movie_id: tt5040012 and genre_id: in0000139
+[2025-01-09T12:49:39.240+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration0 for movie_id: tt13622970 and genre_id: in0000028
+[2025-01-09T12:49:54.521+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration1 for movie_id: tt13622970 and genre_id: in0000021
+[2025-01-09T12:50:06.524+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration2 for movie_id: tt13622970 and genre_id: in0000012
+[2025-01-09T12:50:18.436+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration3 for movie_id: tt13622970 and genre_id: in0000026
+[2025-01-09T12:50:33.081+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration4 for movie_id: tt13622970 and genre_id: in0000034
+[2025-01-09T12:50:47.407+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration5 for movie_id: tt13622970 and genre_id: in0000093
+[2025-01-09T12:51:04.551+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration6 for movie_id: tt13622970 and genre_id: in0000098
+[2025-01-09T12:51:21.547+0000] {extract.py:235} INFO - movie_iteration: 3, genre_iteration7 for movie_id: tt13622970 and genre_id: in0000133
+[2025-01-09T12:51:50.115+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration0 for movie_id: tt11563598 and genre_id: in0000075
+[2025-01-09T12:52:21.996+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration1 for movie_id: tt11563598 and genre_id: in0000083
+[2025-01-09T12:53:28.887+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration2 for movie_id: tt11563598 and genre_id: in0000072
+[2025-01-09T12:53:55.343+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration3 for movie_id: tt11563598 and genre_id: in0000076
+[2025-01-09T12:54:17.084+0000] {extract.py:235} INFO - movie_iteration: 4, genre_iteration4 for movie_id: tt11563598 and genre_id: in0000130
+[2025-01-09T12:54:37.655+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration0 for movie_id: tt1262426 and genre_id: in0000097
+[2025-01-09T12:54:58.842+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration1 for movie_id: tt1262426 and genre_id: in0000134
+[2025-01-09T12:55:37.160+0000] {extract.py:235} INFO - movie_iteration: 5, genre_iteration2 for movie_id: tt1262426 and genre_id: in0000098

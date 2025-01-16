@@ -1,4 +1,4 @@
-name: test
+name: movie_pipeline_airflow
 
 services:
   db:
@@ -11,24 +11,37 @@ services:
     environment:
       - "POSTGRES_PASSWORD=admin"
 
-  airflow:
-    container_name: airflow_cont
-    image: airflow_custom:1.0
+  webserver:
+    container_name: airflow_webserver
+    image: jayesh0809/airflow_custom:1.1
     ports:
       - "8080:8080"
     environment:
-      - AIRFLOW__CORE__DAGS_FOLDER=/opt/src/Airflow/dags
-      - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/src/Airflow/logs
+      - AIRFLOW__CORE__DAGS_FOLDER=/opt/src/airflow/dags
+      - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/src/airflow/logs
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow_user:admin@db:5432/airflow_db
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-    volumes:
-      - type: bind
-        source: "/Users/jayesh/Desktop/Personal Work/Movie_data_pipeline/src"
-        target: "/opt/src"
+    env_file:
+      - secrets.env
     depends_on:
       - db
-    command: standalone
+    command: webserver
+
+  scheduler:
+    container_name: airflow_scheduler
+    image: jayesh0809/airflow_custom:1.1
+    environment:
+      - AIRFLOW__CORE__DAGS_FOLDER=/opt/src/airflow/dags
+      - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/src/airflow/logs
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow_user:admin@db:5432/airflow_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    env_file:
+      - secrets.env
+    depends_on:
+      - webserver
+    command: scheduler
     
 volumes:
   postgres_vol:
-    
+
+
