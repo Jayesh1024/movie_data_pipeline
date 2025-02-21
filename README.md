@@ -10,6 +10,6 @@ And loads this data inside a PostgreSQL instance hosted on AWS Relational Databa
 Following is the pipeline architecture:
 ![Architecture](misc/pipeline_arch.png "data pipeline architecture")
 
-And the following is how the data that gets loaded in the PostgreSQL database is modeled:
+And, the following is the data model where the data will be loaded (click the image to open the link):
 ![Data Model](movieDataModel.png "data model")
 
