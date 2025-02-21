@@ -11,4 +11,5 @@ Following is the pipeline architecture:
 ![Architecture](misc/pipeline_arch.png "data pipeline architecture")
 
 And the following is how the data that gets loaded in the PostgreSQL database is modeled:
+![Data Model](movieDataModel.png "data model")
 
