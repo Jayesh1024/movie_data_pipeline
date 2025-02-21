@@ -11,5 +11,5 @@ Following is the pipeline architecture:
 ![Architecture](misc/pipeline_arch.png "data pipeline architecture")
 
 And, the following is the data model where the data will be loaded (click the image to open the link):
-[![Movie Data Model](movieDataModel.png)](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=dimensional_model.drawio&dark=auto#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FJayesh1024%2Fmovie_data_pipeline%2Fmain%2Fdimensional_model.drawio)
+[![Movie Data Model](movieDataModel.png)](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=dimensional_model.drawio&dark=0#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FJayesh1024%2Fmovie_data_pipeline%2Fmain%2Fdimensional_model.drawio)
 
